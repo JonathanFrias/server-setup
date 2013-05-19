@@ -1,3 +1,6 @@
+##This file exists to quickstart a Arch Linux setup
+#
+
 
 #partition magic
 #parted /dev/***
