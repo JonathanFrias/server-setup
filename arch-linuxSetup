@@ -3,11 +3,24 @@
 
 
 #partition magic
-#parted /dev/***
+#parted /dev/*** #remeber to make bootable
 #mkfs.ext /dev/***
 
 mount /dev/*** /mnt
 pacstrap /mnt base base-devel 
+
+arch-chroot /mnt pacman -S grub-bios
+genfstab -p /mnt >> /mnt/etc/fstab
+cp -r /etc/zsh /mnt/etc/
+cp ~/.zshrc /mnt/root/
+arch-chroot /mnt
+modprobe dm-mod
+grub-install --recheck /dev/***
+grub-mkconfig -o /boot/grub/grub.cfg
+passwd 
+
+
+echo "Arch" > /etc/hostname
 
 #configure locale
 loadkeys us #US keyboard
