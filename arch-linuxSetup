@@ -1,0 +1,79 @@
+
+#partition magic
+#parted /dev/***
+#mkfs.ext /dev/***
+
+mount /dev/*** /mnt
+pacstrap /mnt base base-devel 
+
+#configure locale
+loadkeys us #US keyboard
+timedatectl status
+timedatectl set-timezone America/New_York
+cd /etc
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+
+pacman -Syu
+pacman -S grub-bios
+dhcpcd                                                                                              |   OPTIONAL (install kde)
+wpa_supplicant                                                                                      |   pacman S kde xorg
+dhcpcd											            |   pacman -S kde xorg
+wpa_passphrase  frias '1qazxsw2!QAZXSW@' > /etc/wpa_supplicant/frias.conf                           |   pacman -S kde xorg
+#Add extra options for a hidden network                                                             |                                                                    
+sed -i 's/}/        scan_ssid=1\n        key_mgmt=WPA-PSK\n}/g' /etc/wpa_supplicant/frias.conf      |   mkdir ~/public_html
+wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/frias.conf                                           |   chmod  o+x .
+useradd -d /home/jf --password PASSWORD jf                                                          |   chmod o+x ~/public_html/
+                                                                                                    |   
+chmod u+w sudoers                                                                                   |   
+vi sudoers                                                                                          |   change default audio device                                     
+echo 'jf ALL=(ALL) ALL' >> /etc/sudoers                                                             |   http://crunchbang.org/forums/viewtopic.php?pid=231236%23p231236
+chmod u-w sudoers                                                                         
+
+#Enable dhcpd service on boot
+systemctl enable dhcpcd 
+systemctl start dhcpcd.service
+
+#apache configurations
+sudo usermod -aG jf http                                                                  
+sudo pacman -S vim                                                                        
+sudo pacman -S zsh
+zsh                                                                                                
+sudo pacman -S apache                                                                              
+systemctl restart apaache                                                                          
+sudo systemctl restart apaache                                                                     
+sudo pacman -S php                                                                                 
+sudo pacman -S php-apache                                                                          
+sudo pacman -S mariadb                                                                             
+pacman -S php-apache                                                                               
+sudo pacman -S php-apache                                                                          
+                                                                                                   
+#httpd files to configure
+vim /etc/httpd/conf/extra/httpd-userdir.conf                                                       
+vim /etc/httpd/conf/httpd.conf                                                                     
+sudo vim /etc/httpd/conf/httpd.conf
+
+
+
+pacman -S php-pear php-cgi
+pear list-all
+pear install pear/MDB2_Driver_mysqli
+pear install pear/MDB2#mysqli 
+pear install pear/mysqli
+pear list-all | grep mysqli
+vim /etc/php/php.ini
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
