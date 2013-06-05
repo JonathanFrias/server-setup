@@ -31,6 +31,7 @@ echo "Arch" > /etc/hostname                                                     
                                                                                                                 |   http://crunchbang.org/forums/viewtopic.php?pid=231236%23p231236
 exit 
 reboot 
+#Boot into the system
 #configure locale                                                       |#My specific wireless setup
 loadkeys us #US keyboard                                                |wpa_supplicant                                                                                
 timedatectl status                                                      |wpa_passphrase  frias '1qazxsw2!QAZXSW@' > /etc/wpa_supplicant/frias.conf                     
