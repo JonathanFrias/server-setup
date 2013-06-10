@@ -1,5 +1,5 @@
 ##This file exists to quickstart a Arch Linux setup
-#
+#At somepoint I need to integrate locale stuff: https://wiki.archlinux.org/index.php/Locale
 
 
 
@@ -78,3 +78,5 @@ vim /etc/php/php.ini
 sudo usermod -aG jf http                                                                  
 systemctl restart apaache                                                                          
 sudo systemctl restart apaache                                                                     
+
+
