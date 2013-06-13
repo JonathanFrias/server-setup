@@ -17,28 +17,28 @@ genfstab -p /mnt >> /mnt/etc/fstab
 
 cp -r /etc/zsh /mnt/etc/
 cp ~/.zshrc /mnt/root/
-patch /etc/locale.gen < chroot/etc/locale.gen.patch                                                             |   OPTIONAL (install kde)
-                                                                                                                |   pacman S kde xorg
-                                                                                                                |   pacman -S kde xorg
-arch-chroot /mnt                                                                                                |   pacman -S kde xorg
-grub-install --recheck /dev/***                                                                                 |
-grub-mkconfig -o /boot/grub/grub.cfg                                                                            |   mkdir ~/public_html
-echo "root:password" > /tmp/asdf                                                                                |   chmod  o+x .
-chpasswd < /tmp/asdf                                                                                            |   chmod o+x ~/public_html/
-                                                                                                                |   
-                                                                                                                |   
-echo "Arch" > /etc/hostname                                                                                     |   change default audio device                                     
-                                                                                                                |   http://crunchbang.org/forums/viewtopic.php?pid=231236%23p231236
+patch /etc/locale.gen < chroot/etc/locale.gen.patch                |OPTIONAL (install kde)
+                                                                   |pacman S kde xorg
+                                                                   |pacman -S kde xorg
+arch-chroot /mnt                                                   |pacman -S kde xorg
+grub-install --recheck /dev/***                                    |
+grub-mkconfig -o /boot/grub/grub.cfg                               |mkdir ~/public_html
+echo "root:password" > /tmp/asdf                                   |chmod  o+x .
+chpasswd < /tmp/asdf                                               |chmod o+x ~/public_html/
+                                                                   |
+                                                                   |
+echo "Arch" > /etc/hostname                                        |change default audio device
+                                                                   |http://crunchbang.org/forums/viewtopic.php?pid=231236%23p231236
 exit 
 reboot 
 #Boot into the system
 #configure locale                                                       |#My specific wireless setup
-loadkeys us #US keyboard                                                |wpa_supplicant                                                                                
-timedatectl status                                                      |wpa_passphrase  frias '1qazxsw2!QAZXSW@' > /etc/wpa_supplicant/frias.conf                     
-timedatectl set-timezone America/New_York                               |#Add extra options for a hidden network                                                       
+loadkeys us #US keyboard                                                |wpa_supplicant
+timedatectl status                                                      |wpa_passphrase  frias '1qazxsw2!QAZXSW@' > /etc/wpa_supplicant/frias.conf
+timedatectl set-timezone America/New_York                               |#Add extra options for a hidden network
 rm /etc/localtime                                                       |sed -i 's/}/        scan_ssid=1\n        key_mgmt=WPA-PSK\n}/g' /etc/wpa_supplicant/frias.conf
-ln -s /usr/share/zoneinfo/America/New_York /etc/localtime               |wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/frias.conf                                                    
-                                                                                 
+ln -s /usr/share/zoneinfo/America/New_York /etc/localtime               |wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/frias.conf
+
 #setup a user account that can administer the system
 mkdir /home/jf
 useradd -d /home/jf --password PASSWORD jf                                                          
@@ -78,3 +78,5 @@ vim /etc/php/php.ini
 sudo usermod -aG jf http                                                                  
 systemctl restart apaache                                                                          
 sudo systemctl restart apaache                                                                     
+
+sudo pacman -S ntpd
