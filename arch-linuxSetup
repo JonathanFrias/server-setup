@@ -1,88 +1,41 @@
 #####################
-#                   #
-#####################
-
-
-#####################
-#    Partitions     #
-#####################
-#Simulate user keystrokes to the fdisk program
-echo "
-n
-p
-1
-
-+6G
-
-n
-p
-2
-
-+2G
-a
-1
-w
-" | fdisk /dev/sda
-mkfs.ext4 /dev/sda1
-mkswap /dev/sda2
-
-#####################
-#  Mount Device     #
-#####################
-mount /dev/sda1 /mnt
-
-#####################
-#  Install Base     #
-#####################
-pacstrap /mnt base
-
-#####################
-#  Generate Fstab   #
-#####################
-genfstab -p /mnt >> /mnt/etc/fstab
-
-#####################
 # Configure Locale  #
 #####################
 patch /etc/locale.gen < chroot/etc/locale.gen.patch
 echo "Arch" > /mnt/etc/hostname
-arch-chroot /mnt
-  locale-gen
-  loadkeys us #US keyboard
-  timedatectl set-timezone America/New_York
-  ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+arch-chroot /mnt locale-gen
+arch-chroot /mnt loadkeys us #US keyboard
+arch-chroot /mnt timedatectl set-timezone America/New_York
+arch-chroot /mnt ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 exit
 
 #####################
 #  Root Account     #
 #####################
 cp root-password /mnt/tmp/
-arch-chroot /mnt                  
-  chpasswd /tmp/root-password
-exit
+arch-chroot /mnt chpasswd /tmp/root-password
 
 
 #####################
 #   Boot Manager    #
 #####################
-arch-chroot /mnt                  
-  grub-install --recheck /dev/***       
-  grub-mkconfig -o /boot/grub/grub.cfg  
+arch-chroot /mnt grub-install --recheck /dev/***       
+arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg  
 exit
 
 
 #####################
 #   User Account    #
 #####################
-arch-chroot /mnt
-  USER=jf
-  mkdir /home/$USER
-  useradd -d /home/$USER --password PASSWORD $USER
-  chown $USER:$USER /home/$USER
-  chmod u+w /etc/sudoers
-  echo "$USER ALL=(ALL) ALL" >> /etc/sudoers                                                             
-  chmod u-w /etc/sudoers                                                                         
-exit
+#arch-chroot /mnt
+#  USER=jf
+#  mkdir /home/$USER
+#  useradd -d /home/$USER --password PASSWORD $USER
+#  chown $USER:$USER /home/$USER
+#  chmod u+w /etc/sudoers
+#  echo "$USER ALL=(ALL) ALL" >> /etc/sudoers                                                             
+#  chmod u-w /etc/sudoers
+#exit
 
 
 
