@@ -23,6 +23,8 @@ a
 1
 w
 " | fdisk /dev/sda
+mkfs.ext4 /dev/sda1
+mkswap /dev/sda2
 
 #####################
 #  Mount Device     #
