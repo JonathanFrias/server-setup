@@ -56,8 +56,8 @@ exit
 #####################
 #  Root Account     #
 #####################
-cp root-password /mnt/tmp/
-arch-chroot /mnt chpasswd /tmp/root-password
+cp root-password /mnt/root/
+arch-chroot /mnt chpasswd < /mnt/tmp/root-password
 
 
 #####################
