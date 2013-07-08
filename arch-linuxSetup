@@ -1,12 +1,12 @@
-#####################
-#   Dependencies    #
-#####################
+echo "#####################"
+echo "#   Dependencies    #"
+echo "#####################"
 sudo pacman -Syy
 sudo pacman -S patch git
 
-#####################
-#    Partitions     #
-#####################
+echo "#####################"
+echo "#    Partitions     #"
+echo "#####################"
 #Simulate user keystrokes to the fdisk program
 echo "
 n
@@ -27,49 +27,46 @@ w
 mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 
-#####################
-#  Mount Device     #
-#####################
+echo "#####################"
+echo "#  Mount Device     #"
+echo "#####################"
 mount /dev/sda1 /mnt
 
-#####################
-#  Install Base     #
-#####################
+echo "#####################" 
+echo "#  Install Base     #"
+echo "#####################"
 pacstrap /mnt base
 
-#####################
-#  Generate Fstab   #
-#####################
+echo "#####################"
+echo "#  Generate Fstab   #"
+echo "#####################"
 genfstab -p /mnt >> /mnt/etc/fstab
 
-#####################
-# Configure Locale  #
-#####################
+echo "#####################"
+echo "# Configure Locale  #"
+echo "#####################"
 patch /mnt/etc/locale.gen < chroot/etc/locale.gen.patch
 echo "Arch" > /mnt/etc/hostname
 arch-chroot /mnt locale-gen
 arch-chroot /mnt loadkeys us #US keyboard
 arch-chroot /mnt ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
-exit
 
-#####################
-#  Root Account     #
-#####################
+echo "#####################"
+echo "#  Root Account     #"
+echo "#####################"
 cp root-password /mnt/root/
 arch-chroot /mnt chpasswd < /mnt/tmp/root-password
 
 
-#####################
-#   Boot Manager    #
-#####################
+echo "#####################"
+echo "#   Boot Manager    #"
+echo "#####################"
 arch-chroot /mnt grub-install --recheck /dev/***       
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg  
-exit
 
-
-#####################
-#   User Account    #
-#####################
+echo "#####################"
+echo "#   User Account    #"
+echo "#####################"
 #arch-chroot /mnt
 #  USER=jf
 #  mkdir /home/$USER
