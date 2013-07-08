@@ -55,48 +55,36 @@ echo "#####################"
 echo "#  Root Account     #"
 echo "#####################"
 cp passwords /mnt/root/
-arch-chroot /mnt chpasswd < /mnt/tmp/passwords
+arch-chroot /mnt chpasswd < /mnt/root/passwords
 
 echo "#####################"
 echo "#   Boot Manager    #"
 echo "#####################"
-arch-chroot /mnt pacman -S grub-bios
+arch-chroot /mnt pacman -S grub-bios os-prober --noconfirm
 arch-chroot /mnt grub-install --recheck /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg  
 
 echo "#####################"
 echo "#   User Account    #"
 echo "#####################"
-#arch-chroot /mnt
-#  USER=jf
-#  mkdir /home/$USER
-#  useradd -d /home/$USER --password PASSWORD $USER
-#  chown $USER:$USER /home/$USER
-#  chmod u+w /etc/sudoers
-#  echo "$USER ALL=(ALL) ALL" >> /etc/sudoers                                                             
-#  chmod u-w /etc/sudoers
-#exit
+USER=jf
+arch-chroot mkdir /home/$USER
+arch-chroot useradd -d /home/$USER --password $USER $USER
+arch-chroot chown $USER:$USER /home/$USER
+arch-chroot chmod u+w /etc/sudoers
+arch-chroot echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+arch-chroot chmod u-w /etc/sudoers
+
+echo "#####################"
+echo "#   Extra Configs   #"
+echo "#####################"
+cp -r /etc/zsh /mnt/etc/
+cp ~/.zshrc /mnt/root/
 
 
 
-
-
-
-##configure locale                                                       |#My specific wireless setup
-#loadkeys us #US keyboard                                                |wpa_supplicant
-#timedatectl status                                                      |wpa_passphrase  frias '1qazxsw2!QAZXSW@' > /etc/wpa_supplicant/frias.conf
-#timedatectl set-timezone America/New_York                               |#Add extra options for a hidden network
-#rm /etc/localtime                                                       |sed -i 's/}/        scan_ssid=1\n        key_mgmt=WPA-PSK\n}/g' /etc/wpa_supplicant/frias.conf
-#ln -s /usr/share/zoneinfo/America/New_York /etc/localtime               |wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/frias.conf
-#                                                                     |cp -r /etc/zsh /mnt/etc/
-##setup a user account that can administer the system                 |cp ~/.zshrc /mnt/root/
-#mkdir /home/jf
-#useradd -d /home/jf --password PASSWORD jf                                                          
-#chown jf:jf /home/jf
-#chmod u+w /etc/sudoers                                                                              
-#vi sudoers                                                                                          
-#echo 'jf ALL=(ALL) ALL' >> /etc/sudoers                                                             
-#chmod u-w /etc/sudoers                                                                         
+                               
+                          
 #
 #dhcpcd		                                                                 
 ##Enable dhcpd service on boot                                                    
