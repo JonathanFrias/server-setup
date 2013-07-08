@@ -45,11 +45,10 @@ genfstab -p /mnt >> /mnt/etc/fstab
 #####################
 # Configure Locale  #
 #####################
-patch /etc/locale.gen < chroot/etc/locale.gen.patch
+patch /mnt/etc/locale.gen < chroot/etc/locale.gen.patch
 echo "Arch" > /mnt/etc/hostname
 arch-chroot /mnt locale-gen
 arch-chroot /mnt loadkeys us #US keyboard
-arch-chroot /mnt timedatectl set-timezone America/New_York
 arch-chroot /mnt ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 exit
 
