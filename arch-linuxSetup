@@ -85,7 +85,7 @@ echo "#   Extra Configs   #"
 echo "#####################"
 cp -r /etc/zsh /mnt/etc/
 cp ~/.zshrc /mnt/root/
-systemctl enable dhcpcd.service                                                   
+arch-chroot /mnt systemctl enable dhcpcd.service
 
 
 #
