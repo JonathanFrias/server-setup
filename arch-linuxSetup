@@ -2,7 +2,7 @@ echo "#####################"
 echo "#   Dependencies    #"
 echo "#####################"
 sudo pacman -Syy
-sudo pacman -S patch git
+sudo pacman -S --noconfirm patch git 
 
 echo "#####################"
 echo "#    Partitions     #"
@@ -68,30 +68,26 @@ echo "#####################"
 echo "#   User Account    #"
 echo "#####################"
 USER=jf
-arch-chroot mkdir /home/$USER
-arch-chroot useradd -d /home/$USER --password $USER $USER
-arch-chroot chown $USER:$USER /home/$USER
-arch-chroot chmod u+w /etc/sudoers
-arch-chroot echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
-arch-chroot chmod u-w /etc/sudoers
+arch-chroot /mnt mkdir /home/$USER
+arch-chroot /mnt useradd -d /home/$USER --password $USER $USER
+arch-chroot /mnt chown $USER:$USER /home/$USER
+arch-chroot /mnt chmod u+w /etc/sudoers
+arch-chroot /mnt echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+arch-chroot /mnt chmod u-w /etc/sudoers
+
+echo "#####################"
+echo "# Extra Packages   #"
+echo "#####################"
+pacman -S vim zsh ntpd
 
 echo "#####################"
 echo "#   Extra Configs   #"
 echo "#####################"
 cp -r /etc/zsh /mnt/etc/
 cp ~/.zshrc /mnt/root/
+systemctl enable dhcpcd.service                                                   
 
 
-
-                               
-                          
-#
-#dhcpcd		                                                                 
-##Enable dhcpd service on boot                                                    
-#systemctl start dhcpcd.service                                                   
-#pacman -Syu                                                                      
-#pacman -S vim zsh 
-#
 #
 #
 ##LAMP STACk
@@ -117,7 +113,6 @@ cp ~/.zshrc /mnt/root/
 #systemctl restart apaache                                                                          
 #sudo systemctl restart apaache                                                                     
 #
-#sudo pacman -S ntpd
 #
 #
 ###This file exists to quickstart a Arch Linux setup
