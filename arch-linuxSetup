@@ -54,14 +54,14 @@ arch-chroot /mnt ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 echo "#####################"
 echo "#  Root Account     #"
 echo "#####################"
-cp root-password /mnt/root/
-arch-chroot /mnt chpasswd < /mnt/tmp/root-password
-
+cp passwords /mnt/root/
+arch-chroot /mnt chpasswd < /mnt/tmp/passwords
 
 echo "#####################"
 echo "#   Boot Manager    #"
 echo "#####################"
-arch-chroot /mnt grub-install --recheck /dev/***       
+arch-chroot /mnt pacman -S grub-bios
+arch-chroot /mnt grub-install --recheck /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg  
 
 echo "#####################"
