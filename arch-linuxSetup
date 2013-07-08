@@ -1,4 +1,48 @@
 #####################
+#   Dependencies    #
+#####################
+sudo pacman -Syy
+sudo pacman -S patch git
+
+#####################
+#    Partitions     #
+#####################
+#Simulate user keystrokes to the fdisk program
+echo "
+n
+p
+1
+
++6G
+
+n
+p
+2
+
++2G
+a
+1
+w
+" | fdisk /dev/sda
+mkfs.ext4 /dev/sda1
+mkswap /dev/sda2
+
+#####################
+#  Mount Device     #
+#####################
+mount /dev/sda1 /mnt
+
+#####################
+#  Install Base     #
+#####################
+pacstrap /mnt base
+
+#####################
+#  Generate Fstab   #
+#####################
+genfstab -p /mnt >> /mnt/etc/fstab
+
+#####################
 # Configure Locale  #
 #####################
 patch /etc/locale.gen < chroot/etc/locale.gen.patch
