@@ -78,7 +78,7 @@ arch-chroot /mnt chmod u-w /etc/sudoers
 echo "#####################"
 echo "# Extra Packages   #"
 echo "#####################"
-pacman -S vim zsh ntpd
+pacman -S vim zsh ntp
 
 echo "#####################"
 echo "#   Extra Configs   #"
