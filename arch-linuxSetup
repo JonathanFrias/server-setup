@@ -78,18 +78,19 @@ arch-chroot /mnt chmod u-w /etc/sudoers
 echo "#####################"
 echo "# Extra Packages   #"
 echo "#####################"
-pacman -S vim zsh ntp
+arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl
 
 echo "#####################"
 echo "#   Extra Configs   #"
 echo "#####################"
 cp -r /etc/zsh /mnt/etc/
 cp ~/.zshrc /mnt/root/
-arch-chroot /mnt systemctl enable dhcpcd.service
+arch-chroot /mnt systemctl enable dhcpcd.service bash-completion
+
+#Don't use persistent names
+arch-chroot /mnt ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
 
 
-#
-#
 ##LAMP STACk
 #pacman -S apache  php php-apache mariadb php-pear                                                                              
 #pear list-all
@@ -97,9 +98,6 @@ arch-chroot /mnt systemctl enable dhcpcd.service
 #pear install pear/MDB2#mysqli 
 #pear install pear/mysqli
 #pear list-all | grep mysqli
-#
-#
-#                                                                                                    
 #
 ##apache configurations
 #
@@ -112,9 +110,6 @@ arch-chroot /mnt systemctl enable dhcpcd.service
 #sudo usermod -aG jf http                                                                  
 #systemctl restart apaache                                                                          
 #sudo systemctl restart apaache                                                                     
-#
-#
-#
 ###This file exists to quickstart a Arch Linux setup
 ##At somepoint I need to integrate locale stuff: https://wiki.archlinux.org/index.php/Locale
 #
