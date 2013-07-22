@@ -79,6 +79,8 @@ echo "#####################"
 echo "# Extra Packages   #"
 echo "#####################"
 arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl
+arch-chroot /mnt pacman -S network-manager-applet
+arch-chroot /mnt systemctl enable NetworkManager
 
 echo "#####################"
 echo "#   Extra Configs   #"
@@ -88,7 +90,7 @@ cp ~/.zshrc /mnt/root/
 arch-chroot /mnt systemctl enable dhcpcd.service bash-completion
 
 #Don't use persistent names
-arch-chroot /mnt ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
+ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
 
 
 ##LAMP STACk
