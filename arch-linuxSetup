@@ -52,6 +52,18 @@ arch-chroot /mnt loadkeys us #US keyboard
 arch-chroot /mnt ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 
 echo "#####################"
+echo "#   User Account    #"
+echo "#####################"
+USER=jf
+arch-chroot /mnt mkdir /home/$USER
+arch-chroot /mnt useradd -d /home/$USER $USER
+arch-chroot /mnt chown $USER:$USER /home/$USER
+arch-chroot /mnt chmod u+w /etc/sudoers
+arch-chroot /mnt echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+arch-chroot /mnt chmod u-w /etc/sudoers
+echo "$USER:$USER" >> passwords
+
+echo "#####################"
 echo "#  Root Account     #"
 echo "#####################"
 cp passwords /mnt/root/
@@ -64,23 +76,22 @@ arch-chroot /mnt pacman -S grub-bios os-prober --noconfirm
 arch-chroot /mnt grub-install --recheck /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg  
 
-echo "#####################"
-echo "#   User Account    #"
-echo "#####################"
-USER=jf
-arch-chroot /mnt mkdir /home/$USER
-arch-chroot /mnt useradd -d /home/$USER --password $USER $USER
-arch-chroot /mnt chown $USER:$USER /home/$USER
-arch-chroot /mnt chmod u+w /etc/sudoers
-arch-chroot /mnt echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
-arch-chroot /mnt chmod u-w /etc/sudoers
 
 echo "#####################"
-echo "# Extra Packages   #"
+echo "#   Extra Packages  #"
 echo "#####################"
-arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl
+arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl net-tools
+
+echo "Install Network Manager?"
+echo "------- ------- --------"
 arch-chroot /mnt pacman -S network-manager-applet
 arch-chroot /mnt systemctl enable NetworkManager
+
+echo "Install ssh?"
+echo "------- ----"
+arch-chroot /mnt pacman -S openssh
+arch-chroot /mnt systemctl enable sshd
+
 
 echo "#####################"
 echo "#   Extra Configs   #"
@@ -91,28 +102,3 @@ arch-chroot /mnt systemctl enable dhcpcd.service bash-completion
 
 #Don't use persistent names
 ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
-
-
-##LAMP STACk
-#pacman -S apache  php php-apache mariadb php-pear                                                                              
-#pear list-all
-#pear install pear/MDB2_Driver_mysqli
-#pear install pear/MDB2#mysqli 
-#pear install pear/mysqli
-#pear list-all | grep mysqli
-#
-##apache configurations
-#
-##httpd files to configure
-#vim /etc/httpd/conf/extra/httpd-userdir.conf                                                       
-#vim /etc/httpd/conf/httpd.conf                                                                     
-#vim /etc/httpd/conf/httpd.conf
-#vim /etc/php/php.ini
-#
-#sudo usermod -aG jf http                                                                  
-#systemctl restart apaache                                                                          
-#sudo systemctl restart apaache                                                                     
-###This file exists to quickstart a Arch Linux setup
-##At somepoint I need to integrate locale stuff: https://wiki.archlinux.org/index.php/Locale
-#
-#
