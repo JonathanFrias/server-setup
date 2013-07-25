@@ -13,7 +13,7 @@ pear list-all | grep mysqli
 #apache configurations
 
 #httpd files to configure
-vim /etc/httpd/conf/extra/httpd-userdir.conf                                  
-vim /etc/httpd/conf/httpd.conf                                                
-vim /etc/httpd/conf/httpd.conf
-vim /etc/php/php.ini
+#vim /etc/httpd/conf/extra/httpd-userdir.conf                                  
+#vim /etc/httpd/conf/httpd.conf                                                
+#vim /etc/httpd/conf/httpd.conf
+#vim /etc/php/php.ini
