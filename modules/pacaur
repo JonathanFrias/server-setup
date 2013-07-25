@@ -1,0 +1,16 @@
+pacman -S base-devel --noconfirm
+
+cd ~/
+mkdir aur_builds
+
+cd ~/aur_builds
+wget https://aur.archlinux.org/packages/co/cower/cower.tar.gz
+tar xvf cower
+cd cower && makepkg -si --asroot --noconfirm
+
+cd ~/aur_builds
+wget https://aur.archlinux.org/packages/pa/pacaur/pacaur.tar.gz
+tar xvf pacaur.tar.gz
+cd pacaur && makepkg -si --asroot --noconfirm
+
+cd ~/
