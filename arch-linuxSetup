@@ -82,12 +82,17 @@ echo "#   Extra Packages  #"
 echo "#####################"
 arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl net-tools bash-completion sudo expac
 
-echo "Install Network Manager?"
+echo "
+
+Install Network Manager?"
 echo "------- ------- --------"
 arch-chroot /mnt pacman -S network-manager-applet
 arch-chroot /mnt systemctl enable NetworkManager
 
-echo "Install ssh?"
+
+echo "
+
+Install ssh?"
 echo "------- ----"
 arch-chroot /mnt pacman -S openssh
 
