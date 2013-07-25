@@ -80,7 +80,7 @@ arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 echo "#####################"
 echo "#   Extra Packages  #"
 echo "#####################"
-arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl net-tools
+arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl net-tools bash-completion
 
 echo "Install Network Manager?"
 echo "------- ------- --------"
@@ -90,7 +90,6 @@ arch-chroot /mnt systemctl enable NetworkManager
 echo "Install ssh?"
 echo "------- ----"
 arch-chroot /mnt pacman -S openssh
-arch-chroot /mnt systemctl enable sshd
 
 
 echo "#####################"
@@ -98,7 +97,6 @@ echo "#   Extra Configs   #"
 echo "#####################"
 cp -r /etc/zsh /mnt/etc/
 cp ~/.zshrc /mnt/root/
-arch-chroot /mnt systemctl enable dhcpcd.service bash-completion
 
 #Don't use persistent names
 ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
