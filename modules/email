@@ -1,0 +1,2 @@
+sh pacaur
+arch-chroot /mnt pacaur -S postfix courier-imap squirrelmail mariadb apache openssl --asroot --noconfirm
