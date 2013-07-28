@@ -1,0 +1,46 @@
+75c75
+< #myhostname = host.domain.tld
+---
+> myhostname = mail.gofrias.com
+83c83
+< #mydomain = domain.tld
+---
+> mydomain = gofrias.com
+99c99
+< #myorigin = $mydomain
+---
+> myorigin = $mydomain
+115a116,117
+> inet_interfaces = loopback-only
+> 
+160c162
+< #mydestination = $myhostname, localhost.$mydomain, localhost
+---
+> mydestination = localhost
+247c249
+< #mynetworks_style = host
+---
+> mynetworks_style = host
+292c294
+< #relay_domains = $mydestination
+---
+> relay_domains = $mydestination
+417c419
+< #home_mailbox = Maildir/
+---
+> home_mailbox = Maildir/
+659a662,676
+> 
+> virtual_mailbox_domains = virtualdomain.tld
+> virtual_alias_maps = hash:/etc/postfix/virtual_alias, mysql:/etc/postfix/mysql_virtual_forwards.cf
+> virtual_mailbox_domains = mysql:/etc/postfix/mysql_virtual_domains.cf
+> virtual_mailbox_maps = mysql:/etc/postfix/mysql_virtual_mailboxes.cf
+> virtual_mailbox_base = /home/vmailer
+> virtual_uid_maps = static:5003
+> virtual_gid_maps = static:5003
+> virtual_minimum_uid = 5003
+> virtual_mailbox_limit = 51200000
+> 
+> 
+> append_dot_mydomain = no
+> default_transport = error: Local delivery only!
