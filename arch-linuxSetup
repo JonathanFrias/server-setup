@@ -59,7 +59,7 @@ arch-chroot /mnt mkdir /home/$USER
 arch-chroot /mnt useradd -d /home/$USER $USER
 arch-chroot /mnt chown $USER:$USER /home/$USER
 arch-chroot /mnt chmod u+w /etc/sudoers
-arch-chroot /mnt echo "$USER ALL=(ALL) ALL" >> /etc/sudoers
+echo "$USER ALL=(ALL) ALL" >> /mnt/etc/sudoers
 arch-chroot /mnt chmod u-w /etc/sudoers
 echo "$USER:$USER" >> passwords
 
