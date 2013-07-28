@@ -101,6 +101,7 @@ echo "#   Extra Configs   #"
 echo "#####################"
 cp -r /etc/zsh /mnt/etc/
 cp ~/.zshrc /mnt/root/
+patch /mnt/etc/pacman.conf < chroot/etc/pacman.conf.patch
 
 #Don't use persistent names
 ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
