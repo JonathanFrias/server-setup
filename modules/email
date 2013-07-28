@@ -1,2 +1,17 @@
 sh pacaur
 arch-chroot /mnt pacaur -S postfix courier-imap squirrelmail mariadb apache openssl --asroot --noconfirm
+
+arch-chroot /mnt  groupadd -g 5003 vmail
+arch-chroot /mnt  useradd -g vmail -u 5003 -d /home/vmailer -s /bin/false vmailer
+arch-chroot /mnt  mkdir /home/vmailer
+arch-chroot /mnt  chown vmailer.vmail /home/vmailer
+arch-chroot /mnt  chmod -R 750 /home/vmailer
+echo "vmailer:vmailer" >> /mnt/root/passwords
+arch-chroot /mnt chpasswd < /mnt/root/passwords
+
+patch /mnt/etc/postfix/main.cf < chroot/etc/postfix/main.cf.patch
+arch-chroot /mnt postconf -d mailbox_size_limit
+arch-chroot /mnt postconf -d message_size_limit
+
+patch /mnt/etc/postfix/aliases < crhoot/etc/postfix/aliases.patch
+arch-chroot /mnt postalias /etc/postfix/aliases
