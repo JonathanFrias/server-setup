@@ -104,3 +104,4 @@ cp ~/.zshrc /mnt/root/
 
 #Don't use persistent names
 ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
+cd server-setup/modules
