@@ -1,0 +1,7 @@
+user = vmailer
+password = vmailer
+hosts = localhost
+dbname = postfix
+table = domains
+select_field = 'virtual'
+where_field = domain
