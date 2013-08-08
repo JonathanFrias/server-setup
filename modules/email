@@ -3,7 +3,11 @@ sh pacaur
 
 patch /mnt/etc/xdg/pacaur/config < ../chroot/etc/xdg/pacaur/config.patch
 # This next command is going to take a long time to run...
-arch-chroot /mnt pacaur -S postfix courier-imap squirrelmail mariadb apache openssl --asroot --noconfirm
+arch-chroot /mnt pacaur -S postfix squirrelmail mariadb apache openssl --asroot --noconfirm
+arch-chroot /mnt pacman -U ../bin/courier-authlib-0.65.0-11-x86_64.pkg.tar.xz --noconfirm
+arch-chroot /mnt pacman -U ../bin/courier-maildrop-2.6.0-2-x86_64.pkg.tar.xz --noconfirm
+arch-chroot /mnt pacman -U ../bin/courier-imap-4.13-11-x86_64.pkg.tar.xz --noconfirm
+arch-chroot /mnt pacman -U ../bin/squirrelmail-1.4.22-1-any.pkg.tar.xz
 
 user_group=vmail 
 arch-chroot /mnt  groupadd -g 5003 $user_group
