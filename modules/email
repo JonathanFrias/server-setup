@@ -1,4 +1,7 @@
+set -e # Quit on error
 sh pacaur
+
+patch /mnt/etc/xdg/pacaur/config < chroot/etc/xdg/pacaur/config.patch
 arch-chroot /mnt pacaur -S postfix courier-imap squirrelmail mariadb apache openssl --asroot --noconfirm
 
 arch-chroot /mnt  groupadd -g 5003 vmail
@@ -9,9 +12,12 @@ arch-chroot /mnt  chmod -R 750 /home/vmailer
 echo "vmailer:vmailer" >> /mnt/root/passwords
 arch-chroot /mnt chpasswd < /mnt/root/passwords
 
-patch /mnt/etc/postfix/main.cf < chroot/etc/postfix/main.cf.patch
+patch /mnt/etc/postfix/main.cf < ../chroot/etc/postfix/main.cf.patch
 arch-chroot /mnt postconf -d mailbox_size_limit
 arch-chroot /mnt postconf -d message_size_limit
 
-patch /mnt/etc/postfix/aliases < crhoot/etc/postfix/aliases.patch
+patch /mnt/etc/postfix/aliases < ../chroot/etc/postfix/aliases.patch
 arch-chroot /mnt postalias /etc/postfix/aliases
+
+patch /mnt/etc/postfix/virtual_alias < ../chroot/etc/postfix/virtual_alias.patch
+arch-chroot /mnt postalias /etc/postfix/virtual_alias
