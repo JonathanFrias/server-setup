@@ -10,26 +10,15 @@
 < #myorigin = $mydomain
 ---
 > myorigin = $mydomain
-115a116,117
-> inet_interfaces = loopback-only
-> 
-160c162
+160c160
 < #mydestination = $myhostname, localhost.$mydomain, localhost
 ---
-> mydestination = localhost
-247c249
-< #mynetworks_style = host
----
-> mynetworks_style = host
-292c294
-< #relay_domains = $mydestination
----
-> relay_domains = $mydestination
-417c419
+> mydestination = $myhostname, localhost.$mydomain, localhost
+417c417
 < #home_mailbox = Maildir/
 ---
 > home_mailbox = Maildir/
-659a662,676
+659a660,669
 > 
 > virtual_mailbox_domains = virtualdomain.tld
 > virtual_alias_maps = hash:/etc/postfix/virtual_alias, mysql:/etc/postfix/mysql_virtual_forwards.cf
@@ -40,7 +29,3 @@
 > virtual_gid_maps = static:5003
 > virtual_minimum_uid = 5003
 > virtual_mailbox_limit = 51200000
-> 
-> 
-> append_dot_mydomain = no
-> default_transport = error: Local delivery only!
