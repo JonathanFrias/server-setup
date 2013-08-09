@@ -1,6 +1,8 @@
 set -e # Quit on error
 sh pacaur
 
+echo 'gofrias.com' > /mnt/etc/hostname
+
 patch /mnt/etc/xdg/pacaur/config < ../chroot/etc/xdg/pacaur/config.patch
 # This next command is going to take a long time to run...
 arch-chroot /mnt pacaur -S postfix squirrelmail mariadb apache openssl --asroot --noconfirm
@@ -10,7 +12,7 @@ arch-chroot /mnt pacman -U ~/aur_builds/courier-authlib-0.65.0-11-x86_64.pkg.tar
 arch-chroot /mnt pacman -U ~/aur_builds/courier-maildrop-2.6.0-2-x86_64.pkg.tar.xz --noconfirm
 arch-chroot /mnt pacman -U ~/aur_builds/courier-imap-4.13-11-x86_64.pkg.tar.xz --noconfirm
 
-user_group=vmail 
+user_group=vmail
 arch-chroot /mnt groupadd -g 5003 $user_group
 arch-chroot /mnt useradd -g $user_group -u 5003 -d /home/vmailer -s /bin/false vmailer
 arch-chroot /mnt mkdir /home/vmailer
@@ -30,7 +32,8 @@ cp ../chroot/etc/postfix/virtual_alias /mnt/etc/postfix/
 arch-chroot /mnt postalias /etc/postfix/virtual_alias
 
 cp ../chroot/etc/postfix/mysql_virtual_domains.cf /mnt/etc/postfix/
-
 cp ../chroot/etc/postfix/mysql_virtual_mailboxes.cf /mnt/etc/postfix/
-
 cp ../chroot/etc/postfix/mysql_virtual_forwards.cf /mnt/etc/postfix/
+
+arch-chroot /mnt postfix check
+
