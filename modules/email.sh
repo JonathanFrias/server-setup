@@ -61,3 +61,6 @@ echo "mysql < ~/email.sql && rm ~/email.sql" > /mnt/root/email-init
 echo "if [ -f ~/email-init ] then 
   sh ~/email-init 
 fi" >> /mnt/root/.bashrc
+
+echo "Initial Email server setup has been done!"
+echo "Email's mysql database still needs to be configured! Please reboot and run `/root/email-init' as root"
