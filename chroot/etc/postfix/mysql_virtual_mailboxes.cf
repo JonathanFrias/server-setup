@@ -1,4 +1,5 @@
 user = postfixuser
+password = secret
 hosts = localhost
 dbname = postfix
 table = users
