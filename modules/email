@@ -26,7 +26,11 @@ arch-chroot /mnt postconf -d message_size_limit
 patch /mnt/etc/postfix/aliases < ../chroot/etc/postfix/aliases.patch
 arch-chroot /mnt postalias /etc/postfix/aliases
 
-cp ../chroot/etc/postfix/virtual_alias /mnt/etc/postfix/virtual_alias
+cp ../chroot/etc/postfix/virtual_alias /mnt/etc/postfix/
 arch-chroot /mnt postalias /etc/postfix/virtual_alias
 
-cp ../chroot/etc/postfix/mysql_virtual_domains.cf /mnt/etc/postfix/mysql_virtual_domains.cf
+cp ../chroot/etc/postfix/mysql_virtual_domains.cf /mnt/etc/postfix/
+
+cp ../chroot/etc/postfix/mysql_virtual_mailboxes.cf /mnt/etc/postfix/
+
+cp ../chroot/etc/postfix/mysql_virtual_forwards.cf /mnt/etc/postfix/
