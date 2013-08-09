@@ -1,9 +1,8 @@
 set -e # Quit on error
-
+sh pacaur.sh
 echo "#####################"
 echo "#   Dependencies    #"
 echo "#####################"
-sh pacaur.sh
 
 echo 'gofrias.com' > /mnt/etc/hostname
 
@@ -46,7 +45,7 @@ cp ../chroot/etc/postfix/mysql_virtual_mailboxes.cf /mnt/etc/postfix/
 cp ../chroot/etc/postfix/mysql_virtual_forwards.cf /mnt/etc/postfix/
 
 arch-chroot /mnt postfix check
-patch /mnt/etc/courier-imap/imapd < ../chroot/courier-imap/imapd.patch
+patch /mnt/etc/courier-imap/imapd < ../chroot/etc/courier-imap/imapd.patch
 cp /mnt/etc/authlib/authmysqlrc ../chroot/etc/authlib/authmysqlrc
 
 echo "#####################"
@@ -56,3 +55,9 @@ ln -s '/usr/lib/systemd/system/mysqld.service' '/mnt/etc/systemd/system/multi-us
 ln -s '/usr/lib/systemd/system/postfix.service' '/mnt/etc/systemd/system/multi-user.target.wants/postfix.service'
 ln -s '/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/multi-user.target.wants/courier-imapd.service'
 ln -s '/usr/lib/systemd/system/authdaemond.service' '/mnt/etc/systemd/system/multi-user.target.wants/authdaemond.service'
+
+cp email.sql /mnt/root/email.sql
+echo "mysql < ~/email.sql && rm ~/email.sql" > /mnt/root/email-init
+echo "if [ -f ~/email-init ] then 
+  sh ~/email-init 
+fi" >> /mnt/root/.bashrc
