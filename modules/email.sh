@@ -1,4 +1,8 @@
 set -e # Quit on error
+
+echo "#####################"
+echo "#   Dependencies    #"
+echo "#####################"
 sh pacaur.sh
 
 echo 'gofrias.com' > /mnt/etc/hostname
@@ -12,6 +16,9 @@ arch-chroot /mnt pacman -U ~/aur_builds/courier-authlib-0.65.0-11-x86_64.pkg.tar
 arch-chroot /mnt pacman -U ~/aur_builds/courier-maildrop-2.6.0-2-x86_64.pkg.tar.xz --noconfirm
 arch-chroot /mnt pacman -U ~/aur_builds/courier-imap-4.13-11-x86_64.pkg.tar.xz --noconfirm
 
+echo "#####################"
+echo "#  Virtual Account  #"
+echo "#####################"
 user_group=vmail
 arch-chroot /mnt groupadd -g 5003 $user_group
 arch-chroot /mnt useradd -g $user_group -u 5003 -d /home/vmailer -s /bin/false vmailer
@@ -21,6 +28,9 @@ arch-chroot /mnt chmod -R 750 /home/vmailer
 echo "vmailer:vmailer" >> /mnt/root/passwords
 arch-chroot /mnt chpasswd < /mnt/root/passwords
 
+echo "#####################"
+echo "#  Patching files   #"
+echo "#####################"
 patch /mnt/etc/postfix/main.cf < ../chroot/etc/postfix/main.cf.patch
 arch-chroot /mnt postconf -d mailbox_size_limit
 arch-chroot /mnt postconf -d message_size_limit
@@ -39,6 +49,9 @@ arch-chroot /mnt postfix check
 patch /mnt/etc/courier-imap/imapd < ../chroot/courier-imap/imapd.patch
 cp /mnt/etc/authlib/authmysqlrc ../chroot/etc/authlib/authmysqlrc
 
+echo "#####################"
+echo "# Enabling services #"
+echo "#####################"
 ln -s '/usr/lib/systemd/system/mysqld.service' '/mnt/etc/systemd/system/multi-user.target.wants/mysqld.service'
 ln -s '/usr/lib/systemd/system/postfix.service' '/mnt/etc/systemd/system/multi-user.target.wants/postfix.service'
 ln -s '/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/multi-user.target.wants/courier-imapd.service'
