@@ -1,5 +1,5 @@
 set -e # Quit on error
-sh pacaur
+sh pacaur.sh
 
 echo 'gofrias.com' > /mnt/etc/hostname
 
@@ -37,5 +37,9 @@ cp ../chroot/etc/postfix/mysql_virtual_forwards.cf /mnt/etc/postfix/
 
 arch-chroot /mnt postfix check
 
+exit
+patch /mnt/etc/
+
+ln -s '/mnt/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/multi-user.target.wants/courier-imapd.
 ln -s '/mnt/usr/lib/systemd/system/authdaemond.service' '/mnt/etc/systemd/system/multi-user.target.wants/authdaemond.service'
-ln -s '/mnt/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/multi-user.target.wants/courier-imapd.service'
+service'
