@@ -21,7 +21,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `email` (`email`)
 );
 
-CREATE USER 'postfixuser' IDENTIFIED BY 'secret';
+CREATE USER 'postfixuser';
 GRANT SELECT, INSERT, UPDATE, DELETE ON domains TO postfixuser;
 GRANT SELECT, INSERT, UPDATE, DELETE ON forwardings TO postfixuser;
 GRANT SELECT, INSERT, UPDATE, DELETE ON users TO postfixuser;
