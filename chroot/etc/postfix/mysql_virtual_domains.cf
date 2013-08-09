@@ -1,5 +1,5 @@
-user = vmailer
-password = vmailer
+user = postfixuser
+password = secret
 hosts = localhost
 dbname = postfix
 table = domains
