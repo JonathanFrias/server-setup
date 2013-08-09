@@ -36,9 +36,10 @@ cp ../chroot/etc/postfix/mysql_virtual_mailboxes.cf /mnt/etc/postfix/
 cp ../chroot/etc/postfix/mysql_virtual_forwards.cf /mnt/etc/postfix/
 
 arch-chroot /mnt postfix check
+patch /mnt/etc/courier-imap/imapd < ../chroot/courier-imap/imapd.patch
+cp /mnt/etc/authlib/authmysqlrc ../chroot/etc/authlib/authmysqlrc
 
-exit
-
-ln -s '/mnt/usr/lib/systemd/system/postfix.service' '/mnt/etc/systemd/system/multi-user.target.wants/postfix.service'
-ln -s '/mnt/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/multi-user.target.wants/courier-imapd.service'
-ln -s '/mnt/usr/lib/systemd/system/authdaemond.service' '/mnt/etc/systemd/system/multi-user.target.wants/authdaemond.service'
+ln -s '/usr/lib/systemd/system/mysqld.service' '/mnt/etc/systemd/system/multi-user.target.wants/mysqld.service'
+ln -s '/usr/lib/systemd/system/postfix.service' '/mnt/etc/systemd/system/multi-user.target.wants/postfix.service'
+ln -s '/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/multi-user.target.wants/courier-imapd.service'
+ln -s '/usr/lib/systemd/system/authdaemond.service' '/mnt/etc/systemd/system/multi-user.target.wants/authdaemond.service'
