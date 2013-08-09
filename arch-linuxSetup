@@ -99,3 +99,5 @@ patch /mnt/etc/pacman.conf < chroot/etc/pacman.conf.patch
 #Don't use persistent names
 ln -s /dev/null /mnt/etc/udev/rules.d/80-net-name-slot.rules
 cd modules
+
+echo "Arch linux has been installed!"
