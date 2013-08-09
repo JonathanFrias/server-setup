@@ -1,0 +1,16 @@
+MYSQL_SERVER            localhost
+MYSQL_USERNAME          postfixuser
+MYSQL_PASSWORD          secret
+MYSQL_SOCKET            /run/mysqld/mysqld.sock
+MYSQL_DATABASE          postfix
+# MYSQL_NAME_FIELD      name
+MYSQL_USER_TABLE        users
+MYSQL_CLEAR_PWFIELD     password
+MYSQL_UID_FIELD         '5003'
+##note, this is the uid that we set in /etc/postfix/main.cf
+MYSQL_GID_FIELD         '5003'
+##note, this is the gid that we set in /etc/postfix/main.cf
+MYSQL_LOGIN_FIELD       email
+MYSQL_HOME_FIELD        "/home/vmailer"
+MYSQL_MAILDIR_FIELD     concat(domain,'/',email,'/')
+MYSQL_QUOTA_FIELD       quota

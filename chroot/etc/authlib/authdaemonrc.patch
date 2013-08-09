@@ -1,0 +1,4 @@
+27c27
+< authmodulelist="authuserdb authpam authpwd authshadow authpgsql authldap authmysql authsqlite authcustom authpipe"
+---
+> authmodulelist="authmysql"
