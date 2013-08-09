@@ -4,4 +4,4 @@ hosts = localhost
 dbname = postfix
 table = domains
 select_field = 'virtual'
-where_field = domain
+where_field = gofrias.com

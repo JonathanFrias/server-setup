@@ -1,0 +1,7 @@
+user = vmailer
+password = vmailer
+hosts = localhost
+dbname = postfix
+table = users
+select_field = concat(domain,'/',email,'/')
+where_field = email

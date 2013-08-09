@@ -1,0 +1,7 @@
+user = vmailer
+password = vmailer
+hosts = localhost
+dbname = postfix
+table = forwardings
+select_field = destination
+where_field = source
