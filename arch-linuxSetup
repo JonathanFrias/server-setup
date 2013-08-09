@@ -9,6 +9,8 @@ echo "#####################"
 echo "#    Partitions     #"
 echo "#####################"
 #Simulate user keystrokes to the fdisk program
+# +6G is the size of the first partition
+# +2G is the size of the swap partition
 echo "
 n
 p
@@ -81,10 +83,11 @@ echo "#####################"
 echo "#   Extra Packages  #"
 echo "#####################"
 arch-chroot /mnt pacman -S --noconfirm vim zsh ntp sudo wget curl net-tools bash-completion sudo expac
+arch-chroot /mnt pacman -S openssh --noconfirm
 
 # Optionally install network manager
 # arch-chroot /mnt pacman -S network-manager-applet
-arch-chroot /mnt pacman -S openssh --noconfirm
+
 
 echo "#####################"
 echo "#   Extra Configs   #"
