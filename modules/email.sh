@@ -57,7 +57,7 @@ ln -s '/usr/lib/systemd/system/courier-imapd.service' '/mnt/etc/systemd/system/m
 ln -s '/usr/lib/systemd/system/authdaemond.service' '/mnt/etc/systemd/system/multi-user.target.wants/authdaemond.service'
 
 cp email.sql /mnt/root/email.sql
-echo "mysql < ~/email.sql && rm ~/email.sql" > /mnt/root/email-init
+echo "mysql < ~/email.sql && rm ~/email-init" > /mnt/root/email-init
 echo "if [ -f ~/email-init ] then 
   sh ~/email-init 
 fi" >> /mnt/root/.bashrc
