@@ -35,10 +35,17 @@ echo "#  Mount Device     #"
 echo "#####################"
 mount /dev/sda1 /mnt
 
-echo "#####################" 
+echo "#####################"
 echo "#  Install Base     #"
 echo "#####################"
 pacstrap /mnt base
+
+echo "#####################"
+echo "#   Boot Manager    #"
+echo "#####################"
+arch-chroot /mnt pacman -S grub-bios os-prober --noconfirm
+arch-chroot /mnt grub-install --recheck /dev/sda
+arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "#####################"
 echo "#  Generate Fstab   #"
@@ -54,6 +61,14 @@ arch-chroot /mnt locale-gen
 arch-chroot /mnt loadkeys us #US keyboard
 arch-chroot /mnt ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 
+
+echo "#####################"
+echo "#  Root Account     #"
+echo "#####################"
+cp passwords /mnt/root/
+arch-chroot /mnt chpasswd < /mnt/root/passwords
+
+
 echo "#####################"
 echo "#   User Account    #"
 echo "#####################"
@@ -65,20 +80,6 @@ arch-chroot /mnt chmod u+w /etc/sudoers
 echo "$user ALL=(ALL) ALL" >> /mnt/etc/sudoers
 arch-chroot /mnt chmod u-w /etc/sudoers
 echo "$user:$user" >> passwords
-
-echo "#####################"
-echo "#  Root Account     #"
-echo "#####################"
-cp passwords /mnt/root/
-arch-chroot /mnt chpasswd < /mnt/root/passwords
-
-echo "#####################"
-echo "#   Boot Manager    #"
-echo "#####################"
-arch-chroot /mnt pacman -S grub-bios os-prober --noconfirm
-arch-chroot /mnt grub-install --recheck /dev/sda
-arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
-
 
 echo "#####################"
 echo "#   Extra Packages  #"
