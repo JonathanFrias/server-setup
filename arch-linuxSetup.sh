@@ -70,15 +70,15 @@ arch-chroot /mnt chpasswd < /mnt/root/passwords
 echo "#####################"
 echo "#   User Account    #"
 echo "#####################"
-arch-chroot /mnt pacman -S sudo
+arch-chroot /mnt pacman -S sudo --noconfirm
 user=jf
 arch-chroot /mnt mkdir /home/$user
 arch-chroot /mnt useradd -d /home/$user $user
 arch-chroot /mnt chown $user:$user /home/$user
-arch-chroot /mnt chmod u+w /mnt/etc/sudoers
+arch-chroot /mnt chmod u+w /etc/sudoers
 echo "$user ALL=(ALL) ALL" >> /mnt/etc/sudoers
-arch-chroot /mnt chmod u-w /mnt/etc/sudoers
-echo "$user:$user" >> passwords
+arch-chroot /mnt chmod u-w /etc/sudoers
+echo "$user:$user" >> /mnt/root/passwords
 arch-chroot /mnt chpasswd < /mnt/root/passwords
 
 echo "#####################"
