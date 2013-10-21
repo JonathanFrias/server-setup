@@ -70,6 +70,7 @@ arch-chroot /mnt chpasswd < /mnt/root/passwords
 echo "#####################"
 echo "#   User Account    #"
 echo "#####################"
+arch-chroot /mnt pacman -S sudo
 user=jf
 arch-chroot /mnt mkdir /home/$user
 arch-chroot /mnt useradd -d /home/$user $user
