@@ -61,6 +61,7 @@ user=jf
 arch-chroot /mnt mkdir /home/$user
 arch-chroot /mnt useradd -d /home/$user $user
 arch-chroot /mnt chown $user:$user /home/$user
+arch-chroot /mnt chmod u+w /etc/sudoers
 echo "$user ALL=(ALL) ALL" >> /mnt/etc/sudoers
 arch-chroot /mnt chmod u-w /etc/sudoers
 echo "$user:$user" >> passwords
