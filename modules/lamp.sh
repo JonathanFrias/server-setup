@@ -3,7 +3,7 @@ echo "#   Dependencies    #"
 echo "#####################"
 
 #LAMP STACk
-pacman -S apache  php php-apache mariadb php-pear                             
+pacman -S apache  php php-apache mariadb php-pear
 pear list-all
 pear install pear/MDB2_Driver_mysqli
 pear install pear/MDB2#mysqli 
