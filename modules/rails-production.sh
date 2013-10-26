@@ -1,7 +1,7 @@
 arch-chroot /mnt pacman -S apache mariadb ruby nodejs
-#read -r -d '' msg <<'HEREDOC'
 export msg="
   sudo -u $user curl -L get.rvm.io | bash
+  exit # Must logout/login
   usermod -aG rvm $user
   rvm install 2.0.0
   rvm use 2.0.0 --default
@@ -10,7 +10,6 @@ export msg="
   gem install passenger mysql
   passenger-install-apache2-module
 "
-# HEREDOC
 export msg="$msg"
 echo $msg
 echo "Please reboot and run the following commands as $user"
