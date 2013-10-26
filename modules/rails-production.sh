@@ -12,6 +12,7 @@ export msg="
 "
 # HEREDOC
 export msg="$msg"
+echo $msg
 echo "Please reboot and run the following commands as $user"
 echo "$msg" > /mnt/home/$user/rails
 echo "These commands have been saved in $user's home directory"
