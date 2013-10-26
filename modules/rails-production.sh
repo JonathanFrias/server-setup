@@ -12,6 +12,6 @@ export msg="
 "
 export msg="$msg"
 echo $msg
-echo "Please reboot and run the following commands as $user"
-echo "$msg" > /mnt/home/$user/rails
-echo "These commands have been saved in $user's home directory"
+echo "Please reboot and run the following commands as root"
+echo "$msg" > /mnt/root/rails
+echo "These commands have been saved in root's home directory as 'rails'"
