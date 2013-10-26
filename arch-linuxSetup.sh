@@ -71,7 +71,7 @@ echo "#####################"
 echo "#   User Account    #"
 echo "#####################"
 arch-chroot /mnt pacman -S sudo --noconfirm
-user=jf
+export user=jf
 arch-chroot /mnt mkdir /home/$user
 arch-chroot /mnt useradd -d /home/$user $user
 arch-chroot /mnt chown $user:$user /home/$user

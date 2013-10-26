@@ -1,5 +1,6 @@
 arch-chroot /mnt pacman -S apache mariadb ruby nodejs
-read -r -d '' msg <<'HEREDOC'
+#read -r -d '' msg <<'HEREDOC'
+export msg="
   sudo -u $user curl -L get.rvm.io | bash
   usermod -aG rvm $user
   rvm install 2.0.0
@@ -9,7 +10,8 @@ read -r -d '' msg <<'HEREDOC'
   gem install passenger mysql
   passenger-install-apache2-module
 "
-HEREDOC
+# HEREDOC
+export msg="$msg"
 echo "Please reboot and run the following commands as $user"
 echo "$msg" > /mnt/home/$user/rails
 echo "These commands have been saved in $user's home directory"
