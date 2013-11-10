@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.StatisticsProviderService
+path: 416FDF355AD712744AD5235FA25B2A5F.gwt.rpc

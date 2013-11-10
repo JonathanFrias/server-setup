@@ -1,0 +1,551 @@
+2013-11-04 06:57:15,861  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 06:57:17,185  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ee-dev. This may take a few minutes.
+2013-11-04 06:57:18,051  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Creating BYON context deployer for cloud: EE Development Servers
+2013-11-04 06:57:19,562  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_MANAGEMENT_01. Free nodes: id='ee-mgmt-01.lab.webapps.rr.com', privateIp='71.74.48.136', hostName='ee-mgmt-01', nodeName='ee-mgmt-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:57:21,072  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_01. Free nodes: id='ee-app-01.lab.webapps.rr.com', privateIp='71.74.49.111', hostName='ee-app-01', nodeName='ee-app-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:57:22,577  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_02. Free nodes: id='ee-app-02.lab.webapps.rr.com', privateIp='71.74.48.103', hostName='ee-app-02', nodeName='ee-app-02.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:57:24,130  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_DB_01. Free nodes: id='ee-db-01.lab.webapps.rr.com', privateIp='71.74.49.112', hostName='ee-db-01', nodeName='ee-db-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:57:24,135  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 06:57:24,139  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - DefaultCloudProvisioning: startMachine - management == true
+2013-11-04 06:57:24,310  WARNING [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Failed locating existing management servers
+2013-11-04 06:57:24,313  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Cloudify Deployer is creating a machine named: ee_manager_1. This may take a few minutes
+2013-11-04 06:57:24,517  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Machine successfully allocated
+2013-11-04 06:57:24,578  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 71.74.48.136.
+2013-11-04 06:57:29,814  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 71.74.48.136.
+2013-11-04 06:57:29,878  INFO [org.apache.commons.vfs2.impl.StandardFileSystemManager] - Using "/var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/vfs_cache" as temporary files store.
+2013-11-04 06:57:30,330  INFO [com.jcraft.jsch] - Connecting to 71.74.48.136 port 22
+2013-11-04 06:57:30,521  INFO [com.jcraft.jsch] - Connection established
+2013-11-04 06:57:30,776  INFO [com.jcraft.jsch] - Remote version string: SSH-1.99-OpenSSH_5.3
+2013-11-04 06:57:30,776  INFO [com.jcraft.jsch] - Local version string: SSH-2.0-JSCH-0.1.49
+2013-11-04 06:57:30,776  INFO [com.jcraft.jsch] - CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+2013-11-04 06:57:31,163  INFO [com.jcraft.jsch] - aes256-ctr is not available.
+2013-11-04 06:57:31,163  INFO [com.jcraft.jsch] - aes192-ctr is not available.
+2013-11-04 06:57:31,163  INFO [com.jcraft.jsch] - aes256-cbc is not available.
+2013-11-04 06:57:31,163  INFO [com.jcraft.jsch] - aes192-cbc is not available.
+2013-11-04 06:57:31,164  INFO [com.jcraft.jsch] - arcfour256 is not available.
+2013-11-04 06:57:31,164  INFO [com.jcraft.jsch] - CheckKexes: diffie-hellman-group14-sha1
+2013-11-04 06:57:31,185  INFO [com.jcraft.jsch] - diffie-hellman-group14-sha1 is not available.
+2013-11-04 06:57:31,186  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT sent
+2013-11-04 06:57:31,186  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT received
+2013-11-04 06:57:31,186  INFO [com.jcraft.jsch] - kex: server: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+2013-11-04 06:57:31,186  INFO [com.jcraft.jsch] - kex: server: ssh-rsa,ssh-dss
+2013-11-04 06:57:31,186  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 06:57:31,186  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: client: diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: client: ssh-rsa,ssh-dss
+2013-11-04 06:57:31,187  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 06:57:31,188  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 06:57:31,189  INFO [com.jcraft.jsch] - kex: server->client aes128-ctr hmac-md5 none
+2013-11-04 06:57:31,189  INFO [com.jcraft.jsch] - kex: client->server aes128-ctr hmac-md5 none
+2013-11-04 06:57:31,196  INFO [com.jcraft.jsch] - SSH_MSG_KEXDH_INIT sent
+2013-11-04 06:57:31,197  INFO [com.jcraft.jsch] - expecting SSH_MSG_KEXDH_REPLY
+2013-11-04 06:57:31,540  INFO [com.jcraft.jsch] - ssh_rsa_verify: signature true
+2013-11-04 06:57:31,541  INFO [com.jcraft.jsch] - Host '71.74.48.136' is known and mathces the RSA host key
+2013-11-04 06:57:31,541  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS sent
+2013-11-04 06:57:31,541  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS received
+2013-11-04 06:57:31,544  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_REQUEST sent
+2013-11-04 06:57:31,819  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_ACCEPT received
+2013-11-04 06:57:32,129  INFO [com.jcraft.jsch] - Authentications that can continue: publickey,keyboard-interactive,password
+2013-11-04 06:57:32,129  INFO [com.jcraft.jsch] - Next authentication method: publickey
+2013-11-04 06:57:32,787  INFO [com.jcraft.jsch] - Authentication succeeded (publickey).
+2013-11-04 06:57:34,260  INFO [org.cloudifysource.esc.installer.filetransfer.SftpFileTransfer] - Deleting contents of remote directory: sftp://cloudify@71.74.48.136/tmp/gs-files
+2013-11-04 06:58:20,389  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 71.74.48.136.
+2013-11-04 06:58:20,498  INFO [com.jcraft.jsch] - Connecting to 71.74.48.136 port 22
+2013-11-04 06:58:20,643  INFO [com.jcraft.jsch] - Connection established
+2013-11-04 06:58:20,791  INFO [com.jcraft.jsch] - Remote version string: SSH-1.99-OpenSSH_5.3
+2013-11-04 06:58:20,791  INFO [com.jcraft.jsch] - Local version string: SSH-2.0-JSCH-0.1.49
+2013-11-04 06:58:20,791  INFO [com.jcraft.jsch] - CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+2013-11-04 06:58:20,795  INFO [com.jcraft.jsch] - aes256-ctr is not available.
+2013-11-04 06:58:20,795  INFO [com.jcraft.jsch] - aes192-ctr is not available.
+2013-11-04 06:58:20,795  INFO [com.jcraft.jsch] - aes256-cbc is not available.
+2013-11-04 06:58:20,795  INFO [com.jcraft.jsch] - aes192-cbc is not available.
+2013-11-04 06:58:20,795  INFO [com.jcraft.jsch] - arcfour256 is not available.
+2013-11-04 06:58:20,796  INFO [com.jcraft.jsch] - CheckKexes: diffie-hellman-group14-sha1
+2013-11-04 06:58:20,796  INFO [com.jcraft.jsch] - diffie-hellman-group14-sha1 is not available.
+2013-11-04 06:58:20,796  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT sent
+2013-11-04 06:58:20,956  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT received
+2013-11-04 06:58:20,956  INFO [com.jcraft.jsch] - kex: server: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+2013-11-04 06:58:20,956  INFO [com.jcraft.jsch] - kex: server: ssh-rsa,ssh-dss
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 06:58:20,957  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: ssh-rsa,ssh-dss
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 06:58:20,958  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 06:58:20,959  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 06:58:20,959  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 06:58:20,959  INFO [com.jcraft.jsch] - kex: server->client aes128-ctr hmac-md5 none
+2013-11-04 06:58:20,959  INFO [com.jcraft.jsch] - kex: client->server aes128-ctr hmac-md5 none
+2013-11-04 06:58:20,962  INFO [com.jcraft.jsch] - SSH_MSG_KEXDH_INIT sent
+2013-11-04 06:58:20,962  INFO [com.jcraft.jsch] - expecting SSH_MSG_KEXDH_REPLY
+2013-11-04 06:58:21,164  INFO [com.jcraft.jsch] - ssh_rsa_verify: signature true
+2013-11-04 06:58:21,164  WARNING [com.jcraft.jsch] - Permanently added '71.74.48.136' (RSA) to the list of known hosts.
+2013-11-04 06:58:21,164  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS sent
+2013-11-04 06:58:21,165  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS received
+2013-11-04 06:58:21,166  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_REQUEST sent
+2013-11-04 06:58:21,365  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_ACCEPT received
+2013-11-04 06:58:21,562  INFO [com.jcraft.jsch] - Authentications that can continue: publickey,keyboard-interactive,password
+2013-11-04 06:58:21,563  INFO [com.jcraft.jsch] - Next authentication method: publickey
+2013-11-04 06:58:21,968  INFO [com.jcraft.jsch] - Authentication succeeded (publickey).
+2013-11-04 06:58:22,300  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Checking script path
+2013-11-04 06:58:22,310  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] script path is /tmp/gs-files/upload
+2013-11-04 06:58:22,313  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Running script /tmp/gs-files/upload/pre-bootstrap.sh
+2013-11-04 06:58:22,313  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] checking for previous java installation
+2013-11-04 06:58:22,313  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] checking for previous gigaspaces installation
+2013-11-04 06:58:22,313  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Previous JAVA_HOME value --
+2013-11-04 06:58:22,314  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Downloading JDK from http://relic.lab.webapps.rr.com/artifactory/files-local/ee/jdk-6u32-linux-x64.bin
+2013-11-04 06:58:24,181  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Installing JDK
+2013-11-04 06:58:29,746  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Downloading cloudify installation from http://relic.lab.webapps.rr.com/artifactory/files-local/ee/gigaspaces-cloudify-2.6.1-ga-b5200.tar.gz
+2013-11-04 06:58:34,542  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Updating environment script
+2013-11-04 06:58:34,579  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Setting privileged mode
+2013-11-04 06:58:34,589  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Running script /tmp/gs-files/upload/post-bootstrap.sh
+2013-11-04 06:58:34,605  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] mkdir: cannot create directory `/data/logs/gigaspaces': File exists
+2013-11-04 06:58:34,606  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] mv: cannot stat `/home/cloudify/gigaspaces/logs/*': No such file or directory
+2013-11-04 06:58:34,636  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] nohup: ignoring input and appending output to `nohup.out'
+2013-11-04 06:59:54,614  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] cat nohup.out
+2013-11-04 06:59:54,617  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] 
+2013-11-04 06:59:54,617  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Starting Non-Interactive Shell
+2013-11-04 06:59:54,617  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /tmp/gs-fi les/ee-dev-cloud.groovy 
+2013-11-04 06:59:54,617  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-04 06:59:54,617  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] >>> exit
+2013-11-04 06:59:54,618  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Good Bye!
+2013-11-04 06:59:54,618  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] 
+2013-11-04 06:59:54,765  INFO [com.jcraft.jsch] - Disconnecting from 71.74.48.136 port 22
+2013-11-04 06:59:54,768  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 71.74.48.136.
+2013-11-04 06:59:54,768  INFO [com.jcraft.jsch] - Caught an exception, leaving main loop due to Socket closed
+2013-11-04 06:59:55,266  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:59:55,267  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:00:05,567  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:00:05,568  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:00:15,865  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:00:15,866  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:00:26,161  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:00:26,162  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:00:36,456  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:00:36,457  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:00:46,753  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:00:46,753  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:00:57,051  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:00:57,052  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:01:07,346  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:01:07,347  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:01:17,646  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:01:17,647  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:01:27,945  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:01:27,946  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:01:38,239  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:01:38,240  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:01:48,536  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:01:48,536  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:01:58,832  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:01:58,833  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:02:09,153  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:02:09,154  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:02:19,457  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:02:19,457  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:02:29,755  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:02:29,756  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:02:40,054  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:02:40,055  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:02:50,349  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:02:50,350  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:03:00,645  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:03:00,645  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:03:10,939  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:03:10,940  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:03:21,238  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:03:21,239  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:03:31,544  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:03:31,544  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:03:41,843  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:03:41,843  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:03:52,140  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:03:52,141  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:04:02,435  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:04:02,435  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:04:12,732  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:04:12,732  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:04:23,026  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:04:23,027  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:04:33,321  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:04:33,322  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:04:43,623  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:04:43,624  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:04:53,920  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:04:53,920  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:05:04,223  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:05:04,224  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:05:14,522  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:05:14,523  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:05:24,883  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:05:24,883  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:05:35,184  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:05:35,184  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:05:45,491  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:05:45,491  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:05:55,788  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:05:55,789  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:06:06,085  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:06:06,085  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:06:16,388  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:06:16,389  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:06:26,683  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:06:26,683  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:06:37,026  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:06:37,027  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:06:47,338  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:06:47,339  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:06:57,634  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:06:57,635  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:07:07,930  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:07:07,931  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:07:18,225  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:07:18,225  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:07:28,587  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:07:28,587  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:07:38,891  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:07:38,892  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:07:49,201  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:07:49,202  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:07:59,496  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:07:59,497  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:08:09,790  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:08:09,791  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:08:20,254  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:08:20,255  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:08:30,553  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:08:30,554  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:08:40,848  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:08:40,849  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:08:51,147  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:08:51,147  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:09:01,444  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:09:01,444  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:09:11,741  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:09:11,741  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:09:22,035  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:09:22,035  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:09:32,332  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:09:32,333  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:09:42,628  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:09:42,629  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:09:52,964  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:09:52,965  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:10:03,260  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:10:03,261  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:10:13,560  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:10:13,561  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:10:23,858  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:10:23,859  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:10:34,193  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:10:34,194  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:10:44,494  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:10:44,495  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:10:54,796  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:10:54,796  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:11:05,090  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:11:05,090  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:11:15,385  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:11:15,386  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:11:25,804  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:11:25,805  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:11:36,105  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:11:36,106  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:11:46,406  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:11:46,407  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:11:56,701  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:11:56,702  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:12:06,997  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:12:06,997  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:12:17,292  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:12:17,293  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:12:27,588  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:12:27,589  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:12:37,882  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:12:37,882  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:12:48,177  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:12:48,178  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:12:58,473  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:12:58,473  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:13:08,766  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:13:08,767  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:13:19,078  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:13:19,078  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:13:29,371  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:13:29,372  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:13:39,664  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:13:39,664  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:13:49,960  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:13:49,960  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:14:00,255  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:14:00,255  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:14:10,555  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:14:10,555  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:14:20,849  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:14:20,849  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:14:31,146  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:14:31,147  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:14:41,447  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:14:41,447  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:14:51,746  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:14:51,746  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:15:02,039  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:15:02,040  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:15:12,335  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:15:12,336  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:15:22,631  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:15:22,632  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:15:32,925  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:15:32,925  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:15:43,226  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:15:43,227  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:15:53,521  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:15:53,521  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:16:03,818  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:16:03,819  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:16:14,122  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:16:14,123  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:16:24,417  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:16:24,418  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:16:34,716  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:16:34,717  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:16:45,011  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:16:45,011  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:16:55,309  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:16:55,310  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:17:05,605  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:17:05,605  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:17:15,901  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:17:15,902  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:17:26,199  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:17:26,199  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:17:36,493  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:17:36,494  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:17:46,795  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:17:46,796  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:17:57,091  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:17:57,092  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:18:07,387  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:18:07,388  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:18:17,682  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:18:17,683  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:18:27,980  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:18:27,980  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:18:38,272  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:18:38,273  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:18:48,570  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:18:48,571  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:18:58,866  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:18:58,866  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:19:09,375  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:19:09,375  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:19:19,669  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:19:19,669  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:19:29,961  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:19:29,962  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:19:40,398  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:19:40,399  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:19:50,696  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:19:50,697  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:20:00,992  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:20:00,992  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:20:11,286  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:20:11,287  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:20:21,582  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:20:21,582  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:20:31,883  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:20:31,883  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:20:42,175  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:20:42,175  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:20:52,470  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:20:52,471  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:21:02,766  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:21:02,766  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:21:13,071  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:21:13,072  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:21:23,369  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:21:23,369  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:21:33,668  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:21:33,669  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:21:43,967  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:21:43,968  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:21:54,263  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:21:54,263  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:22:04,560  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:22:04,561  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:22:14,855  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:22:14,856  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:22:25,152  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:22:25,153  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:22:35,450  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:22:35,450  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:22:45,948  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:22:45,949  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:22:56,246  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:22:56,246  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:23:06,694  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:23:06,694  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:23:16,990  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:23:16,991  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:23:27,290  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:23:27,290  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:23:37,587  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:23:37,587  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:23:47,881  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:23:47,882  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:23:58,174  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:23:58,175  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:24:08,469  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:24:08,469  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:24:18,764  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:24:18,765  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:24:29,168  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:24:29,168  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:24:39,462  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:24:39,463  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:24:49,757  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:24:49,758  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:25:00,051  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:25:00,052  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:25:10,347  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:25:10,348  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:25:20,643  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:25:20,643  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:25:30,937  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:25:30,938  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:25:41,234  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:25:41,234  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:25:51,528  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:25:51,529  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:26:01,823  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:26:01,824  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:26:12,116  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:26:12,117  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:26:22,412  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:26:22,413  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:26:32,710  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:26:32,711  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:26:43,006  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:26:43,006  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:26:53,324  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:26:53,325  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:27:03,620  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:27:03,621  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:27:13,921  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:27:13,922  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:27:24,273  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:27:24,273  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:27:34,567  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:27:34,568  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:27:44,862  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:27:44,862  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:27:55,155  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:27:55,156  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:28:05,450  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:28:05,450  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:28:15,744  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:28:15,744  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:28:26,038  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:28:26,038  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:28:36,351  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:28:36,352  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:28:46,808  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:28:46,809  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:28:57,107  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:28:57,108  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:29:07,405  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:29:07,406  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:29:17,703  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:29:17,703  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:29:27,994  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:29:27,995  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:29:38,288  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:29:38,289  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:29:48,583  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:29:48,584  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:29:58,878  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:29:58,878  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:30:09,214  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:30:09,215  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:30:19,506  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:30:19,507  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:30:29,799  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:30:29,799  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:30:40,269  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:30:40,269  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:30:50,565  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:30:50,566  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:31:00,876  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:31:00,876  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:31:11,171  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:31:11,172  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:31:21,467  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:31:21,467  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:31:31,787  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:31:31,787  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:31:42,082  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:31:42,082  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:31:52,378  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:31:52,378  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:32:02,672  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:32:02,673  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:32:12,966  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:32:12,967  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:32:23,259  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:32:23,259  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:32:33,558  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:32:33,559  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:32:43,855  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:32:43,856  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:32:54,148  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:32:54,148  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:33:04,445  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:33:04,446  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:33:14,746  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:33:14,747  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:33:25,045  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:33:25,045  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:33:35,340  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:33:35,341  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:33:45,631  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:33:45,632  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:33:55,926  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:33:55,926  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:34:06,220  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:34:06,221  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:34:16,517  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:34:16,518  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:34:26,820  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:34:26,821  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:34:37,118  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:34:37,118  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:34:47,413  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:34:47,413  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:34:57,918  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:34:57,918  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:35:08,213  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:35:08,214  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 07:35:18,508  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 07:35:18,508  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.

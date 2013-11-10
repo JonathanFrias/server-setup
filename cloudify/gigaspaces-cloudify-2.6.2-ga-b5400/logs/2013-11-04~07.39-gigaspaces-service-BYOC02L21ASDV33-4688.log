@@ -1,0 +1,572 @@
+2013-11-04 07:39:50,355  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 07:39:51,504  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ee-dev. This may take a few minutes.
+2013-11-04 07:39:53,299  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Creating BYON context deployer for cloud: EE Development Servers
+2013-11-04 07:39:54,783  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_MANAGEMENT_01. Free nodes: id='ee-mgmt-01.lab.webapps.rr.com', privateIp='71.74.48.136', hostName='ee-mgmt-01', nodeName='ee-mgmt-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:39:56,317  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_01. Free nodes: id='ee-app-01.lab.webapps.rr.com', privateIp='71.74.49.111', hostName='ee-app-01', nodeName='ee-app-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:39:57,806  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_02. Free nodes: id='ee-app-02.lab.webapps.rr.com', privateIp='71.74.48.103', hostName='ee-app-02', nodeName='ee-app-02.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:39:59,283  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_DB_01. Free nodes: id='ee-db-01.lab.webapps.rr.com', privateIp='71.74.49.112', hostName='ee-db-01', nodeName='ee-db-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:39:59,288  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 07:39:59,290  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - DefaultCloudProvisioning: startMachine - management == true
+2013-11-04 07:39:59,434  WARNING [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Failed locating existing management servers
+2013-11-04 07:39:59,438  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Cloudify Deployer is creating a machine named: ee_manager_1. This may take a few minutes
+2013-11-04 07:39:59,584  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Machine successfully allocated
+2013-11-04 07:39:59,601  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 71.74.48.136.
+2013-11-04 07:40:02,692  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Command interrupted by user.
+2013-11-04 07:40:04,754  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 71.74.48.136.
+2013-11-04 07:40:04,765  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Failed accessing management VM  Reason: Could not find key file: /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-1001619819657597106/ee-dev/upload/cloudify_id_rsa.pem. KeyFile /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-1001619819657597106/ee-dev/upload/cloudify_id_rsa.pem that was passed in the installation Details does not exist; Caused by: org.cloudifysource.esc.installer.InstallerException: Could not find key file: /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-1001619819657597106/ee-dev/upload/cloudify_id_rsa.pem. KeyFile /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-1001619819657597106/ee-dev/upload/cloudify_id_rsa.pem that was passed in the installation Details does not exist
+2013-11-04 07:41:16,509  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 07:41:16,795  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ee-dev. This may take a few minutes.
+2013-11-04 07:41:18,029  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Creating BYON context deployer for cloud: EE Development Servers
+2013-11-04 07:41:18,174  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_MANAGEMENT_01. Free nodes: id='ee-mgmt-01.lab.webapps.rr.com', privateIp='71.74.48.136', hostName='ee-mgmt-01', nodeName='ee-mgmt-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:41:18,318  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_01. Free nodes: id='ee-app-01.lab.webapps.rr.com', privateIp='71.74.49.111', hostName='ee-app-01', nodeName='ee-app-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:41:18,464  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_02. Free nodes: id='ee-app-02.lab.webapps.rr.com', privateIp='71.74.48.103', hostName='ee-app-02', nodeName='ee-app-02.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:41:18,608  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_DB_01. Free nodes: id='ee-db-01.lab.webapps.rr.com', privateIp='71.74.49.112', hostName='ee-db-01', nodeName='ee-db-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 07:41:18,610  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 07:41:18,610  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - DefaultCloudProvisioning: startMachine - management == true
+2013-11-04 07:41:18,754  WARNING [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Failed locating existing management servers
+2013-11-04 07:41:18,754  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Cloudify Deployer is creating a machine named: ee_manager_1. This may take a few minutes
+2013-11-04 07:41:18,897  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Machine successfully allocated
+2013-11-04 07:41:18,898  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 71.74.48.136.
+2013-11-04 07:41:24,045  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 71.74.48.136.
+2013-11-04 07:41:24,058  INFO [org.apache.commons.vfs2.impl.StandardFileSystemManager] - Using "/var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/vfs_cache" as temporary files store.
+2013-11-04 07:41:24,175  INFO [com.jcraft.jsch] - Connecting to 71.74.48.136 port 22
+2013-11-04 07:41:24,319  INFO [com.jcraft.jsch] - Connection established
+2013-11-04 07:41:24,466  INFO [com.jcraft.jsch] - Remote version string: SSH-1.99-OpenSSH_5.3
+2013-11-04 07:41:24,467  INFO [com.jcraft.jsch] - Local version string: SSH-2.0-JSCH-0.1.49
+2013-11-04 07:41:24,467  INFO [com.jcraft.jsch] - CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+2013-11-04 07:41:24,611  INFO [com.jcraft.jsch] - aes256-ctr is not available.
+2013-11-04 07:41:24,611  INFO [com.jcraft.jsch] - aes192-ctr is not available.
+2013-11-04 07:41:24,611  INFO [com.jcraft.jsch] - aes256-cbc is not available.
+2013-11-04 07:41:24,611  INFO [com.jcraft.jsch] - aes192-cbc is not available.
+2013-11-04 07:41:24,611  INFO [com.jcraft.jsch] - arcfour256 is not available.
+2013-11-04 07:41:24,611  INFO [com.jcraft.jsch] - CheckKexes: diffie-hellman-group14-sha1
+2013-11-04 07:41:24,617  INFO [com.jcraft.jsch] - diffie-hellman-group14-sha1 is not available.
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT sent
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT received
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - kex: server: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - kex: server: ssh-rsa,ssh-dss
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 07:41:24,618  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: client: diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: client: ssh-rsa,ssh-dss
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:24,619  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:24,620  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 07:41:24,620  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 07:41:24,620  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 07:41:24,620  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 07:41:24,620  INFO [com.jcraft.jsch] - kex: server->client aes128-ctr hmac-md5 none
+2013-11-04 07:41:24,620  INFO [com.jcraft.jsch] - kex: client->server aes128-ctr hmac-md5 none
+2013-11-04 07:41:24,629  INFO [com.jcraft.jsch] - SSH_MSG_KEXDH_INIT sent
+2013-11-04 07:41:24,629  INFO [com.jcraft.jsch] - expecting SSH_MSG_KEXDH_REPLY
+2013-11-04 07:41:24,782  INFO [com.jcraft.jsch] - ssh_rsa_verify: signature true
+2013-11-04 07:41:24,783  INFO [com.jcraft.jsch] - Host '71.74.48.136' is known and mathces the RSA host key
+2013-11-04 07:41:24,783  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS sent
+2013-11-04 07:41:24,783  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS received
+2013-11-04 07:41:24,786  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_REQUEST sent
+2013-11-04 07:41:24,930  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_ACCEPT received
+2013-11-04 07:41:25,074  INFO [com.jcraft.jsch] - Authentications that can continue: publickey,keyboard-interactive,password
+2013-11-04 07:41:25,074  INFO [com.jcraft.jsch] - Next authentication method: publickey
+2013-11-04 07:41:25,391  INFO [com.jcraft.jsch] - Authentication succeeded (publickey).
+2013-11-04 07:41:26,283  INFO [org.cloudifysource.esc.installer.filetransfer.SftpFileTransfer] - Deleting contents of remote directory: sftp://cloudify@71.74.48.136/tmp/gs-files
+2013-11-04 07:41:49,897  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 71.74.48.136.
+2013-11-04 07:41:49,918  INFO [com.jcraft.jsch] - Connecting to 71.74.48.136 port 22
+2013-11-04 07:41:50,060  INFO [com.jcraft.jsch] - Connection established
+2013-11-04 07:41:50,208  INFO [com.jcraft.jsch] - Remote version string: SSH-1.99-OpenSSH_5.3
+2013-11-04 07:41:50,208  INFO [com.jcraft.jsch] - Local version string: SSH-2.0-JSCH-0.1.49
+2013-11-04 07:41:50,208  INFO [com.jcraft.jsch] - CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+2013-11-04 07:41:50,210  INFO [com.jcraft.jsch] - aes256-ctr is not available.
+2013-11-04 07:41:50,211  INFO [com.jcraft.jsch] - aes192-ctr is not available.
+2013-11-04 07:41:50,211  INFO [com.jcraft.jsch] - aes256-cbc is not available.
+2013-11-04 07:41:50,211  INFO [com.jcraft.jsch] - aes192-cbc is not available.
+2013-11-04 07:41:50,211  INFO [com.jcraft.jsch] - arcfour256 is not available.
+2013-11-04 07:41:50,211  INFO [com.jcraft.jsch] - CheckKexes: diffie-hellman-group14-sha1
+2013-11-04 07:41:50,211  INFO [com.jcraft.jsch] - diffie-hellman-group14-sha1 is not available.
+2013-11-04 07:41:50,212  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT sent
+2013-11-04 07:41:50,351  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT received
+2013-11-04 07:41:50,351  INFO [com.jcraft.jsch] - kex: server: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+2013-11-04 07:41:50,351  INFO [com.jcraft.jsch] - kex: server: ssh-rsa,ssh-dss
+2013-11-04 07:41:50,351  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 07:41:50,351  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 07:41:50,351  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: client: diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: client: ssh-rsa,ssh-dss
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 07:41:50,352  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: server->client aes128-ctr hmac-md5 none
+2013-11-04 07:41:50,353  INFO [com.jcraft.jsch] - kex: client->server aes128-ctr hmac-md5 none
+2013-11-04 07:41:50,356  INFO [com.jcraft.jsch] - SSH_MSG_KEXDH_INIT sent
+2013-11-04 07:41:50,356  INFO [com.jcraft.jsch] - expecting SSH_MSG_KEXDH_REPLY
+2013-11-04 07:41:50,506  INFO [com.jcraft.jsch] - ssh_rsa_verify: signature true
+2013-11-04 07:41:50,507  WARNING [com.jcraft.jsch] - Permanently added '71.74.48.136' (RSA) to the list of known hosts.
+2013-11-04 07:41:50,507  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS sent
+2013-11-04 07:41:50,507  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS received
+2013-11-04 07:41:50,508  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_REQUEST sent
+2013-11-04 07:41:50,652  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_ACCEPT received
+2013-11-04 07:41:50,796  INFO [com.jcraft.jsch] - Authentications that can continue: publickey,keyboard-interactive,password
+2013-11-04 07:41:50,796  INFO [com.jcraft.jsch] - Next authentication method: publickey
+2013-11-04 07:41:51,109  INFO [com.jcraft.jsch] - Authentication succeeded (publickey).
+2013-11-04 07:41:51,409  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Checking script path
+2013-11-04 07:41:51,411  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] script path is /tmp/gs-files/upload
+2013-11-04 07:41:51,415  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Running script /tmp/gs-files/upload/pre-bootstrap.sh
+2013-11-04 07:41:51,416  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] checking for previous java installation
+2013-11-04 07:41:51,416  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] checking for previous gigaspaces installation
+2013-11-04 07:41:51,416  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Machine Architecture -- x86_64
+2013-11-04 07:41:51,416  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Previous JAVA_HOME value --
+2013-11-04 07:41:51,416  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-04 07:41:53,411  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Installing JDK
+2013-11-04 07:41:58,630  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-04 07:42:39,999  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Updating environment script
+2013-11-04 07:42:39,999  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Setting privileged mode
+2013-11-04 07:42:39,999  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Running script /tmp/gs-files/upload/post-bootstrap.sh
+2013-11-04 07:42:39,999  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] mkdir: cannot create directory `/data/logs/gigaspaces': File exists
+2013-11-04 07:42:40,000  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] mv: cannot stat `/home/cloudify/gigaspaces/logs/*': No such file or directory
+2013-11-04 07:42:40,000  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] nohup: ignoring input and appending output to `nohup.out'
+2013-11-04 07:44:10,099  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] cat nohup.out
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] 
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Starting Non-Interactive Shell
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /tmp/gs-fi les/ee-dev-cloud.groovy 
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] >>> exit
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Good Bye!
+2013-11-04 07:44:10,101  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] 
+2013-11-04 07:44:10,468  INFO [com.jcraft.jsch] - Disconnecting from 71.74.48.136 port 22
+2013-11-04 07:44:10,473  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 71.74.48.136.
+2013-11-04 07:44:10,473  INFO [com.jcraft.jsch] - Caught an exception, leaving main loop due to Socket closed
+2013-11-04 07:44:10,963  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Rest service is available at: http://71.74.48.136:8100.
+2013-11-04 07:44:10,964  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Webui service is available at: http://71.74.48.136:8099.
+2013-11-04 07:44:33,158  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 07:44:35,434  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - null : java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:299)
+	at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:808)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1094)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1055)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:976)
+	at org.cloudifysource.dsl.internal.packaging.Packager.createCopyDirectory(Packager.java:484)
+	at org.cloudifysource.dsl.internal.packaging.Packager.packApplication(Packager.java:410)
+	at org.cloudifysource.shell.commands.InstallApplication.doExecute(InstallApplication.java:186)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.cloudifysource.shell.commands.AdminAwareCommand.execute(AdminAwareCommand.java:36)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+
+2013-11-04 07:44:42,484  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 07:44:44,229  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application eeportal
+2013-11-04 07:44:55,081  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [eeportal] with 2 services
+2013-11-04 07:44:55,081  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [apacheLB] 1 planned instances
+2013-11-04 07:44:55,081  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [tomcat] 1 planned instances
+2013-11-04 07:55:44,824  INFO [org.cloudifysource.dsl.internal.packaging.Packager] - packing folder ./eeportal/postgresql
+2013-11-04 07:55:44,970  INFO [org.cloudifysource.dsl.internal.packaging.Packager] - created /private/var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/ServicePackage8337088831807176282.tmp/postgresql.zip
+2013-11-04 08:16:13,799  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - The installation of postgresql timed out on the client side. The service is still installed, To remove it use the uninstall-service command.
+2013-11-04 09:47:13,626  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 09:47:13,831  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ec2-cfrias. This may take a few minutes.
+2013-11-04 09:47:45,050  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 09:47:50,562  INFO [org.cloudifysource.esc.jclouds.JCloudsDeployer] - starting machine with template : {image={id=us-east-1/ami-35792c5c, providerId=ami-35792c5c, name=amzn-ami-pv-2013.09.0.x86_64-ebs, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, os={family=unrecognized, arch=paravirtual, version=, description=amazon/amzn-ami-pv-2013.09.0.x86_64-ebs, is64Bit=true}, description=Amazon Linux AMI x86_64 PV EBS, status=AVAILABLE[available], loginUser=ec2-user, userMetadata={owner=137112412989, rootDeviceType=ebs, virtualizationType=paravirtual, hypervisor=xen}}, hardware={id=m1.small, providerId=m1.small, processors=[{cores=1.0, speed=1.0}], ram=1740, volumes=[{type=LOCAL, size=10.0, device=/dev/sda1, bootDevice=true, durable=false}, {type=LOCAL, size=150.0, device=/dev/sda2, bootDevice=false, durable=false}], supportsImage=And(ALWAYS_TRUE,Or(isWindows(),requiresVirtualizationType(paravirtual)),ALWAYS_TRUE,ALWAYS_TRUE)}, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, options={groupNames=[default], keyPair=id_rsa, userData=[35, 99, 108, 111, 117, 100, 45, 99, 111, 110, 102, 105, 103, 10, 114, 101, 112, 111, 95, 117, 112, 103, 114, 97, 100, 101, 58, 32, 110, 111, 110, 101, 10]}}
+2013-11-04 09:49:02,878  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 54.204.196.49.
+2013-11-04 09:49:18,055  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 54.204.196.49.
+2013-11-04 09:49:18,349  WARNING [com.jcraft.jsch] - Permanently added '54.204.196.49' (RSA) to the list of known hosts.
+2013-11-04 09:49:26,312  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 54.204.196.49.
+2013-11-04 09:49:26,567  WARNING [com.jcraft.jsch] - Permanently added '54.204.196.49' (RSA) to the list of known hosts.
+2013-11-04 09:49:27,123  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Checking script path
+2013-11-04 09:49:27,134  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] script path is /home/ec2-user/gs-files/upload
+2013-11-04 09:49:27,138  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Running script /home/ec2-user/gs-files/upload/pre-bootstrap.sh
+2013-11-04 09:49:27,139  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Installing wget with yum
+2013-11-04 09:49:27,819  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Package wget-1.14-8.11.amzn1.x86_64 already installed and latest version
+2013-11-04 09:49:27,910  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Yum invocation complete
+2013-11-04 09:49:27,935  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Machine Architecture -- x86_64
+2013-11-04 09:49:27,935  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Previous JAVA_HOME value -- /usr/lib/jvm/jre
+2013-11-04 09:49:27,935  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-04 09:49:29,435  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Installing JDK
+2013-11-04 09:49:48,447  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-04 09:49:59,495  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Updating environment script
+2013-11-04 09:50:00,937  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Setting privileged mode
+2013-11-04 09:50:01,551  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] nohup: ignoring input and appending output to `nohup.out'
+2013-11-04 09:54:13,040  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] cat nohup.out
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] 
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Starting Non-Interactive Shell
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /home/ec2- user/gs-files/ec2-cloud.groovy 
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] >>> exit
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] Good Bye!
+2013-11-04 09:54:13,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.204.196.49] 
+2013-11-04 09:54:13,358  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 54.204.196.49.
+2013-11-04 09:54:13,530  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Rest service is available at: http://54.204.196.49:8100.
+2013-11-04 09:54:13,530  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Webui service is available at: http://54.204.196.49:8099.
+2013-11-04 09:57:11,430  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Terminating cloud machines
+2013-11-04 09:59:52,449  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - The CLI is not connected to a Cloudify REST gateway. You can connect to an existing gateway by using the connect command, or alternatively use the bootstrap-cloud or bootstrap-localcloud commands to start the Cloudify management infrastructure and automatically connect to the REST gateway it creates.
+2013-11-04 09:59:59,863  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 10:00:00,063  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ec2-cfrias. This may take a few minutes.
+2013-11-04 10:00:32,589  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 10:00:37,639  INFO [org.cloudifysource.esc.jclouds.JCloudsDeployer] - starting machine with template : {image={id=us-east-1/ami-35792c5c, providerId=ami-35792c5c, name=amzn-ami-pv-2013.09.0.x86_64-ebs, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, os={family=unrecognized, arch=paravirtual, version=, description=amazon/amzn-ami-pv-2013.09.0.x86_64-ebs, is64Bit=true}, description=Amazon Linux AMI x86_64 PV EBS, status=AVAILABLE[available], loginUser=ec2-user, userMetadata={owner=137112412989, rootDeviceType=ebs, virtualizationType=paravirtual, hypervisor=xen}}, hardware={id=m1.small, providerId=m1.small, processors=[{cores=1.0, speed=1.0}], ram=1740, volumes=[{type=LOCAL, size=10.0, device=/dev/sda1, bootDevice=true, durable=false}, {type=LOCAL, size=150.0, device=/dev/sda2, bootDevice=false, durable=false}], supportsImage=And(ALWAYS_TRUE,Or(isWindows(),requiresVirtualizationType(paravirtual)),ALWAYS_TRUE,ALWAYS_TRUE)}, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, options={groupNames=[default], keyPair=id_rsa, userData=[35, 99, 108, 111, 117, 100, 45, 99, 111, 110, 102, 105, 103, 10, 114, 101, 112, 111, 95, 117, 112, 103, 114, 97, 100, 101, 58, 32, 110, 111, 110, 101, 10]}}
+2013-11-04 10:01:25,884  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 107.21.171.49.
+2013-11-04 10:02:01,135  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 107.21.171.49.
+2013-11-04 10:02:01,461  WARNING [com.jcraft.jsch] - Permanently added '107.21.171.49' (RSA) to the list of known hosts.
+2013-11-04 10:02:08,845  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 107.21.171.49.
+2013-11-04 10:02:09,104  WARNING [com.jcraft.jsch] - Permanently added '107.21.171.49' (RSA) to the list of known hosts.
+2013-11-04 10:02:09,585  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Checking script path
+2013-11-04 10:02:09,601  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] script path is /home/ec2-user/gs-files/upload
+2013-11-04 10:02:09,601  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Running script /home/ec2-user/gs-files/upload/pre-bootstrap.sh
+2013-11-04 10:02:09,601  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Installing wget with yum
+2013-11-04 10:02:10,442  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Package wget-1.14-8.11.amzn1.x86_64 already installed and latest version
+2013-11-04 10:02:10,442  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Yum invocation complete
+2013-11-04 10:02:10,442  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Machine Architecture -- x86_64
+2013-11-04 10:02:10,442  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Previous JAVA_HOME value -- /usr/lib/jvm/jre
+2013-11-04 10:02:10,443  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-04 10:02:12,236  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Installing JDK
+2013-11-04 10:02:40,919  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-04 10:02:52,977  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Updating environment script
+2013-11-04 10:02:56,929  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Setting privileged mode
+2013-11-04 10:02:57,684  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] nohup: ignoring input and appending output to `nohup.out'
+2013-11-04 10:07:55,939  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] cat nohup.out
+2013-11-04 10:07:55,939  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] 
+2013-11-04 10:07:55,940  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Starting Non-Interactive Shell
+2013-11-04 10:07:55,940  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /home/ec2- user/gs-files/ec2-cfrias-cloud.groovy 
+2013-11-04 10:07:55,940  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-04 10:07:55,940  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] >>> exit
+2013-11-04 10:07:55,940  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] Good Bye!
+2013-11-04 10:07:55,940  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [107.21.171.49] 
+2013-11-04 10:07:56,467  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 107.21.171.49.
+2013-11-04 10:07:56,618  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Rest service is available at: http://107.21.171.49:8100.
+2013-11-04 10:07:56,618  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Webui service is available at: http://107.21.171.49:8099.
+2013-11-04 10:08:21,938  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 10:08:23,626  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application eeportal
+2013-11-04 10:09:56,057  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [eeportal] with 2 services
+2013-11-04 10:09:56,057  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [apacheLB] 1 planned instances
+2013-11-04 10:09:56,057  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [tomcat] 1 planned instances
+2013-11-04 10:23:32,205  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - The installation of <{0}> timed out on the client side. The application is still installed, To remove it use the uninstall-application command.
+2013-11-04 10:23:47,952  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Uninstalling the currently deployed applications
+2013-11-04 10:23:48,232  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Waiting for application eeportal to uninstall.
+2013-11-04 10:33:37,217  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Command interrupted by user.
+2013-11-04 10:37:05,173  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 10:37:05,438  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ec2-cfrias. This may take a few minutes.
+2013-11-04 10:37:37,836  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 10:37:43,425  INFO [org.cloudifysource.esc.jclouds.JCloudsDeployer] - starting machine with template : {image={id=us-east-1/ami-35792c5c, providerId=ami-35792c5c, name=amzn-ami-pv-2013.09.0.x86_64-ebs, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, os={family=unrecognized, arch=paravirtual, version=, description=amazon/amzn-ami-pv-2013.09.0.x86_64-ebs, is64Bit=true}, description=Amazon Linux AMI x86_64 PV EBS, status=AVAILABLE[available], loginUser=ec2-user, userMetadata={owner=137112412989, rootDeviceType=ebs, virtualizationType=paravirtual, hypervisor=xen}}, hardware={id=m1.large, providerId=m1.large, processors=[{cores=2.0, speed=2.0}], ram=7680, volumes=[{type=LOCAL, size=10.0, device=/dev/sda1, bootDevice=true, durable=false}, {type=LOCAL, size=420.0, device=/dev/sdb, bootDevice=false, durable=false}, {type=LOCAL, size=420.0, device=/dev/sdc, bootDevice=false, durable=false}], supportsImage=And(ALWAYS_TRUE,Or(isWindows(),requiresVirtualizationType(paravirtual)),ALWAYS_TRUE,is64Bit())}, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, options={groupNames=[default], keyPair=id_rsa, userData=[35, 99, 108, 111, 117, 100, 45, 99, 111, 110, 102, 105, 103, 10, 114, 101, 112, 111, 95, 117, 112, 103, 114, 97, 100, 101, 58, 32, 110, 111, 110, 101, 10]}}
+2013-11-04 10:38:02,399  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 54.211.150.199.
+2013-11-04 10:38:40,193  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 54.211.150.199.
+2013-11-04 10:38:40,703  WARNING [com.jcraft.jsch] - Permanently added '54.211.150.199' (RSA) to the list of known hosts.
+2013-11-04 10:38:49,970  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 54.211.150.199.
+2013-11-04 10:38:50,265  WARNING [com.jcraft.jsch] - Permanently added '54.211.150.199' (RSA) to the list of known hosts.
+2013-11-04 10:38:50,677  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Checking script path
+2013-11-04 10:38:50,685  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] script path is /home/ec2-user/gs-files/upload
+2013-11-04 10:38:50,688  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Running script /home/ec2-user/gs-files/upload/pre-bootstrap.sh
+2013-11-04 10:38:50,780  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Installing wget with yum
+2013-11-04 10:38:51,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Package wget-1.14-8.11.amzn1.x86_64 already installed and latest version
+2013-11-04 10:38:51,083  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Yum invocation complete
+2013-11-04 10:38:51,090  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Machine Architecture -- x86_64
+2013-11-04 10:38:51,090  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Previous JAVA_HOME value -- /usr/lib/jvm/jre
+2013-11-04 10:38:51,090  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-04 10:38:52,055  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Installing JDK
+2013-11-04 10:39:04,489  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-04 10:39:11,563  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Updating environment script
+2013-11-04 10:39:12,514  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Setting privileged mode
+2013-11-04 10:39:15,322  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] nohup: ignoring input and appending output to `nohup.out'
+2013-11-04 10:41:07,002  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] cat nohup.out
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] 
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Starting Non-Interactive Shell
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /home/ec2- user/gs-files/ec2-cfrias-cloud.groovy 
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] >>> exit
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] Good Bye!
+2013-11-04 10:41:07,004  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.211.150.199] 
+2013-11-04 10:41:07,303  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 54.211.150.199.
+2013-11-04 10:41:07,466  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Rest service is available at: http://54.211.150.199:8100.
+2013-11-04 10:41:07,466  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Webui service is available at: http://54.211.150.199:8099.
+2013-11-04 10:51:21,554  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 10:51:22,987  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application eeportal
+2013-11-04 10:51:37,342  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [eeportal] with 1 services
+2013-11-04 10:51:37,342  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [apacheLB] 1 planned instances
+2013-11-04 11:13:25,074  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Command interrupted by user.
+2013-11-04 11:18:50,153  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - The operation timed out. Try to increase the timeout using the -timeout flag : java.util.concurrent.TimeoutException: The operation timed out. Try to increase the timeout using the -timeout flag
+	at org.cloudifysource.shell.ConditionLatch.waitFor(ConditionLatch.java:146)
+	at org.cloudifysource.shell.rest.RestLifecycleEventsLatch.waitForLifecycleEvents(RestLifecycleEventsLatch.java:80)
+	at org.cloudifysource.shell.rest.RestAdminFacade.waitForLifecycleEvents(RestAdminFacade.java:371)
+	at org.cloudifysource.shell.commands.UninstallApplication.doExecute(UninstallApplication.java:95)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.cloudifysource.shell.commands.AdminAwareCommand.execute(AdminAwareCommand.java:36)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+
+2013-11-04 11:23:22,945  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 11:23:25,734  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - null : java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.size(FileChannelImpl.java:299)
+	at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:808)
+	at org.apache.commons.io.FileUtils.doCopyDirectory(FileUtils.java:1094)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:1055)
+	at org.apache.commons.io.FileUtils.copyDirectory(FileUtils.java:976)
+	at org.cloudifysource.dsl.internal.packaging.Packager.createCopyDirectory(Packager.java:484)
+	at org.cloudifysource.dsl.internal.packaging.Packager.packApplication(Packager.java:410)
+	at org.cloudifysource.shell.commands.InstallApplication.doExecute(InstallApplication.java:186)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.cloudifysource.shell.commands.AdminAwareCommand.execute(AdminAwareCommand.java:36)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+
+2013-11-04 11:23:56,458  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Terminating cloud machines
+2013-11-04 11:50:43,949  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - The operation timed out. Try to increase the timeout using the -timeout flag
+2013-11-04 11:55:04,069  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - Application eeportal could not be found or has no services deployed
+2013-11-04 11:57:10,232  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 11:57:12,075  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application eeportal
+2013-11-04 11:57:19,014  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [eeportal] with 2 services
+2013-11-04 11:57:19,014  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [postgresql] 1 planned instances
+2013-11-04 11:57:19,014  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [tomcat] 1 planned instances
+2013-11-04 12:08:26,845  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - The installation of <{0}> timed out on the client side. The application is still installed, To remove it use the uninstall-application command.
+2013-11-04 13:15:23,851  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - Failed to locate service postgresql
+2013-11-04 13:20:32,693  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - The operation timed out. Try to increase the timeout using the -timeout flag
+2013-11-04 13:40:54,080  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 13:40:54,240  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Could not find a cloud definition file in: /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-3165311522141549625/eeportal. Definitions file must end with the suffix '-cloud.groovy' : java.io.FileNotFoundException: Could not find a cloud definition file in: /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-3165311522141549625/eeportal. Definitions file must end with the suffix '-cloud.groovy'
+	at org.cloudifysource.esc.shell.commands.BootstrapCloud.findCloudFile(BootstrapCloud.java:281)
+	at org.cloudifysource.esc.shell.commands.BootstrapCloud.doExecute(BootstrapCloud.java:170)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+
+2013-11-04 13:50:23,814  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 13:50:23,827  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Could not find a cloud definition file in: /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-8966766939964953406/eeportal. Definitions file must end with the suffix '-cloud.groovy' : java.io.FileNotFoundException: Could not find a cloud definition file in: /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/cloud-8966766939964953406/eeportal. Definitions file must end with the suffix '-cloud.groovy'
+	at org.cloudifysource.esc.shell.commands.BootstrapCloud.findCloudFile(BootstrapCloud.java:281)
+	at org.cloudifysource.esc.shell.commands.BootstrapCloud.doExecute(BootstrapCloud.java:170)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+
+2013-11-04 13:50:37,041  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 13:50:37,341  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ee-dev. This may take a few minutes.
+2013-11-04 13:50:37,844  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Creating BYON context deployer for cloud: EE Development Servers
+2013-11-04 13:50:37,988  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_MANAGEMENT_01. Free nodes: id='ee-mgmt-01.lab.webapps.rr.com', privateIp='71.74.48.136', hostName='ee-mgmt-01', nodeName='ee-mgmt-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 13:50:38,603  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_01. Free nodes: id='ee-app-01.lab.webapps.rr.com', privateIp='71.74.49.111', hostName='ee-app-01', nodeName='ee-app-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 13:50:39,212  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_02. Free nodes: id='ee-app-02.lab.webapps.rr.com', privateIp='71.74.48.103', hostName='ee-app-02', nodeName='ee-app-02.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 13:50:39,825  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_DB_01. Free nodes: id='ee-db-01.lab.webapps.rr.com', privateIp='71.74.49.112', hostName='ee-db-01', nodeName='ee-db-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 13:50:39,827  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 13:50:39,827  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - DefaultCloudProvisioning: startMachine - management == true
+2013-11-04 13:50:39,970  WARNING [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Failed locating existing management servers
+2013-11-04 13:50:39,970  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Cloudify Deployer is creating a machine named: ee_manager_1. This may take a few minutes
+2013-11-04 13:50:40,114  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Machine successfully allocated
+2013-11-04 13:50:40,115  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 71.74.48.136.
+2013-11-04 13:50:45,262  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 71.74.48.136.
+2013-11-04 13:50:45,363  INFO [com.jcraft.jsch] - Connecting to 71.74.48.136 port 22
+2013-11-04 13:50:45,514  INFO [com.jcraft.jsch] - Connection established
+2013-11-04 13:50:45,662  INFO [com.jcraft.jsch] - Remote version string: SSH-1.99-OpenSSH_5.3
+2013-11-04 13:50:45,662  INFO [com.jcraft.jsch] - Local version string: SSH-2.0-JSCH-0.1.49
+2013-11-04 13:50:45,662  INFO [com.jcraft.jsch] - CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+2013-11-04 13:50:45,679  INFO [com.jcraft.jsch] - aes256-ctr is not available.
+2013-11-04 13:50:45,679  INFO [com.jcraft.jsch] - aes192-ctr is not available.
+2013-11-04 13:50:45,679  INFO [com.jcraft.jsch] - aes256-cbc is not available.
+2013-11-04 13:50:45,680  INFO [com.jcraft.jsch] - aes192-cbc is not available.
+2013-11-04 13:50:45,680  INFO [com.jcraft.jsch] - arcfour256 is not available.
+2013-11-04 13:50:45,680  INFO [com.jcraft.jsch] - CheckKexes: diffie-hellman-group14-sha1
+2013-11-04 13:50:45,692  INFO [com.jcraft.jsch] - diffie-hellman-group14-sha1 is not available.
+2013-11-04 13:50:45,692  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT sent
+2013-11-04 13:50:45,805  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT received
+2013-11-04 13:50:45,805  INFO [com.jcraft.jsch] - kex: server: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+2013-11-04 13:50:45,805  INFO [com.jcraft.jsch] - kex: server: ssh-rsa,ssh-dss
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: client: diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: client: ssh-rsa,ssh-dss
+2013-11-04 13:50:45,806  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: server->client aes128-ctr hmac-md5 none
+2013-11-04 13:50:45,807  INFO [com.jcraft.jsch] - kex: client->server aes128-ctr hmac-md5 none
+2013-11-04 13:50:45,809  INFO [com.jcraft.jsch] - SSH_MSG_KEXDH_INIT sent
+2013-11-04 13:50:45,810  INFO [com.jcraft.jsch] - expecting SSH_MSG_KEXDH_REPLY
+2013-11-04 13:50:45,963  INFO [com.jcraft.jsch] - ssh_rsa_verify: signature true
+2013-11-04 13:50:45,963  INFO [com.jcraft.jsch] - Host '71.74.48.136' is known and mathces the RSA host key
+2013-11-04 13:50:45,963  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS sent
+2013-11-04 13:50:45,963  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS received
+2013-11-04 13:50:45,964  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_REQUEST sent
+2013-11-04 13:50:46,107  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_ACCEPT received
+2013-11-04 13:50:46,251  INFO [com.jcraft.jsch] - Authentications that can continue: publickey,keyboard-interactive,password
+2013-11-04 13:50:46,251  INFO [com.jcraft.jsch] - Next authentication method: publickey
+2013-11-04 13:50:46,599  INFO [com.jcraft.jsch] - Authentication succeeded (publickey).
+2013-11-04 13:50:47,483  INFO [org.cloudifysource.esc.installer.filetransfer.SftpFileTransfer] - Deleting contents of remote directory: sftp://cloudify@71.74.48.136/tmp/gs-files
+2013-11-04 13:51:11,081  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 71.74.48.136.
+2013-11-04 13:51:11,081  INFO [com.jcraft.jsch] - Connecting to 71.74.48.136 port 22
+2013-11-04 13:51:11,234  INFO [com.jcraft.jsch] - Connection established
+2013-11-04 13:51:11,385  INFO [com.jcraft.jsch] - Remote version string: SSH-1.99-OpenSSH_5.3
+2013-11-04 13:51:11,386  INFO [com.jcraft.jsch] - Local version string: SSH-2.0-JSCH-0.1.49
+2013-11-04 13:51:11,386  INFO [com.jcraft.jsch] - CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+2013-11-04 13:51:11,387  INFO [com.jcraft.jsch] - aes256-ctr is not available.
+2013-11-04 13:51:11,387  INFO [com.jcraft.jsch] - aes192-ctr is not available.
+2013-11-04 13:51:11,387  INFO [com.jcraft.jsch] - aes256-cbc is not available.
+2013-11-04 13:51:11,387  INFO [com.jcraft.jsch] - aes192-cbc is not available.
+2013-11-04 13:51:11,387  INFO [com.jcraft.jsch] - arcfour256 is not available.
+2013-11-04 13:51:11,388  INFO [com.jcraft.jsch] - CheckKexes: diffie-hellman-group14-sha1
+2013-11-04 13:51:11,388  INFO [com.jcraft.jsch] - diffie-hellman-group14-sha1 is not available.
+2013-11-04 13:51:11,388  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT sent
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - SSH_MSG_KEXINIT received
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - kex: server: diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - kex: server: ssh-rsa,ssh-dss
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - kex: server: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:51:11,538  INFO [com.jcraft.jsch] - kex: server: hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: server: none,zlib@openssh.com
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: server: 
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: ssh-rsa,ssh-dss
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+2013-11-04 13:51:11,539  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 13:51:11,540  INFO [com.jcraft.jsch] - kex: client: none
+2013-11-04 13:51:11,540  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 13:51:11,540  INFO [com.jcraft.jsch] - kex: client: 
+2013-11-04 13:51:11,540  INFO [com.jcraft.jsch] - kex: server->client aes128-ctr hmac-md5 none
+2013-11-04 13:51:11,540  INFO [com.jcraft.jsch] - kex: client->server aes128-ctr hmac-md5 none
+2013-11-04 13:51:11,542  INFO [com.jcraft.jsch] - SSH_MSG_KEXDH_INIT sent
+2013-11-04 13:51:11,542  INFO [com.jcraft.jsch] - expecting SSH_MSG_KEXDH_REPLY
+2013-11-04 13:51:11,692  INFO [com.jcraft.jsch] - ssh_rsa_verify: signature true
+2013-11-04 13:51:11,692  WARNING [com.jcraft.jsch] - Permanently added '71.74.48.136' (RSA) to the list of known hosts.
+2013-11-04 13:51:11,692  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS sent
+2013-11-04 13:51:11,692  INFO [com.jcraft.jsch] - SSH_MSG_NEWKEYS received
+2013-11-04 13:51:11,693  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_REQUEST sent
+2013-11-04 13:51:11,835  INFO [com.jcraft.jsch] - SSH_MSG_SERVICE_ACCEPT received
+2013-11-04 13:51:11,981  INFO [com.jcraft.jsch] - Authentications that can continue: publickey,keyboard-interactive,password
+2013-11-04 13:51:11,981  INFO [com.jcraft.jsch] - Next authentication method: publickey
+2013-11-04 13:51:12,305  INFO [com.jcraft.jsch] - Authentication succeeded (publickey).
+2013-11-04 13:51:12,617  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Checking script path
+2013-11-04 13:51:12,632  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] script path is /tmp/gs-files/upload
+2013-11-04 13:51:12,634  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Running script /tmp/gs-files/upload/pre-bootstrap.sh
+2013-11-04 13:51:12,635  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] checking for previous java installation
+2013-11-04 13:51:12,635  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] checking for previous gigaspaces installation
+2013-11-04 13:51:12,637  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Machine Architecture -- x86_64
+2013-11-04 13:51:12,637  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Previous JAVA_HOME value --
+2013-11-04 13:51:12,637  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-04 13:51:22,523  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Installing JDK
+2013-11-04 13:51:27,988  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-04 13:51:45,191  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Updating environment script
+2013-11-04 13:51:45,191  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Setting privileged mode
+2013-11-04 13:51:45,191  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Running script /tmp/gs-files/upload/post-bootstrap.sh
+2013-11-04 13:51:45,191  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] mkdir: cannot create directory `/data/logs/gigaspaces': File exists
+2013-11-04 13:51:45,191  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] mv: cannot stat `/home/cloudify/gigaspaces/logs/*': No such file or directory
+2013-11-04 13:51:45,196  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] nohup: ignoring input and appending output to `nohup.out'
+2013-11-04 13:53:15,508  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] cat nohup.out
+2013-11-04 13:53:15,508  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] 
+2013-11-04 13:53:15,508  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Starting Non-Interactive Shell
+2013-11-04 13:53:15,509  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /tmp/gs-fi les/ee-dev-cloud.groovy 
+2013-11-04 13:53:15,509  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-04 13:53:15,509  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] >>> exit
+2013-11-04 13:53:15,509  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] Good Bye!
+2013-11-04 13:53:15,509  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [71.74.48.136] 
+2013-11-04 13:53:15,645  INFO [com.jcraft.jsch] - Disconnecting from 71.74.48.136 port 22
+2013-11-04 13:53:15,645  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 71.74.48.136.
+2013-11-04 13:53:15,645  INFO [com.jcraft.jsch] - Caught an exception, leaving main loop due to Socket closed
+2013-11-04 13:53:15,940  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Rest service is available at: http://71.74.48.136:8100.
+2013-11-04 13:53:15,940  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Webui service is available at: http://71.74.48.136:8099.
+2013-11-04 13:54:51,154  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file eeportal
+2013-11-04 13:54:52,200  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application eeportal
+2013-11-04 13:54:58,385  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [eeportal] with 1 services
+2013-11-04 13:54:58,385  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [postgresql] 1 planned instances
+2013-11-04 13:58:28,646  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - Operation failed. Reason: reasonCodejava.util.concurrent.ExecutionException: Errors occurred during installation of services: [postgresql] : org.cloudifysource.shell.exceptions.CLIException: Operation failed. Reason: reasonCodejava.util.concurrent.ExecutionException: Errors occurred during installation of services: [postgresql]
+	at org.cloudifysource.shell.rest.RestLifecycleEventsLatch$1.isDone(RestLifecycleEventsLatch.java:94)
+	at org.cloudifysource.shell.ConditionLatch.waitFor(ConditionLatch.java:142)
+	at org.cloudifysource.shell.rest.RestLifecycleEventsLatch.waitForLifecycleEvents(RestLifecycleEventsLatch.java:80)
+	at org.cloudifysource.shell.commands.InstallApplication.doExecute(InstallApplication.java:223)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.cloudifysource.shell.commands.AdminAwareCommand.execute(AdminAwareCommand.java:36)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+Caused by: ErrorStatusException, reason code: java.util.concurrent.ExecutionException: Errors occurred during installation of services: [postgresql], message arguments: null, Verbose: null
+	at org.cloudifysource.restclient.GSRestClient.executeHttpMethod(GSRestClient.java:401)
+	at org.cloudifysource.restclient.GSRestClient.get(GSRestClient.java:278)
+	at org.cloudifysource.restclient.GSRestClient.get(GSRestClient.java:265)
+	at org.cloudifysource.shell.rest.RestLifecycleEventsLatch$1.isDone(RestLifecycleEventsLatch.java:88)
+	... 16 more
+
+2013-11-04 14:12:11,628  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Creating BYON context deployer for cloud: EE Development Servers
+2013-11-04 14:12:11,868  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_MANAGEMENT_01. Free nodes: id='ee-mgmt-01.lab.webapps.rr.com', privateIp='71.74.48.136', hostName='ee-mgmt-01', nodeName='ee-mgmt-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 14:12:12,119  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_01. Free nodes: id='ee-app-01.lab.webapps.rr.com', privateIp='71.74.49.111', hostName='ee-app-01', nodeName='ee-app-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 14:12:12,364  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_02. Free nodes: id='ee-app-02.lab.webapps.rr.com', privateIp='71.74.48.103', hostName='ee-app-02', nodeName='ee-app-02.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 14:12:12,605  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_DB_01. Free nodes: id='ee-db-01.lab.webapps.rr.com', privateIp='71.74.49.112', hostName='ee-db-01', nodeName='ee-db-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 14:12:12,753  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Uninstalling the currently deployed applications
+2013-11-04 14:12:12,948  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Waiting for application eeportal to uninstall.
+2013-11-04 14:12:39,096  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Terminating cloud machines

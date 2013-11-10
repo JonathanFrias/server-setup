@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.SpaceQueryService
+path: 885A883407286F1B1049ECEEB62BF8E1.gwt.rpc

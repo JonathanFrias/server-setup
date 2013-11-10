@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "web-app_2_3.dtd">
+
+<web-app>
+
+    <!-- file locations are specified in the Listener code.
+         Override possible by system property com.gs.webui.context
+         multiple values supported by ";" separator
+    -->
+	<listener>
+	    <listener-class>mvc.jetty.SmartContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- Filters -->
+
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<!--<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>-->
+        <filter-class>mvc.jetty.SmartFilter$SpringSecurity</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/gs_webui/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>gZipFilter</filter-name>
+		<filter-class>com.gigaspaces.admin.webui.server.filter.GzipFilter</filter-class>
+		<init-param>
+			<param-name>mimeTypes</param-name>
+			<param-value>text/html,text/plain,text/xml,application/xhtml+xml,text/css,application/javascript,image/svg+xml</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>gZipFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- Servlets -->
+
+    <servlet>
+        <servlet-name>Spring</servlet-name>
+        <servlet-class>
+          org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/web-context.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Spring</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+		<servlet-name>adminServlet</servlet-name>
+		<servlet-class>com.gigaspaces.admin.webui.server.AdminServiceImpl</servlet-class>
+	</servlet>
+    <servlet-mapping>
+		<servlet-name>adminServlet</servlet-name>
+		<url-pattern>/gs_webui/rpc/adminService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>platformInfoServlet</servlet-name>
+		<servlet-class>com.gigaspaces.admin.webui.server.PlatformInfoServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>platformInfoServlet</servlet-name>
+		<url-pattern>/gs_webui/rpc/permitted/platformInfoService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>zipFileDownloaderServlet</servlet-name>
+		<servlet-class>com.gigaspaces.admin.webui.server.ZipFileDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zipFileDownloaderServlet</servlet-name>
+		<url-pattern>/gs_webui/rpc/zipFileDownload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>fileDownloaderServlet</servlet-name>
+		<servlet-class>com.gigaspaces.admin.webui.server.FileDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fileDownloaderServlet</servlet-name>
+		<url-pattern>/gs_webui/rpc/fileDownload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>fileUploaderServlet</servlet-name>
+		<servlet-class>com.gigaspaces.admin.webui.server.FileUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fileUploaderServlet</servlet-name>
+		<url-pattern>/gs_webui/rpc/fileUpload</url-pattern>
+	</servlet-mapping>
+	
+    <servlet>
+        <servlet-name>spaceQueryService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.SpaceQueryServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spaceQueryService</servlet-name>
+        <url-pattern>/gs_webui/rpc/spaceQueryService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>spaceRuntimeInfoService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.SpaceRuntimeInfoServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spaceRuntimeInfoService</servlet-name>
+        <url-pattern>/gs_webui/rpc/spaceRuntimeInfoService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>discoveryDetailsService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.DiscoveryDetailsServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>discoveryDetailsService</servlet-name>
+        <url-pattern>/gs_webui/rpc/permitted/discoveryDetailsService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>recipesService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.RecipesServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>recipesService</servlet-name>
+        <url-pattern>/gs_webui/rpc/recipesService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>securityAvailabilityService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.SecurityServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>securityAvailabilityService</servlet-name>
+        <url-pattern>/gs_webui/rpc/permitted/securityAvailabilityService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>loginDetailsService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.LoginDetailsServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginDetailsService</servlet-name>
+        <url-pattern>/gs_webui/rpc/permitted/loginDetailsService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>cloudifyRestClientController</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.CloudifyRestClientController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cloudifyRestClientController</servlet-name>
+        <url-pattern>/gs_webui/xhr/cloudifyRestClientController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>activeFeaturesService</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.AppContextServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>activeFeaturesService</servlet-name>
+        <url-pattern>/gs_webui/rpc/permitted/activeFeaturesService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>statisticsProvider</servlet-name>
+        <servlet-class>com.gigaspaces.admin.webui.server.StatisticsProviderServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>statisticsProvider</servlet-name>
+        <url-pattern>/gs_webui/rpc/statisticsProvider</url-pattern>
+    </servlet-mapping>    
+
+
+    <filter>
+        <filter-name>SassCompiler</filter-name>
+        <filter-class>mvc.jetty.SmartFilter$Sass</filter-class>
+        <init-param>
+            <param-name>cache</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SassCompiler</filter-name>
+        <url-pattern>*.css</url-pattern>
+    </filter-mapping>
+
+    <!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>/welcome.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>

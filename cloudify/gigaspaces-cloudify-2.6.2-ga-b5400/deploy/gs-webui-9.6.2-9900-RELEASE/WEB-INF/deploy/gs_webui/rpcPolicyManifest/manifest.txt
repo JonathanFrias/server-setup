@@ -1,0 +1,12 @@
+# Module gs_webui
+# RPC service class, partial path of RPC policy file
+com.gigaspaces.admin.webui.client.PlatformInfoService, 3843CF05B607363D963BC91346CB2896.gwt.rpc
+com.gigaspaces.admin.webui.client.DiscoveryDetailsService, 40A83BABB2641701CE627C4CF2D345F1.gwt.rpc
+com.gigaspaces.admin.webui.client.AdminService, 8C7C83C10CB72E2F29FFFE6558F63938.gwt.rpc
+com.gigaspaces.admin.webui.client.SpaceRuntimeInfoService, DF8471FCE4A1E727A0C33DABFC9622E0.gwt.rpc
+com.gigaspaces.admin.webui.client.SpaceQueryService, 885A883407286F1B1049ECEEB62BF8E1.gwt.rpc
+com.gigaspaces.admin.webui.client.RecipesService, 33BDF3EAA713089886C8DD02D1BCF3AD.gwt.rpc
+com.gigaspaces.admin.webui.client.LoginDetailsService, 05F61326EED6BCF3E677ED8657865D0A.gwt.rpc
+com.gigaspaces.admin.webui.client.SecurityService, B94BFC23C3ED3B0918BD6417441C7820.gwt.rpc
+com.gigaspaces.admin.webui.client.AppContextService, 36DBC0DD517F5ECE06A51CC533B8E766.gwt.rpc
+com.gigaspaces.admin.webui.client.StatisticsProviderService, 416FDF355AD712744AD5235FA25B2A5F.gwt.rpc

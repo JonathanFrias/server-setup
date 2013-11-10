@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+		<!-- 	IE conditional comments are used to avoid loading resources, 
+				as the web application is currently not supported on IE -->		
+
+		<!--[if !IE]> -->
+		<!-- init scripts required for simile timeline -->
+		<script>
+			Timeline_ajax_url = "gs_webui/timeline_ajax/simile-ajax-api.js";
+			Timeline_urlPrefix = 'gs_webui/timeline_js/';
+			Timeline_parameters = 'bundle=true';
+		</script>
+		<script src="gs_webui/timeline_js/timeline-api.js" type="text/javascript"></script>
+		<script src="gs_webui/timeline-helper.js" type="text/javascript"></script>
+		<!-- <![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="ext/resources/css/gxt-all.css">
+		<link type="text/css" rel="stylesheet" href="Gs_webui.css">
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+		<title></title>
+
+		<!--[if !IE]> -->
+		<script type="text/javascript" src="gs_webui/gs_webui.nocache.js"></script>
+		<script type="text/javascript" src="dynamic_props.js"></script>
+		<script type="text/javascript" src="labels.js"></script>
+		<!-- <![endif]-->
+		
+	</head>
+
+	<body>
+
+		<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+
+		<!--[if IE]>
+		<style>
+			html,
+			body,
+			.centeredOuter {
+				height: 100%;
+			}
+			.centeredOuter {
+				text-align: center;
+			}
+			/* 
+			 * inner cell elements vertical align:
+			 * using Chris Coyier's "Centering in the unknown" hack (http://css-tricks.com/centering-in-the-unknown/)
+			 */
+			.centeredOuter:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				margin-right: -0.25em;
+			}
+			.centeredInner {
+				display: inline-block;
+				vertical-align: middle;
+				width: 70%;
+			}
+		</style>
+		</span>
+		<div class="centeredOuter">
+			<p class="centeredInner" style="font-size: 1.8em;">
+			Internet Explorer is currently not supported, Please use 
+			<a href="http://www.google.com/chrome">Chrome</a> or 
+			<a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> to run the Management Console.
+			</p>
+		</div>
+		<![endif]-->
+		
+	</body>
+</html>

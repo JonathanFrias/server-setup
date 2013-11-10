@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.PlatformInfoService
+path: 3843CF05B607363D963BC91346CB2896.gwt.rpc

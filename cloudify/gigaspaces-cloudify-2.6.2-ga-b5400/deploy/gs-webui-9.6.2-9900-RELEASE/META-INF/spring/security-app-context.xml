@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringSecurityFiltersConfiguredInspection -->
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<beans:beans profile="secure,secure_no_ssl">
+
+        <!-- set an initial mock permission evaluator for a fallback -->
+        <beans:bean id="permissionEvaluator" class="com.gigaspaces.admin.webui.server.security.CustomPermissionEvaluatorMock">
+            <!-- whether to always pass or always fail the evaluation -->
+            <beans:property name="permissionFilterAllPass" value="false" />
+        </beans:bean>
+
+        <!-- include the authentication manager configuration, shared from the injected REST configuration -->
+		<beans:import
+			resource="file:///${SPRING_SECURITY_CONFIG_FILE}" />
+
+		<!-- Custom entry point to indicate that the user needs to authenticate 
+			first -->
+		<beans:bean id="gsAuthenticationEntryPoint"
+			class="com.gigaspaces.admin.webui.server.security.GsAuthenticationEntryPoint" />
+
+		<!-- Custom handler to indicate that the authentication is successful -->
+		<beans:bean id="gsAuthenticationSuccessHandler"
+			class="com.gigaspaces.admin.webui.server.security.GsAuthenticationSuccessHandler" />
+
+		<!-- Custom handler to indicate that the authentication has failed -->
+		<beans:bean id="gsAuthenticationFailureHandler"
+			class="com.gigaspaces.admin.webui.server.security.GsAuthenticationFailureHandler" />
+
+		<!-- Custom handler to indicate that the logout is successful -->
+		<beans:bean id="gsLogoutSuccessHandler"
+			class="com.gigaspaces.admin.webui.server.security.GsLogoutSuccessHandler" />
+
+		<beans:bean id="validator"
+			class="com.gigaspaces.admin.webui.server.security.GSBeansValidator" />
+
+		<!-- Custom admin filter, must implement org.opensapces.security.AdminFilter,
+			following interface: org.springframework.context.ApplicationListener<InteractiveAuthenticationSuccessEvent> 
+			can be implemented as well in order to get injected Authentication object -->
+		<beans:bean id="adminFilter"
+			class="com.gigaspaces.admin.webui.server.adminfilter.GSAdminFilterImpl">
+            <beans:property name="customPermissionEvaluator" ref="permissionEvaluator" />
+		</beans:bean>
+
+	</beans:beans>
+
+	<beans:beans profile="nonsecure,default">
+
+		<http auto-config="true">
+			<intercept-url pattern="/**" filters="none" />
+		</http>
+		
+		<authentication-manager />
+
+	</beans:beans>
+
+    <!-- TODO remove: obsolete -->
+	<beans:beans profile="secure_no_ssl">
+
+		<http create-session="never" use-expressions="true" auto-config="false"
+			entry-point-ref="gsAuthenticationEntryPoint">
+
+			<!-- permit access to the host page -->
+			<intercept-url pattern="/Gs_webui.html" access="permitAll"
+				requires-channel="http" />
+
+			<!-- bypass filters for static resources -->
+			<intercept-url pattern="/favicon.ico" filters="none" />
+			<intercept-url pattern="/Gs_webui.css" filters="none" />
+			<intercept-url pattern="/ext/resources/css/**" filters="none" />
+			<intercept-url pattern="/ext/resources/images/**"
+				filters="none" />
+			<intercept-url pattern="/images/**" filters="none" />
+
+			<!-- map RPC calls to GWT services: services required before the login 
+				phase are permitted, all other services are restricted -->
+			<intercept-url pattern="/gs_webui/rpc/permitted/**"
+				access="permitAll" requires-channel="http" />
+			<intercept-url pattern="/gs_webui/rpc/**" access="isFullyAuthenticated()"
+				requires-channel="http" />
+
+			<!-- map XHR calls to GWT services -->
+			<intercept-url pattern="/gs_webui/xhr/**" access="isFullyAuthenticated()"
+				requires-channel="http" />
+
+			<intercept-url pattern="/gs_webui/**" access="permitAll"
+				requires-channel="http" />
+			<intercept-url pattern="/**" access="isFullyAuthenticated()"
+				requires-channel="http" />
+
+			<form-login authentication-success-handler-ref="gsAuthenticationSuccessHandler"
+				authentication-failure-handler-ref="gsAuthenticationFailureHandler" />
+
+			<logout success-handler-ref="gsLogoutSuccessHandler" />
+		</http>
+
+	</beans:beans>
+
+	<beans:beans profile="secure">
+
+		<http create-session="never" use-expressions="true" auto-config="false"
+			entry-point-ref="gsAuthenticationEntryPoint">
+
+			<!-- permit access to the host page -->
+			<intercept-url pattern="/Gs_webui.html" access="permitAll"
+				requires-channel="https" />
+
+			<!-- bypass filters for static resources -->
+			<intercept-url pattern="/favicon.ico" filters="none" />
+			<intercept-url pattern="/Gs_webui.css" filters="none" />
+			<intercept-url pattern="/ext/resources/css/**" filters="none" />
+			<intercept-url pattern="/ext/resources/images/**"
+				filters="none" />
+			<intercept-url pattern="/images/**" filters="none" />
+
+			<!-- map RPC calls to GWT services: services required before the login 
+				phase are permitted, all other services are restricted -->
+			<intercept-url pattern="/gs_webui/rpc/permitted/**"
+				access="permitAll" requires-channel="https" />
+			<intercept-url pattern="/gs_webui/rpc/**" access="isFullyAuthenticated()"
+				requires-channel="https" />
+
+			<!-- map XHR calls to GWT services -->
+			<intercept-url pattern="/gs_webui/xhr/**" access="isFullyAuthenticated()"
+				requires-channel="https" />
+
+			<intercept-url pattern="/gs_webui/**" access="permitAll"
+				requires-channel="https" />
+			<intercept-url pattern="/**" access="isFullyAuthenticated()"
+				requires-channel="https" />
+
+			<form-login authentication-success-handler-ref="gsAuthenticationSuccessHandler"
+				authentication-failure-handler-ref="gsAuthenticationFailureHandler" />
+
+			<logout success-handler-ref="gsLogoutSuccessHandler" />
+		</http>
+
+	</beans:beans>
+
+</beans:beans>

@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.DiscoveryDetailsService
+path: 40A83BABB2641701CE627C4CF2D345F1.gwt.rpc

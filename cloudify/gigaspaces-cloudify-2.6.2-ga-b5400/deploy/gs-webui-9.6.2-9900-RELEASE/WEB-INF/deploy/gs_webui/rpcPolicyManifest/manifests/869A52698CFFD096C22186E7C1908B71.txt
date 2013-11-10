@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.LoginDetailsService
+path: 05F61326EED6BCF3E677ED8657865D0A.gwt.rpc

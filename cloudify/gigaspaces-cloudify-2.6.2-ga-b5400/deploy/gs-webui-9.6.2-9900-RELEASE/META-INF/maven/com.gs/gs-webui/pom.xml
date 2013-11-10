@@ -1,0 +1,449 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <artifactId>gs-webui</artifactId>
+    <groupId>com.gs</groupId>
+    <name>Web UI</name>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+
+    <parent>
+        <groupId>com.gs.webui</groupId>
+        <artifactId>webui-parent-pom</artifactId>
+        <version>9.6.2-9900-RELEASE</version>
+        <relativePath>../webui-libs/webui-parent-pom</relativePath>
+    </parent>
+
+	<repositories>
+		<repository>
+            <id>sass-java</id>
+            <url>http://sass-java.googlecode.com/svn/repo/</url>
+        </repository>
+		<repository>
+			<id>org.openspaces</id>
+			<name>OpenSpaces</name>
+			<url>http://maven-repository.openspaces.org</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <!--<packagingExcludes>WEB-INF/lib/scala-compiler-2.10.0.jar</packagingExcludes>&lt;!&ndash; CSV &ndash;&gt;-->
+                </configuration>
+            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.fusesource.scalate</groupId>-->
+                      <!--<artifactId>maven-scalate-plugin_2.10</artifactId>-->
+                      <!--<version>1.6.1</version>-->
+                      <!--<executions>-->
+                        <!--<execution>-->
+                          <!--<goals>-->
+                            <!--<goal>precompile</goal>-->
+                          <!--</goals>-->
+                        <!--</execution>-->
+                      <!--</executions>-->
+            <!--</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<archiveClasses>true</archiveClasses>
+                    <warSourceExcludes>WEB-INF/sass/**</warSourceExcludes>
+					<packagingExcludes>
+                        WEB-INF/lib/spring-asm*.jar,
+                        WEB-INF/lib/spring-context*.jar,
+                        WEB-INF/lib/spring-core*.jar,
+                        WEB-INF/lib/commons-logging*.jar,
+                        WEB-INF/lib/spring-beans*.jar,
+                        WEB-INF/lib/spring-expression*.jar,
+                        WEB-INF/lib/spring-aop*.jar,
+                        WEB-INF/lib/commons-lang*.jar,
+                        WEB-INF/lib/logkit*.jar,
+                        WEB-INF/lib/avalon*.jar,
+                        WEB-INF/lib/aopalliance*.jar
+                    </packagingExcludes>
+					<attachClasses>true</attachClasses>
+
+				</configuration>
+			</plugin>
+
+
+
+            <plugin>
+                <groupId>org.jasig.maven</groupId>
+                <artifactId>sass-maven-plugin</artifactId>
+                <version>1.0.2</version>
+                <executions>
+                    <execution>
+                        <id>compile-sass</id>
+                        <goals>
+                            <goal>update-stylesheets</goal>
+
+                        </goals>
+                        <phase>validate</phase>
+                        <configuration>
+                            <includes>
+                                <include>**/sass</include>
+
+                            </includes>
+                            <relativeOutputDirectory>../../stylesheets</relativeOutputDirectory>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>${gwtVersion}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+
+                    <gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath>
+                    <compileSourcesArtifacts>
+                        <artifact>com.gs.webui:color-palette-gwt</artifact>
+                        <artifact>com.hydro4ge:raphaelgwt</artifact>
+                        <artifact>com.gs.webui:raphael-gauges-gwt</artifact>
+                        <artifact>com.gs.webui:graphs-gwt</artifact>
+                        <artifact>com.gs.webui:simile-timeline-gwt</artifact>
+                        <artifact>com.gs.webui:jquery-widgets-gwt</artifact>
+                        <artifact>com.gs.webui:svg-components-gwt</artifact>
+                        <artifact>com.gs.webui:highcharts-gwt</artifact>
+                        <artifact>com.gs.webui:client-bundle</artifact>
+                        <artifact>com.gs.webui:code-mirror-gwt</artifact>
+                        <artifact>com.gs.webui:webui-commons</artifact>
+                    </compileSourcesArtifacts>
+                </configuration>
+            </plugin>
+        </plugins>
+            <resources>
+                <resource>
+                    <directory>src/main/resources</directory>
+                    <excludes>
+                        <exclude>config/**/*</exclude>
+                    </excludes>
+                    <filtering>false</filtering>
+                </resource>
+            </resources>
+    </build>
+
+
+
+    <!--=========================================================================================================-->
+    <!-- TAKEN FROM GWT ARCHETYPE - START -->
+    <!--=========================================================================================================-->
+
+    <dependencies>
+        <!-- available through gwt-dev but not in runtime, adding it here -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- spring security -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${springVersion}</version>
+			<scope>${spring.provided}</scope>
+		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springVersion}</version>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${springVersion}</version>
+			<scope>${spring.provided}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${springSecurityVersion}</version>
+			<scope>${spring.provided}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springSecurityVersion}</version>
+			<scope>${spring.provided}</scope>
+		</dependency>
+ 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springSecurityVersion}</version>
+			<scope>${spring.provided}</scope>
+		</dependency>
+        <dependency>
+			<groupId>org.springframework.ldap</groupId>
+			<artifactId>spring-ldap-core</artifactId>
+			<version>1.3.1.RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-ldap</artifactId>
+			<version>3.0.1.RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- GWT SDK -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwtVersion}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwtVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- available through gwt-dev but not in runtime, adding it here -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwtVersion}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- external libraries -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.0.0.GA</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+        	<groupId>commons-fileupload</groupId>
+        	<artifactId>commons-fileupload</artifactId>
+        	<version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.0.0.GA</version>
+            <classifier>sources</classifier>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- external GWT libraries -->
+        <dependency>
+            <groupId>com.googlecode.gwtupload</groupId>
+            <artifactId>gwtupload</artifactId>
+            <version>0.6.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- slf4j logger with java utils logging (jul) bridge -->
+        <dependency>
+        	<groupId>org.slf4j</groupId>
+        	<artifactId>slf4j-jdk14</artifactId>
+        	<version>1.7.2</version>
+        </dependency>
+        <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.gwtquery</groupId>
+            <artifactId>gwtquery</artifactId>
+            <version>1.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.extjs</groupId>
+            <artifactId>gxt</artifactId>
+            <version>${gxt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- internal GWT libraries (web ui GWT modules) -->
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>simile-timeline-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>raphael-gauges-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>highcharts-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>code-mirror-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>svg-components-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>client-bundle</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>color-palette-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>graphs-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gs.webui</groupId>
+            <artifactId>jquery-widgets-gwt</artifactId>
+            <version>${gsVersion}</version>
+            <scope>compile</scope>
+        </dependency>
+
+		<!-- gigaspaces infrastructure -->
+        <dependency>
+            <groupId>com.gigaspaces</groupId>
+            <artifactId>gs-runtime</artifactId>
+            <version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+        	<groupId>com.gigaspaces</groupId>
+        	<artifactId>gs-openspaces</artifactId>
+        	<version>${gsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+
+		<!-- common -->               
+        <dependency>
+        	<groupId>org.cloudifysource</groupId>
+        	<artifactId>cloudify-repository</artifactId>
+        	<version>${cloudifyVersion}</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.gs.webui</groupId>
+        	<artifactId>webui-commons</artifactId>
+        	<version>${gsVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.fusesource.scalate</groupId>
+            <artifactId>scalate-core_2.10</artifactId>
+            <version>1.6.1</version>
+            <scope>provided</scope><!-- rollback -->
+        </dependency>
+  		<dependency>
+        	    <artifactId>webui-commons</artifactId>
+    			<version>${gsVersion}</version>
+    			<groupId>com.gs.webui</groupId>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <gwtVersion>2.4.0</gwtVersion>
+        <gxt.version>2.2.5</gxt.version>
+        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.provided>provided</spring.provided>
+    </properties>
+
+	<profiles>
+		<profile>
+			<id>stub</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+			<dependencies>
+				<dependency>
+					<artifactId>webui-stubs</artifactId>
+					<version>${gsVersion}</version>
+					<groupId>com.gs.webui</groupId>
+				</dependency>
+			</dependencies>
+		</profile>
+        <profile>
+            <id>dev</id>
+            <dependencies>
+                <dependency> <!-- automatically compile scss -->
+                    <groupId>com.sass-lang</groupId>
+                    <artifactId>sass-java</artifactId>
+                    <version>3.1.1.4</version>
+                </dependency>
+                <dependency> <!-- cloudify security implementation -->
+                    <groupId>org.cloudifysource</groupId>
+                    <artifactId>security</artifactId>
+                    <version>${cloudifyVersion}</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+            <properties>
+                <spring.provided>compile</spring.provided>
+            </properties>
+        </profile>
+        <profile>
+            <id>no-gwt</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>gwt-maven-plugin</artifactId>
+                        <version>${gwtVersion}</version>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+	</profiles>
+</project>

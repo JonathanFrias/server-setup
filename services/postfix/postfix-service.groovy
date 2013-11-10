@@ -13,6 +13,12 @@ service {
     }
 
     lifecycle {
-        init 'postfix_init.groovy'
+        preInstall 'postfix_preInstall.groovy'
+        install 'postfix_install.groovy'
+        start 'postfix_start.groovy'
+        startDetectionTimeoutSecs 800
+        startDetection {
+            ServiceUtils.isPortOccupied(postfixPort)
+        }
     }
 }
