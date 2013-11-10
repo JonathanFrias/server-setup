@@ -1,0 +1,121 @@
+#import(mvc.Helpers._)
+<% attributes("head") = { () => %>
+    <title>${i18n("product.name")} - Login</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <script type="/public/javascripts/jquery/jquery-1.8.1.min.js"></script>
+<% } %>
+
+
+<% attributes("body") = { () =>%>
+<div class="background">
+    <div class="column">
+        <div class="content">
+            <div class="sprite logo">
+
+            </div>
+
+            <div class="sprite form-background">
+                <div class="form-area">
+                    <div class="login-error-message">
+                        Authentication failed: username or password incorrect, please try again
+                    </div>
+                    <form class="complex-form" action="/login/submit.do" method="POST">
+                        <div class="form-content">
+                            <div class="display-table expand">
+                                <div class="display-cell login-welcome">
+                                    <div class="msg-welcome">Welcome</div>
+                                    <div class="msg-login">Please Log in</div>
+                                </div>
+                                <div class="intro align-bottom display-cell">
+                                    <div>
+                                        You may enter a locator or a group name to <br/>change the default cluster discovery
+                                        policy
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display-table expand input-area">
+                                <div class="display-cell login-input">
+                                    <div class="input-section">
+                                        <div class="label">Username</div>
+                                        <input type="text" name="username"/>
+                                    </div>
+                                    <div class="input-section">
+                                        <div class="label">Password</div>
+                                        <input type="password" name="password"/>
+                                    </div>
+                                </div>
+                                <div class="display-cell admin-input">
+                                    <div class="input-section">
+                                        <div class="label">Groups</div>
+                                        <input type="text" name="groups" placeholder="(optional)"/>
+                                    </div>
+                                    <div class="input-section">
+                                        <div class="label">Locators</div>
+                                        <input type="text" name="locators" placeholder="(optional)"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="sprite login-btn btn">login</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <form class="simple-form" action="/login/submit.do" method="POST">
+                        <div class="form-content display-table expand">
+                            <div class="display-row">
+                                <div class="display-cell login-welcome">
+                                    <div class="msg-welcome">Welcome</div>
+                                    <div class="msg-login">Please Log in</div>
+                                </div>
+                                <div class="display-cell login-input">
+                                    <div class="input-section">
+                                        <div class="label">Username</div>
+                                        <input type="text" name="username"/>
+                                    </div>
+                                    <div class="input-section">
+                                        <div class="label">Password</div>
+                                        <input type="password" name="password"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="sprite login-btn btn">login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+
+        $("form").submit(function(e){
+            e.stopPropagation();
+            $("body").removeClass("login-error");
+            var $username = $(this).find("input[name=username]");
+            var $password = $(this).find("input[name=password]");
+
+            $.ajax({
+                type:'POST',
+                url:'/gs_webui/j_spring_security_check',
+                data: {j_username:$username.val(), j_password:$password.val() },
+                success:function(){},
+                error:function(result){
+                    $("body").addClass("login-error");
+                }
+            });
+
+           return false;
+        });
+
+    })
+</script>
+
+<% } %>
+
+<% render("/pages/scaffold.ssp") %>

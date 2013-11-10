@@ -1,0 +1,212 @@
+body {
+  background: #edf7fc;
+  padding: 0;
+  margin: 0;
+  /** gwt standard **/
+  font-size: small;
+  color: black;
+  direction: ltr;
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  background-image: url("/images/login/cloudify-login-bg.jpg");
+  background-repeat: repeat-x;
+  background-color: #B6E6F4;
+  background-position: 0 50%;
+}
+body .login-error-message {
+  margin-top: 40px;
+  color: red;
+  text-align: center;
+  visibility: hidden;
+}
+body.login-error form .form-content input, body.login-error form .form-content input:focus {
+  border-color: red;
+  border-width: 1px;
+}
+body.login-error .login-error-message {
+  visibility: visible;
+}
+
+.sprite {
+  /*display:inline-block;*/
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+}
+
+.column {
+  width: 656px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 150px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.display-table {
+  display: table;
+}
+
+.display-row {
+  display: table-row;
+}
+
+.display-cell {
+  display: table-cell;
+}
+
+/** clearfix **/
+.clearfix {
+  /* for IE 6/7 only */
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.form-background {
+  margin: 40px auto 0 auto;
+  height: 462px;
+  width: 591px;
+  background-image: url("/images/login/login-box-bg.png");
+  overflow: hidden;
+}
+
+.form-area {
+  width: 100%;
+  height: 340px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.msg-welcome {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.msg-login {
+  font-size: 24px;
+  color: #609b00;
+}
+
+.sprite.login-btn {
+  background-image: url("/images/login/login-button-states.png");
+  background-position: 0 0;
+  width: 98px;
+  font-size: 0;
+  height: 39px;
+}
+
+.sprite.btn {
+  background-color: transparent;
+  border: none;
+}
+.sprite.btn:hover {
+  background-position: 0 -39px;
+}
+.sprite.btn:active {
+  background-position: 0 -78px;
+}
+
+.expand {
+  width: 100%;
+}
+
+.msg-welcome, .msg-login {
+  margin-left: 50px;
+}
+
+form {
+  height: 340px;
+}
+form .form-content {
+  overflow: hidden;
+  /** prevent collapsed margins - http://colinaarts.com/articles/the-magic-of-overflow-hidden/ **/
+}
+form .form-content input {
+  border-radius: 8px;
+  width: 210px;
+  padding: 5px;
+  border: 2px solid #b5b8c8;
+  font-size: 16px;
+}
+form .form-content input:focus {
+  outline: none;
+  border-color: #7eadd9;
+}
+form .login-input {
+  vertical-align: top;
+}
+form .label {
+  text-align: left;
+  font-size: 18px;
+}
+
+.intro {
+  font-size: 12px;
+  width: 240px;
+  padding-right: 20px;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cloudify-theme .complex-form {
+  display: none;
+}
+.cloudify-theme .form-content {
+  margin-top: 60px;
+}
+.cloudify-theme .sprite.logo {
+  background-image: url("/images/login/cloudify-login-logo.png");
+  margin: auto;
+  height: 162px;
+  width: 730px;
+}
+.cloudify-theme .login-input {
+  width: 210px;
+  padding-right: 20px;
+}
+
+.xap-theme .form-content {
+  margin-top: 20px;
+}
+.xap-theme .admin-input {
+  width: 225px;
+  padding-right: 20px;
+}
+.xap-theme .simple-form {
+  display: none;
+}
+.xap-theme .login-input .input-section {
+  margin-left: 50px;
+}
+.xap-theme .sprite.logo {
+  background-image: url("/images/login/xap-login-logo.png");
+  margin: auto;
+  height: 122px;
+  width: 603px;
+}
+.xap-theme .input-area {
+  margin-top: 20px;
+}

@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.AppContextService
+path: 36DBC0DD517F5ECE06A51CC533B8E766.gwt.rpc

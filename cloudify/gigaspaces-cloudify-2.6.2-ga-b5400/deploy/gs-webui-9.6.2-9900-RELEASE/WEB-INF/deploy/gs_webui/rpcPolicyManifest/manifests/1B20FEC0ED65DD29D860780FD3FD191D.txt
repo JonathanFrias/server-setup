@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.AdminService
+path: 8C7C83C10CB72E2F29FFFE6558F63938.gwt.rpc

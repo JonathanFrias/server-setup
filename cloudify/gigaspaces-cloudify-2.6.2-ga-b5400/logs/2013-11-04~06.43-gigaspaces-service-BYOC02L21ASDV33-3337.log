@@ -1,0 +1,9 @@
+2013-11-04 06:43:56,915  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-04 06:44:00,011  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ee-dev. This may take a few minutes.
+2013-11-04 06:44:02,074  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Creating BYON context deployer for cloud: EE Development Servers
+2013-11-04 06:44:04,158  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_MANAGEMENT_01. Free nodes: id='ee-mgmt-01.lab.webapps.rr.com', privateIp='71.74.48.136', hostName='ee-mgmt-01', nodeName='ee-mgmt-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:44:06,109  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_01. Free nodes: id='ee-app-01.lab.webapps.rr.com', privateIp='71.74.49.111', hostName='ee-app-01', nodeName='ee-app-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:44:08,184  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_APP_02. Free nodes: id='ee-app-02.lab.webapps.rr.com', privateIp='71.74.48.103', hostName='ee-app-02', nodeName='ee-app-02.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:44:10,224  INFO [org.cloudifysource.esc.byon.ByonDeployer] - Setting initial pools for template: EE_DB_01. Free nodes: id='ee-db-01.lab.webapps.rr.com', privateIp='71.74.49.112', hostName='ee-db-01', nodeName='ee-db-01.lab.webapps.rr.com'Invalid nodes: 
+2013-11-04 06:44:10,230  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-04 06:44:10,263  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - DefaultCloudProvisioning: startMachine - management == true

@@ -1,0 +1,1 @@
+/export/utils/java/jdk1.6.0_27-64Bit/jre/../bin/javadoc "-requestExample org.cloudifysource.rest.doclet.RESTRequestExampleGenerator -responseExample org.cloudifysource.rest.doclet.RESTResposneExampleGenerator -requestBodyParamFilter org.cloudifysource.rest.doclet.RequestBodyParamFilter" @options @argfile

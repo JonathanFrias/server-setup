@@ -1,0 +1,1 @@
+2013-11-04 07:36:25,419  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - Version mismatch between Cloudify REST gateway and Cloudify CLI: CLI version is [2.6.2-Cloudify-ga] while server version is [2.6.1-Cloudify-ga]

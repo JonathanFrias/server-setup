@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: tgrid
+Build-Jdk: 1.6.0_27
+Class-Path: lib/platform/cloudify/dsl.jar lib/platform/cloudify/securi
+ ty-2.6.2-5400-RELEASE.jar lib/platform/cloudify/security-ldap-2.6.2-5
+ 400-RELEASE.jar tools/groovy/embeddable/groovy-all-1.8.6.jar tools/gr
+ oovy/lib/ivy-2.2.0.jar
+

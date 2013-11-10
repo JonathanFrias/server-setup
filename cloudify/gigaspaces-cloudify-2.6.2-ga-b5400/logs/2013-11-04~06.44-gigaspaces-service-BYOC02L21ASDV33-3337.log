@@ -1,0 +1,35 @@
+2013-11-04 06:44:22,533  INFO [org.cloudifysource.esc.driver.provisioning.byon.ByonProvisioningDriver] - Found existing management servers ([MachineDetails [machineId=ee-mgmt-01.lab.webapps.rr.com, privateAddress=71.74.48.136, publicAddress=, gigaspacesInstalled=true, agentRunning=true, installationDirectory=null, locationId=null]])
+2013-11-04 06:44:23,372  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:44:23,372  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:44:33,798  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:44:33,798  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:44:44,280  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:44:44,280  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:44:54,574  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:44:54,575  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:45:04,870  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:45:04,870  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:45:15,171  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:45:15,172  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:45:25,694  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Error connecting to rest service.; Caused by: CLIStatusException, reason code: version_mismatch, message arguments: 2.6.2-Cloudify-ga, 2.6.1-Cloudify-ga
+2013-11-04 06:45:25,694  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Connecting to rest service.
+2013-11-04 06:45:35,204  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Failed to clean management machines after provisioning failure, reported error: Failed to lookup existing management servers.
+2013-11-04 06:45:35,241  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Command interrupted by user.
+2013-11-04 06:46:04,093  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4265
+2013-11-04 06:46:37,178  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4267
+2013-11-04 06:47:10,380  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4268
+2013-11-04 06:47:28,321  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4270
+2013-11-04 06:48:01,598  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4272
+2013-11-04 06:48:34,973  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4273
+2013-11-04 06:49:08,449  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4275
+2013-11-04 06:49:28,941  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4277
+2013-11-04 06:50:04,786  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4278
+2013-11-04 06:50:27,119  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4280
+2013-11-04 06:50:45,386  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4281
+2013-11-04 06:51:03,856  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4283
+2013-11-04 06:51:37,833  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4284
+2013-11-04 06:52:11,575  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4286
+2013-11-04 06:52:29,655  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4288
+2013-11-04 06:53:03,242  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4289
+2013-11-04 06:53:37,833  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4291
+2013-11-04 06:54:02,281  INFO [net.jini.lookup.ServiceDiscoveryManager] - failure occurred while renewing an event lease; Caused by: net.jini.core.lease.UnknownLeaseException: Unknown event id: 4293

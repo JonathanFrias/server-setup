@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.SecurityService
+path: B94BFC23C3ED3B0918BD6417441C7820.gwt.rpc

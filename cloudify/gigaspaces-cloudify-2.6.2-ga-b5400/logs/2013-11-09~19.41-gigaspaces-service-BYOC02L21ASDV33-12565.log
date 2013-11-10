@@ -1,0 +1,13 @@
+2013-11-09 19:42:27,747  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file email-server
+2013-11-09 19:42:34,850  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application gofrias-mail
+2013-11-09 19:42:36,814  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - Could not find compute template: SMALL_LINUX
+2013-11-09 19:52:43,095  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file email-server
+2013-11-09 19:52:44,822  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application gofrias-mail
+2013-11-09 19:52:46,065  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - Could not find compute template: EE_APP-01
+2013-11-09 19:55:11,364  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file email-server
+2013-11-09 19:55:12,263  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application gofrias-mail
+2013-11-09 19:55:25,032  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [gofrias-mail] with 1 services
+2013-11-09 19:55:25,033  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [postfix] 1 planned instances
+2013-11-09 20:08:10,526  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - The installation of <{0}> timed out on the client side. The application is still installed, To remove it use the uninstall-application command.
+2013-11-09 20:08:59,087  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Uninstalling the currently deployed applications
+2013-11-09 20:08:59,252  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Waiting for application gofrias-mail to uninstall.

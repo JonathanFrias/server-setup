@@ -1,0 +1,24 @@
+2013-11-09 19:33:20,260  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-09 19:33:23,948  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ec2-cfrias. This may take a few minutes.
+2013-11-09 19:34:15,033  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-09 19:34:23,011  INFO [org.cloudifysource.esc.jclouds.JCloudsDeployer] - starting machine with template : {image={id=us-east-1/ami-35792c5c, providerId=ami-35792c5c, name=amzn-ami-pv-2013.09.0.x86_64-ebs, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, os={family=unrecognized, arch=paravirtual, version=, description=amazon/amzn-ami-pv-2013.09.0.x86_64-ebs, is64Bit=true}, description=Amazon Linux AMI x86_64 PV EBS, status=AVAILABLE[available], loginUser=ec2-user, userMetadata={owner=137112412989, rootDeviceType=ebs, virtualizationType=paravirtual, hypervisor=xen}}, hardware={id=m1.large, providerId=m1.large, processors=[{cores=2.0, speed=2.0}], ram=7680, volumes=[{type=LOCAL, size=10.0, device=/dev/sda1, bootDevice=true, durable=false}, {type=LOCAL, size=420.0, device=/dev/sdb, bootDevice=false, durable=false}, {type=LOCAL, size=420.0, device=/dev/sdc, bootDevice=false, durable=false}], supportsImage=And(ALWAYS_TRUE,Or(isWindows(),requiresVirtualizationType(paravirtual)),ALWAYS_TRUE,is64Bit())}, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, options={groupNames=[default], keyPair=id_rsa, userData=[35, 99, 108, 111, 117, 100, 45, 99, 111, 110, 102, 105, 103, 10, 114, 101, 112, 111, 95, 117, 112, 103, 114, 97, 100, 101, 58, 32, 110, 111, 110, 101, 10]}}
+2013-11-09 19:34:46,035  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 54.224.125.75.
+2013-11-09 19:35:16,397  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 54.224.125.75.
+2013-11-09 19:35:16,793  INFO [org.apache.commons.vfs2.impl.StandardFileSystemManager] - Using "/var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/vfs_cache" as temporary files store.
+2013-11-09 19:35:18,180  WARNING [com.jcraft.jsch] - Permanently added '54.224.125.75' (RSA) to the list of known hosts.
+2013-11-09 19:35:28,042  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 54.224.125.75.
+2013-11-09 19:35:32,831  WARNING [com.jcraft.jsch] - Permanently added '54.224.125.75' (RSA) to the list of known hosts.
+2013-11-09 19:35:34,297  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Checking script path
+2013-11-09 19:35:34,309  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] script path is /home/ec2-user/gs-files/upload
+2013-11-09 19:35:34,362  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Running script /home/ec2-user/gs-files/upload/pre-bootstrap.sh
+2013-11-09 19:35:34,363  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Installing wget with yum
+2013-11-09 19:35:34,659  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Package wget-1.14-8.11.amzn1.x86_64 already installed and latest version
+2013-11-09 19:35:34,679  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Yum invocation complete
+2013-11-09 19:35:34,685  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Machine Architecture -- x86_64
+2013-11-09 19:35:34,685  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Previous JAVA_HOME value -- /usr/lib/jvm/jre
+2013-11-09 19:35:34,685  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-09 19:36:11,228  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Installing JDK
+2013-11-09 19:36:23,812  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-09 19:38:37,548  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Updating environment script
+2013-11-09 19:38:37,599  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] Setting privileged mode
+2013-11-09 19:38:37,599  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.224.125.75] nohup: ignoring input and appending output to `nohup.out'

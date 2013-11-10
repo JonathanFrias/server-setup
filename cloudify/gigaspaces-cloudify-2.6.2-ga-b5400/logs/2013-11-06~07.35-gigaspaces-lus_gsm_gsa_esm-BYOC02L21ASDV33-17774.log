@@ -1,0 +1,141 @@
+2013-11-06 07:35:52,486  INFO [com.gigaspaces.start] - 
+==================================================
+GigaSpaces ServiceGrid starting using command <com.gigaspaces.start.services="LH,GSM,GSA,ESM",gsa.global.lus,0,gsa.lus,0,gsa.gsc,0,gsa.global.gsm,0,gsa.gsm_lus,0,gsa.global.esm,0,gsa.esm,0>
+Log created by <carlos.frias> on Wed Nov 06 07:35:52 EST 2013
+==================================================
+2013-11-06 07:35:52,805  CONFIG [com.gigaspaces.start] - platformJARs
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/commons-logging-1.1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/gs-runtime.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jee/activation-1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jee/geronimo-j2ee-connector_1.5_spec-1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jee/transactions-jta-3.8.0.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/java-cup-11a-runtime.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/org.eclipse.wst.xml.xpath2.processor_2.1.1.v201204260055.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/serializer.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/xalan.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/xercesImpl.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/xml-apis.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/../tools/groovy/embeddable/groovy-all-1.8.6.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jruby
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/ant-1.8.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/ant-commons-net-1.8.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/ant-launcher-1.8.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/commons-net-1.4.0.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/jakarta-oro-2.0.8.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jpa/geronimo-jpa_2.0_spec-1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jpa/geronimo-jta_1.1_spec-1.1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jpa/openjpa-2.0.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-collections-3.2.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-dbcp-1.2.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-lang-2.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-pool-1.4.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/scala/lib
+2013-11-06 07:35:52,825  CONFIG [com.gigaspaces.start] - Webster created on http://127.0.0.1:61323, roots : /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/;/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/;/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/deploy
+2013-11-06 07:35:53,089  INFO [com.gigaspaces.start] - JMXServiceURL=service:jmx:rmi:///jndi/rmi://BYOC02L21ASDV33:10098/jmxrmi
+2013-11-06 07:35:53,338  INFO [com.gigaspaces.start] - JMX Platform MBeanServer exported with RMI Connector, creation time [248] millis
+2013-11-06 07:35:53,403  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/com.springsource.net.sf.cglib-2.2.0.jar to ClassPath
+2013-11-06 07:35:53,404  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jdbc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,404  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jms-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,404  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-orm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,404  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-oxm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,405  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-web-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,405  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-webmvc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,405  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/security/spring-security-core-3.0.7.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,406  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/com.springsource.net.sf.cglib-2.2.0.jar to ClassPath
+2013-11-06 07:35:53,406  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jdbc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,406  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jms-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,406  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-orm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,407  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-oxm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,407  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-web-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,407  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-webmvc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,407  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/security/spring-security-core-3.0.7.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,409  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/com.springsource.net.sf.cglib-2.2.0.jar to ClassPath
+2013-11-06 07:35:53,409  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jdbc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,409  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jms-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,409  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-orm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,409  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-oxm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,410  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-web-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,410  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-webmvc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:35:53,410  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/security/spring-security-core-3.0.7.RELEASE.jar to ClassPath
+2013-11-06 07:35:55,067 LUS INFO [com.sun.jini.reggie] - started Reggie: 935633ef-a7d3-4a12-afe4-458dd5046c9c, [localcloud], jini://BYOC02L21ASDV33:4176/
+2013-11-06 07:35:56,311 GSM INFO [com.gigaspaces.grid.gsm.peer] - A backup GSM has not yet been discovered. To ensure high availability, make sure that another GSM is running.
+2013-11-06 07:35:56,331 GSM INFO [com.gigaspaces.grid.gsm] - 
+
+ System Environment: 
+	 System:
+		 OS Name: Mac OS X
+		 OS Version: 10.8.5
+		 Architecture: x86_64
+		 Number Of Processors: 8
+	 JVM Details:
+		 Java Version: 1.7.0_25, Oracle Corporation
+		 Java Runtime: Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+		 Java VM: Java HotSpot(TM) 64-Bit Server VM 23.25-b01, Oracle Corporation
+		 Java Home: /Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre
+	 JVM Memory:
+		 Max Heap Size (KB): 116544
+		 Current Allocated Heap Size (KB): 47030
+	 Network Interfaces Information:
+		 Host Name: [BYOC02L21ASDV33] 
+		 Network Interface Name: vmnet8 / vmnet8
+		 IP Address: 192.168.226.1
+		 Network Interface Name: vmnet1 / vmnet1
+		 IP Address: 192.168.146.1
+		 Network Interface Name: utun0 / utun0
+		 IP Address: fe80:0:0:0:5d68:3b30:3df2:3df2%8
+		 IP Address: fe80:0:0:0:12dd:b1ff:fee7:3f41%8
+		 IP Address: 10.143.19.118
+		 Network Interface Name: en1 / en1
+		 IP Address: fe80:0:0:0:aabb:cfff:fe01:23e8%5
+		 IP Address: 192.168.1.101
+		 Network Interface Name: lo0 / lo0
+		 IP Address: 0:0:0:0:0:0:0:1
+		 IP Address: fe80:0:0:0:0:0:0:1%1
+		 IP Address: 127.0.0.1
+	 Zones: [management, localcloud]
+	 Process Id: 17774
+	 GigaSpaces Cloudify:
+		 Edition: Cloudify 2.6.2 GA (compatible with XAP 9.6.2)
+		 Build: 5400
+		 Home: /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/
+
+
+2013-11-06 07:35:56,457  INFO [org.jini.rio.jsb] - Service-Id: [b97d2cd3-eb1d-48ba-8695-620b44333464]
+2013-11-06 07:35:56,458  INFO [com.gigaspaces.grid.gsm] - GSM started successfully with groups [localcloud] and locators [jini://127.0.0.1:4176/]
+2013-11-06 07:35:56,507 GSA INFO [com.gigaspaces.grid.gsa] - Starting GSA ...
+2013-11-06 07:35:56,518 GSA INFO [com.gigaspaces.grid.gsa] - GSA will use discovery groups [localcloud] and locators [jini://127.0.0.1:4176/]
+2013-11-06 07:35:56,630 GSA INFO [com.gigaspaces.grid.gsa] - GSA will use an interval of [1] seconds to monitor processes
+2013-11-06 07:35:56,632 GSA INFO [com.gigaspaces.grid.gsa] - GSA will check for global managed instances every [10] seconds, with randomized initial delay of [21] seconds out of [30] seconds
+2013-11-06 07:35:56,662  INFO [org.jini.rio.jsb] - Service-Id: [6b10ec51-5954-4955-8950-1fb63fd24ca4]
+2013-11-06 07:35:56,662  INFO [com.gigaspaces.grid.gsa] - GSA started successfully with groups [localcloud] and locators [jini://127.0.0.1:4176/]
+2013-11-06 07:35:57,402 ESM INFO [org.openspaces.grid.esm.ESMImplInitializer] - Waiting to discover at least one GSM
+2013-11-06 07:35:57,408 ESM INFO [org.openspaces.grid.esm.ESMImplInitializer] - Waiting 1 seconds for all grid components to register with lookup service
+2013-11-06 07:35:58,462 ESM INFO [org.openspaces.grid.esm] - Waiting to discover one ESM
+2013-11-06 07:35:59,438 ESM INFO [org.openspaces.grid.esm] - Starting ESM ...
+2013-11-06 07:35:59,462 ESM INFO [org.jini.rio.jsb] - Service-Id: [78075ab9-5db8-4b49-8a87-a73e68da274d]
+2013-11-06 07:35:59,463 ESM INFO [org.openspaces.grid.esm] - ESM started successfully with groups [localcloud] and locators [jini://127.0.0.1:4176/]
+2013-11-06 07:35:59,953 GSA INFO [com.gigaspaces.grid.gsa] - [gsc][1/]: Received request to start
+2013-11-06 07:35:59,954 GSA INFO [com.gigaspaces.grid.gsa] - [gsc][1/]: Starting with command [/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/bin/java, -XX:+AggressiveOpts, -XX:MaxPermSize=256m, -XX:+HeapDumpOnOutOfMemoryError, -Xmx512m, -Xmx128m, -Dcom.sun.jini.reggie.initialUnicastDiscoveryPort=4176, -Dgsm.excludeGscOnFailedInstance.disabled=true, -Dorg.jini.rio.monitor.pendingRequestDelay=1000, -Dcom.gs.zones=management,localcloud, -Dcom.gs.esm.discovery_polling_interval_seconds=1, -Dcom.gs.multicast.enabled=false, -DagentId=, -DgsaServiceID=, -DenableDynamicLocators=, -Xbootclasspath/p:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../lib/platform/xml/*, -Dsun.rmi.dgc.client.gcInterval=36000000, -Dsun.rmi.dgc.server.gcInterval=36000000, -Djava.rmi.server.hostname=BYOC02L21ASDV33, -Djava.rmi.server.RMIClassLoaderSpi=default, -Djava.rmi.server.logCalls=false, -Dcom.gs.jini_lus.groups=localcloud, -Dcom.gs.jini_lus.locators=127.0.0.1:4176, -Dcom.gs.logging.debug=false, -Djava.util.logging.config.file=/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../config/gs_logging.properties, -Xmx256m, -Dcom.gs.zones=rest,cloudifyManagementSpace,webui, -DagentId=1, -DgsaServiceID=6b10ec51-5954-4955-8950-1fb63fd24ca4, -DenableDynamicLocators=false, -cp, :/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../lib/platform/sigar/sigar.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../..:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../lib/platform/boot/gs-boot.jar:, com.gigaspaces.start.SystemBoot, com.gigaspaces.start.services="GSC"]
+2013-11-06 07:36:00,252 GSA INFO [com.gigaspaces.grid.gsa] - [gsc][1/17775]: Assigned process id
+2013-11-06 07:36:01,611 GSM INFO [com.gigaspaces.grid.gsm] - Registered GSC - [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]], count [1]
+2013-11-06 07:36:03,463 ESM INFO [org.openspaces.grid.esm] - ESM is now listening for Processing Unit events
+2013-11-06 07:36:03,895 GSM INFO [com.gigaspaces.grid.gsm] - Deploying cloudifyManagementSpace
+2013-11-06 07:36:04,005 GSM INFO [com.gigaspaces.grid.gsm.provision] - Attempting to allocate processing unit instance [cloudifyManagementSpace [1]] on [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]] 
+2013-11-06 07:36:07,079 GSM INFO [com.gigaspaces.grid.gsm] - Deploying webui
+2013-11-06 07:36:07,087 GSM INFO [com.gigaspaces.grid.gsm.provision] - Attempting to allocate processing unit instance [webui [1]] on [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]] 
+2013-11-06 07:36:10,277 GSM INFO [com.gigaspaces.grid.gsm] - Deploying rest
+2013-11-06 07:36:10,285 GSM WARNING [com.gigaspaces.grid.gsm] - Could not meet required dependencies of: [rest [1]] reasons: {waitForDeploymentToComplete=false, minimumNumberOfDeployedInstances=0, name=cloudifyManagementSpace, minimumNumberOfDeployedInstancesPerPartition=1}
+2013-11-06 07:36:10,286 GSM WARNING [com.gigaspaces.grid.gsm] - Pending allocation request for [rest [1]] until an available GSC is obtained, and all dependencies are met.
+2013-11-06 07:36:11,255 GSM INFO [com.gigaspaces.grid.gsm.provision] - Allocated processing unit instance [cloudifyManagementSpace [1]] on [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]]
+2013-11-06 07:36:11,362 GSM INFO [com.gigaspaces.grid.gsm.services] - Managing Service: [cloudifyManagementSpace [1]] at host: [127.0.0.1] 
+2013-11-06 07:36:12,372 GSM INFO [com.gigaspaces.grid.gsm.provision] - Attempting to allocate processing unit instance [rest [1]] on [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]] 
+2013-11-06 07:36:20,522 GSM INFO [com.gigaspaces.grid.gsm.provision] - Allocated processing unit instance [webui [1]] on [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]]
+2013-11-06 07:36:20,578 GSM INFO [com.gigaspaces.grid.gsm.services] - Managing Service: [webui [1]] at host: [127.0.0.1] 
+2013-11-06 07:36:31,982 GSM INFO [com.gigaspaces.grid.gsm.provision] - Allocated processing unit instance [rest [1]] on [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]]
+2013-11-06 07:36:32,011 GSM INFO [com.gigaspaces.grid.gsm.services] - Managing Service: [rest [1]] at host: [127.0.0.1] 
+2013-11-06 07:46:16,268 GSA INFO [com.gigaspaces.grid.gsa] - Stopping GSA ...
+2013-11-06 07:46:16,300 GSA INFO [com.gigaspaces.grid.gsa] - [gsc][1/17775]: Stopping process
+2013-11-06 07:46:16,896 GSM INFO [com.gigaspaces.grid.gsm] - Unregistered GSC - [GSC pid[17775] host[BYOC02L21ASDV33/127.0.0.1]], count [0]
+2013-11-06 07:46:18,718 GSA INFO [com.gigaspaces.grid.gsa] - [gsc][1/17775]: Process stopped successfully through shutdown hook
+2013-11-06 07:46:18,856 GSA INFO [com.gigaspaces.grid.gsa] - GSA stopped successfully
+2013-11-06 07:46:18,857 LUS INFO [com.gigaspaces.grid.lookup] - Stopping LUS

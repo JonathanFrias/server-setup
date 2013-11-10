@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Highcharts Example</title>
+
+
+<!-- 1. Add these JavaScript inclusions in the head of your page -->
+
+<!-- we are using highcharts 2.1.4 with jquery 1.4.4 since it gives us minimum memory footprint
+	 vs 
+	 highcharts 2.1.7 jquery-1.6.4,
+	 highcharts 2.1.7 jquery-1.4.4,
+	 highcharts 2.1.6 jquery-1.4.4-->
+
+<script type="text/javascript" src="highcharts-2.1.9/jquery.min.js"></script>
+<script type="text/javascript" src="highcharts-2.1.9/highcharts.js"></script>
+
+
+<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+<script language="JavaScript" type="text/javascript">
+var chart;
+
+var gray = {
+    colors: ["#DDDF0D", "#7798BF", "#55BF3B", "#DF5353", "#aaeeee", "#ff0066", "#eeaaee",
+        "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+    chart: {
+        backgroundColor: {
+            linearGradient: [0, 0, 0, 400],
+            stops: [
+                [0, 'rgb(96, 96, 96)'],
+                [1, 'rgb(16, 16, 16)']
+            ]
+        },
+        borderWidth: 0,
+        borderRadius: 15,
+        plotBackgroundColor: null,
+        plotShadow: false,
+        plotBorderWidth: 0
+    },
+    title: {
+        style: {
+            color: '#FFF',
+            font: '16px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+        }
+    },
+    subtitle: {
+        style: {
+            color: '#DDD',
+            font: '12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+        }
+    },
+    xAxis: {
+        gridLineWidth: 0,
+        lineColor: '#999',
+        tickColor: '#999',
+        labels: {
+            style: {
+                color: '#999',
+                fontWeight: 'bold'
+            }
+        },
+        title: {
+            style: {
+                color: '#AAA',
+                font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+            }
+        }
+    },
+    yAxis: {
+        alternateGridColor: null,
+        minorTickInterval: null,
+        gridLineColor: 'rgba(255, 255, 255, .1)',
+        lineWidth: 0,
+        tickWidth: 0,
+        labels: {
+            style: {
+                color: '#999',
+                fontWeight: 'bold'
+            }
+        },
+        title: {
+            style: {
+                color: '#AAA',
+                font: 'bold 12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif'
+            }
+        }
+    },
+    legend: {
+
+        itemStyle: {
+            color: '#CCC'
+        },
+        itemHoverStyle: {
+            color: '#FFF'
+        },
+        itemHiddenStyle: {
+            color: '#333'
+        }
+    },
+    credits: {
+        style: {
+            right: '50px'
+        }
+    },
+    labels: {
+        style: {
+            color: '#CCC'
+        }
+    },
+    tooltip: {
+        backgroundColor: {
+            linearGradient: [0, 0, 0, 50],
+            stops: [
+                [0, 'rgba(96, 96, 96, .8)'],
+                [1, 'rgba(16, 16, 16, .8)']
+            ]
+        },
+        borderWidth: 1,
+        style: {
+            color: '#FFF'
+        }
+    },
+
+
+    plotOptions: {
+        line: {
+            dataLabels: {
+                color: '#CCC'
+            },
+            marker: {
+                lineColor: '#333'
+            }
+        },
+        spline: {
+            marker: {
+                lineColor: '#333'
+            }
+        },
+        scatter: {
+            marker: {
+                lineColor: '#333'
+            }
+        }
+    },
+
+    toolbar: {
+        itemStyle: {
+            color: '#CCC'
+        }
+    },
+
+    // special colors for some of the
+    legendBackgroundColor: 'rgba(48, 48, 48, 0.8)',
+    legendBackgroundColorSolid: 'rgb(70, 70, 70)',
+    dataLabelsColor: '#444',
+    maskColor: 'rgba(255,255,255,0.3)'
+};
+
+
+$(document).ready(function() {
+    //        var highChartsOptions = Highcharts.setOptions(gray);
+
+    function createChart(width, height) {
+        return new Highcharts.Chart({
+            chart: {
+                showAxes: true,
+                renderTo: 'container',
+                defaultSeriesType: 'spline',
+                margin: [50, 80, 60, 50],
+                height: height,
+                width: width,
+                //                backgroundColor: {
+                //                    linearGradient: [0, 0, 500, 500],
+                //                    stops: [
+                //                        [0, 'rgb(255, 255, 255)'],
+                //                        [1, 'rgb(240, 240, 255)']
+                //                    ]
+                //                },
+                //                plotBackgroundColor: {
+                //                    linearGradient: [0, 0, 500, 500],
+                //                    stops: [
+                //                        [0, 'rgb(255, 255, 255)'],
+                //                        [1, 'rgb(240, 240, 255)']
+                //                    ]
+                //                    //'rgba(255, 255, 255, .9)'
+                //                }
+                plotBackgroundColor: {
+                    linearGradient: [0, 0, 250, 500],
+                    stops: [
+                        [0, 'rgba(255, 255, 255, 1)'],
+                        [1, 'rgba(255, 255, 255, 0)']
+                    ]
+                },
+                plotBorderWidth: 1
+            },
+            title: {
+                text: 'CPU Utilization',
+                style: {
+                    margin: '10px 100px 0 0' // center it
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                gridLineWidth: 1,
+                tickPixelInterval: 150
+
+
+            },
+            yAxis: {
+                title: {
+                    text: 'Value'
+                },
+                labels: {
+                    formatter: function() {
+                        return (this.value * 100) + "%";
+                    }
+                },
+                plotLines: [
+                    {
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }
+                ]
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                            Highcharts.dateFormat('%H:%M:%S', this.x) + '<br/>' +
+                            Highcharts.numberFormat(this.y * 100, 0) + '%';
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                backgroundColor: '#FFFFFF',
+                borderWidth: 1,
+                style: {
+                    right: 'auto',
+                    bottom: 'auto',
+                    left: '60px',
+                    top: '60px'
+                }
+
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    lineWidth: 2,
+                    cursor: 'pointer',
+                    marker: {
+                        enabled: false
+                        //                    radius: 3,
+                        //                    symbol: 'circle'
+                    }
+                }
+            }
+        });
+    }
+
+    var myChart = createChart(900, 450);
+
+    //    var i = myChart.series.length;
+    $("#addSeries").click(function() {
+        var seriesIndex = myChart.series.length;
+        var seriesName = 'Random data ' + (seriesIndex + 1);
+        myChart.addSeries({
+            name: seriesName,
+            data: (function() {
+                // generate an array of random data
+                var data = [];
+                return data;
+            })()
+        }, false);
+        myChart.redraw();
+    });
+
+    $("#resize").click(function() {
+
+        $("#container").height(600);
+        $("#container").width(300);
+        var series = myChart.series;
+        var oldChart = myChart;
+        myChart = createChart(600, 300);
+        var i,j;
+        for (i = 0; i < series.length; i++) {
+            var name = series[i].name;
+            var newData = [];
+            var j;
+            for (j = 0; j < oldChart.series[i].data.length; j++) {
+                newData.push({
+                    x:series[i].data[j].x,
+                    y:series[i].data[j].y
+                });
+            }
+            myChart.addSeries({
+                name: name,
+                data: newData,
+                animation: false
+            }, true);
+        }
+
+        oldChart.destroy();
+        myChart.redraw();
+    });
+
+    var i = 0;
+    var timerId = setInterval(function() {
+        var j;
+        var x = (new Date()).getTime();
+
+        i++;
+        for (j = 0; j < myChart.series.length; j++) {
+            myChart.series[j].addPoint([x, Math.random()], true, myChart.series[j].data.length > 50);
+        }
+    }, 1000);
+
+    $("#stopInterval").click(function() {
+        clearInterval(timerId);
+
+    });
+
+    $("#showPoint").click(function() {
+            myChart.series[0].drawPointState(myChart.series[0].data[0], 'hover');
+    });
+
+
+});
+
+</script>
+
+<script type="text/javascript" src="http://www.highcharts.com/highslide/highslide-full.min.js"></script>
+<script type="text/javascript" src="http://www.highcharts.com/highslide/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="http://www.highcharts.com/highslide/highslide.css"/>
+</head>
+<body>
+
+<!-- 3. Add the container -->
+<div id="container" style="width: 900px; height: 450px; margin: 0 auto"></div>
+
+<p id="addSeries">Add series</p>
+
+<p id="resize">Resize</p>
+<p id="showPoint">Show Point</p>
+<p id="stopInterval">stop Interval</p>
+
+
+</body>
+</html>

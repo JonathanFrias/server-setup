@@ -1,0 +1,17 @@
+.cm-severe,
+.cm-warning,
+.cm-config,
+.cm-info {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+.cm-severe {
+	color: rgb(228,42,0);
+}
+.cm-warning {
+	color: rgb(240,151,36);
+}
+.cm-config,
+.cm-info {
+	color: #007cbf;
+}

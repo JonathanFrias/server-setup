@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.RecipesService
+path: 33BDF3EAA713089886C8DD02D1BCF3AD.gwt.rpc

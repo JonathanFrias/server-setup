@@ -1,0 +1,220 @@
+2013-11-09 20:14:52,234  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Setting security profile to "nonsecure".
+2013-11-09 20:14:53,705  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Bootstrapping cloud ec2-cfrias. This may take a few minutes.
+2013-11-09 20:15:38,070  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Creating provisioning Context
+2013-11-09 20:15:44,079  INFO [org.cloudifysource.esc.jclouds.JCloudsDeployer] - starting machine with template : {image={id=us-east-1/ami-35792c5c, providerId=ami-35792c5c, name=amzn-ami-pv-2013.09.0.x86_64-ebs, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, os={family=unrecognized, arch=paravirtual, version=, description=amazon/amzn-ami-pv-2013.09.0.x86_64-ebs, is64Bit=true}, description=Amazon Linux AMI x86_64 PV EBS, status=AVAILABLE[available], loginUser=ec2-user, userMetadata={owner=137112412989, rootDeviceType=ebs, virtualizationType=paravirtual, hypervisor=xen}}, hardware={id=m1.large, providerId=m1.large, processors=[{cores=2.0, speed=2.0}], ram=7680, volumes=[{type=LOCAL, size=10.0, device=/dev/sda1, bootDevice=true, durable=false}, {type=LOCAL, size=420.0, device=/dev/sdb, bootDevice=false, durable=false}, {type=LOCAL, size=420.0, device=/dev/sdc, bootDevice=false, durable=false}], supportsImage=And(ALWAYS_TRUE,Or(isWindows(),requiresVirtualizationType(paravirtual)),ALWAYS_TRUE,is64Bit())}, location={scope=REGION, id=us-east-1, description=us-east-1, parent=aws-ec2, iso3166Codes=[US-VA]}, options={groupNames=[default], keyPair=id_rsa, userData=[35, 99, 108, 111, 117, 100, 45, 99, 111, 110, 102, 105, 103, 10, 114, 101, 112, 111, 95, 117, 112, 103, 114, 97, 100, 101, 58, 32, 110, 111, 110, 101, 10]}}
+2013-11-09 20:16:08,938  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Attempting to access Management VM 54.226.40.35.
+2013-11-09 20:16:33,525  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Uploading files to 54.226.40.35.
+2013-11-09 20:16:33,548  INFO [org.apache.commons.vfs2.impl.StandardFileSystemManager] - Using "/var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/vfs_cache" as temporary files store.
+2013-11-09 20:16:34,148  WARNING [com.jcraft.jsch] - Permanently added '54.226.40.35' (RSA) to the list of known hosts.
+2013-11-09 20:16:43,159  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Launching agent on 54.226.40.35.
+2013-11-09 20:16:43,529  WARNING [com.jcraft.jsch] - Permanently added '54.226.40.35' (RSA) to the list of known hosts.
+2013-11-09 20:16:44,136  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Checking script path
+2013-11-09 20:16:44,137  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] script path is /home/ec2-user/gs-files/upload
+2013-11-09 20:16:44,140  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Running script /home/ec2-user/gs-files/upload/pre-bootstrap.sh
+2013-11-09 20:16:44,141  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Installing wget with yum
+2013-11-09 20:16:44,539  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Package wget-1.14-8.11.amzn1.x86_64 already installed and latest version
+2013-11-09 20:16:44,612  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Yum invocation complete
+2013-11-09 20:16:44,613  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Machine Architecture -- x86_64
+2013-11-09 20:16:44,613  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Previous JAVA_HOME value -- /usr/lib/jvm/jre
+2013-11-09 20:16:44,613  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Downloading JDK from http://repository.cloudifysource.org/com/oracle/java/1.6.0_32/jdk-6u32-linux-x64.bin
+2013-11-09 20:16:45,768  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Installing JDK
+2013-11-09 20:17:00,000  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Downloading cloudify installation from http://repository.cloudifysource.org/org/cloudifysource/2.6.2-5400-RELEASE/gigaspaces-cloudify-2.6.2-ga-b5400.tar.gz
+2013-11-09 20:17:07,682  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Updating environment script
+2013-11-09 20:17:09,319  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Setting privileged mode
+2013-11-09 20:17:09,890  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] nohup: ignoring input and appending output to `nohup.out'
+2013-11-09 20:19:05,955  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] cat nohup.out
+2013-11-09 20:19:05,956  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] 
+2013-11-09 20:19:05,956  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Starting Non-Interactive Shell
+2013-11-09 20:19:05,956  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] >>> start-management -timeout 30 --verbose -auto-shutdown -cloud-file /home/ec2- user/gs-files/ec2-cfrias-cloud.groovy 
+2013-11-09 20:19:05,957  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Management started successfully. Use the shutdown-management command to shutdown management processes running on local machine.
+2013-11-09 20:19:05,957  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] >>> exit
+2013-11-09 20:19:05,957  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] Good Bye!
+2013-11-09 20:19:05,957  INFO [org.cloudifysource.esc.installer.AgentlessInstaller.ssh.output] - [54.226.40.35] 
+2013-11-09 20:19:06,161  INFO [org.cloudifysource.esc.shell.listener.CliAgentlessInstallerListener] - Established connection with Management VM 54.226.40.35.
+2013-11-09 20:19:06,485  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Rest service is available at: http://54.226.40.35:8100.
+2013-11-09 20:19:06,485  INFO [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Webui service is available at: http://54.226.40.35:8099.
+2013-11-09 20:19:30,130  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file email-server
+2013-11-09 20:19:30,696  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Failed to load properties file postfix-service.properties: Failed to read properties file: /Users/carlos.frias/Dropbox/personal-workspaces/email-workspace/server-setup/./deployment/email-server/postfix/../../../services/postfix/postfix-service.properties : java.lang.IllegalArgumentException: Failed to load properties file postfix-service.properties: Failed to read properties file: /Users/carlos.frias/Dropbox/personal-workspaces/email-workspace/server-setup/./deployment/email-server/postfix/../../../services/postfix/postfix-service.properties
+	at org.cloudifysource.dsl.internal.DSLReader.readDslObject(DSLReader.java:347)
+	at org.cloudifysource.dsl.internal.DSLReader.readDslEntity(DSLReader.java:311)
+	at org.cloudifysource.dsl.internal.BaseDslScript.readServiceToExtend(BaseDslScript.java:523)
+	at org.cloudifysource.dsl.internal.BaseDslScript.handleSpecialProperty(BaseDslScript.java:485)
+	at org.cloudifysource.dsl.internal.BaseDslScript.invokeMethod(BaseDslScript.java:333)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:407)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:346)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity$_run_closure3.doCall(dslEntity:2)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity$_run_closure3.doCall(dslEntity)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at org.cloudifysource.dsl.internal.BaseDslScript.swapActiveObject(BaseDslScript.java:785)
+	at org.cloudifysource.dsl.internal.BaseDslScript.invokeMethod(BaseDslScript.java:310)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:72)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity.run(dslEntity:1)
+	at groovy.lang.GroovyShell.evaluate(GroovyShell.java:682)
+	at org.cloudifysource.dsl.internal.DSLReader.evaluateGroovyScript(DSLReader.java:459)
+	at org.cloudifysource.dsl.internal.DSLReader.readDslObject(DSLReader.java:379)
+	at org.cloudifysource.dsl.internal.DSLReader.readDslEntity(DSLReader.java:311)
+	at org.cloudifysource.dsl.internal.ServiceReader.getApplicationServiceFromDirectory(ServiceReader.java:197)
+	at org.cloudifysource.dsl.internal.BaseDslScript.loadApplicationService(BaseDslScript.java:847)
+	at org.cloudifysource.dsl.internal.BaseDslScript.checkForApplicationServiceBlockNameParameter(BaseDslScript.java:802)
+	at org.cloudifysource.dsl.internal.BaseDslScript.applyPropertyToObject(BaseDslScript.java:230)
+	at org.cloudifysource.dsl.internal.BaseDslScript.setProperty(BaseDslScript.java:142)
+	at org.codehaus.groovy.runtime.InvokerHelper.setProperty(InvokerHelper.java:179)
+	at groovy.lang.Closure.setPropertyTryThese(Closure.java:380)
+	at groovy.lang.Closure.setPropertyOwnerFirst(Closure.java:374)
+	at groovy.lang.Closure.setProperty(Closure.java:363)
+	at org.codehaus.groovy.runtime.InvokerHelper.setProperty(InvokerHelper.java:179)
+	at groovy.lang.Closure.setPropertyTryThese(Closure.java:380)
+	at groovy.lang.Closure.setPropertyOwnerFirst(Closure.java:374)
+	at groovy.lang.Closure.setProperty(Closure.java:363)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.setGroovyObjectProperty(ScriptBytecodeAdapter.java:528)
+	at dslEntity$_run_closure3_closure4.doCall(dslEntity:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity$_run_closure3_closure4.doCall(dslEntity)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at org.cloudifysource.dsl.internal.BaseDslScript.swapActiveObject(BaseDslScript.java:785)
+	at org.cloudifysource.dsl.internal.BaseDslScript.invokeMethod(BaseDslScript.java:310)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:407)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:346)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity$_run_closure3.doCall(dslEntity:9)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity$_run_closure3.doCall(dslEntity)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at org.cloudifysource.dsl.internal.BaseDslScript.swapActiveObject(BaseDslScript.java:785)
+	at org.cloudifysource.dsl.internal.BaseDslScript.invokeMethod(BaseDslScript.java:310)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:72)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at dslEntity.run(dslEntity:2)
+	at groovy.lang.GroovyShell.evaluate(GroovyShell.java:682)
+	at org.cloudifysource.dsl.internal.DSLReader.evaluateGroovyScript(DSLReader.java:459)
+	at org.cloudifysource.dsl.internal.DSLReader.readDslObject(DSLReader.java:379)
+	at org.cloudifysource.dsl.internal.DSLReader.readDslEntity(DSLReader.java:311)
+	at org.cloudifysource.shell.commands.InstallApplication.doExecute(InstallApplication.java:158)
+	at org.cloudifysource.shell.commands.AbstractGSCommand.execute(AbstractGSCommand.java:101)
+	at org.cloudifysource.shell.commands.AdminAwareCommand.execute(AdminAwareCommand.java:36)
+	at org.apache.felix.gogo.commands.basic.AbstractCommand.execute(AbstractCommand.java:35)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:474)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:400)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.karaf.shell.console.jline.Console.run(Console.java:172)
+	at org.apache.karaf.shell.console.Main.run(Main.java:191)
+	at org.apache.karaf.shell.console.Main.run(Main.java:89)
+	at org.cloudifysource.shell.GigaShellMain.main(GigaShellMain.java:126)
+Caused by: java.io.IOException: Failed to read properties file: /Users/carlos.frias/Dropbox/personal-workspaces/email-workspace/server-setup/./deployment/email-server/postfix/../../../services/postfix/postfix-service.properties
+	at org.cloudifysource.dsl.internal.DSLReader.createDSLProperties(DSLReader.java:575)
+	at org.cloudifysource.dsl.internal.DSLReader.readDslObject(DSLReader.java:334)
+	... 142 more
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+script1384046370661652446067.groovy: 4: unexpected token:  @ line 4, column 14.
+   postfixPort =
+                ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:302)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:359)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:141)
+	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:107)
+	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:236)
+	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:160)
+	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:843)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:548)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:524)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:501)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:306)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:287)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:267)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:214)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:224)
+	at groovy.lang.GroovyClassLoader$parseClass.call(Unknown Source)
+	at groovy.util.ConfigSlurper.parse(ConfigSlurper.groovy:148)
+	at org.cloudifysource.dsl.internal.DSLReader.createDSLProperties(DSLReader.java:572)
+	... 143 more
+
+2013-11-09 20:20:20,792  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Validating file email-server
+2013-11-09 20:20:21,528  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Uploading application gofrias-mail
+2013-11-09 20:20:36,920  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Application [gofrias-mail] with 1 services
+2013-11-09 20:20:36,920  INFO [org.cloudifysource.shell.commands.AbstractGSCommand] - Service [postfix] 1 planned instances
+2013-11-09 20:46:54,325  WARNING [org.cloudifysource.shell.commands.AbstractGSCommand] - The installation of <{0}> timed out on the client side. The application is still installed, To remove it use the uninstall-application command.
+2013-11-09 21:27:40,149  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - The operation timed out. Try to increase the timeout using the -timeout flag

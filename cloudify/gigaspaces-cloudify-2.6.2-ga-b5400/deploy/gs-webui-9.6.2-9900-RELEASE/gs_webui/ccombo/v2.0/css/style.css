@@ -1,0 +1,75 @@
+.combo{
+	position:relative;
+	display:inline-block;
+	white-space:nowrap;
+}
+.combo-vis{
+	display:inline-block;
+	position:relative;
+	background-color:white;
+}
+.combo-inp{
+	margin:0;
+	border:none;
+	padding-top:1px;
+	padding-bottom:1px;
+	padding-left:0;
+	padding-right:0;
+	outline:0px;
+	height:15px;
+	font:12px Verdana;
+	overflow:hidden;
+}
+.combo-left{
+	height:22px;
+	width:3px;
+	background-repeat:no-repeat;
+}
+.combo-center{
+	height:22px;
+	background-repeat:repeat;
+}
+.combo-arrow{
+	position:relative;
+	height:22px;
+	width:18px;
+	background-repeat:no-repeat;
+}
+.combo-wrapper{
+	position:relative;
+}
+.combo-list{
+	position:absolute;
+	border:1px solid #707070;
+	background-color:white;
+}
+
+.combo-list ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+.combo-list li{
+	height:19px;
+	font-size:12px;
+	font-family:Verdana;
+	cursor:pointer;
+}
+
+.combo-node{
+	vertical-align:middle;
+}
+
+.combo-selected{
+	background-color:#3399ff;
+	color:white;
+}
+
+.combo-expcol{
+	vertical-align:middle;
+}
+
+.combo-spacer{
+	display:inline-block;
+}

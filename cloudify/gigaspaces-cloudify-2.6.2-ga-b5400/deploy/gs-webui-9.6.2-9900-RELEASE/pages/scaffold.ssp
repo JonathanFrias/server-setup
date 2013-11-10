@@ -1,0 +1,13 @@
+#import(mvc.Helpers._)
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta product="${i18n("product.name", null)}"/>
+    <meta charset="UTF-8"/>
+    ${attributes("head")}
+    ${bodyArgs( "class" , theme() + "-theme" )}
+</head>
+<body ${unescape(bodyArgsString)}>
+     ${attributes("body")}
+</body>
+</html>

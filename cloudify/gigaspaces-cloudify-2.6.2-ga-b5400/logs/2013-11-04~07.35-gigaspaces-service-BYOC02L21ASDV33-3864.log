@@ -1,0 +1,2 @@
+2013-11-04 07:35:28,697  WARNING [org.cloudifysource.esc.shell.installer.CloudGridAgentBootstrapper] - Failed to clean management machines after provisioning failure, reported error: Failed to lookup existing management servers.
+2013-11-04 07:35:28,703  SEVERE [org.cloudifysource.shell.commands.AbstractGSCommand] - Command interrupted by user.

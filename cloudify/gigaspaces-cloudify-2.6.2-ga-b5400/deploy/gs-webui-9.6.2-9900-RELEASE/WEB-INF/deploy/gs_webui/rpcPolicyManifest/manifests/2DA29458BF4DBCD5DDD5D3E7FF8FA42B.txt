@@ -1,0 +1,2 @@
+serviceClass: com.gigaspaces.admin.webui.client.SpaceRuntimeInfoService
+path: DF8471FCE4A1E727A0C33DABFC9622E0.gwt.rpc

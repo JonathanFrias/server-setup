@@ -1,0 +1,192 @@
+2013-11-06 07:36:00,187  INFO [com.gigaspaces.start] - 
+==================================================
+GigaSpaces ServiceGrid starting using command <com.gigaspaces.start.services="GSC">
+Log created by <carlos.frias> on Wed Nov 06 07:36:00 EST 2013
+==================================================
+2013-11-06 07:36:00,317  CONFIG [com.gigaspaces.start] - platformJARs
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/commons-logging-1.1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/gs-runtime.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jee/activation-1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jee/geronimo-j2ee-connector_1.5_spec-1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jee/transactions-jta-3.8.0.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/java-cup-11a-runtime.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/org.eclipse.wst.xml.xpath2.processor_2.1.1.v201204260055.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/serializer.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/xalan.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/xercesImpl.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/xml/xml-apis.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/../tools/groovy/embeddable/groovy-all-1.8.6.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jruby
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/ant-1.8.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/ant-commons-net-1.8.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/ant-launcher-1.8.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/commons-net-1.4.0.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/ant/jakarta-oro-2.0.8.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jpa/geronimo-jpa_2.0_spec-1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jpa/geronimo-jta_1.1_spec-1.1.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/jpa/openjpa-2.0.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-collections-3.2.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-dbcp-1.2.1.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-lang-2.3.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/commons/commons-pool-1.4.jar
+    file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/platform/scala/lib
+2013-11-06 07:36:00,387  INFO [com.gigaspaces.start] - JMXServiceURL=service:jmx:rmi:///jndi/rmi://BYOC02L21ASDV33:10099/jmxrmi
+2013-11-06 07:36:00,448  INFO [com.gigaspaces.start] - JMX Platform MBeanServer exported with RMI Connector, creation time [60] millis
+2013-11-06 07:36:00,449  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/com.springsource.net.sf.cglib-2.2.0.jar to ClassPath
+2013-11-06 07:36:00,449  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jdbc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,449  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jms-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,449  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-orm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,449  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-oxm-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,449  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-web-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,450  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-webmvc-3.1.3.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,450  INFO [com.gigaspaces.start] - Adding /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/security/spring-security-core-3.0.7.RELEASE.jar to ClassPath
+2013-11-06 07:36:00,450  INFO [com.gigaspaces.start] - GSC Classpath is: /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/com.springsource.org.aopalliance-1.0.0.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/commons-logging-1.1.1.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/gs-openspaces.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-aop-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-asm-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-aspects-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-beans-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-context-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-context-support-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-core-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-expression-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/required/spring-tx-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/com.springsource.net.sf.cglib-2.2.0.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jdbc-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-jms-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-orm-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-oxm-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-web-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/spring/spring-webmvc-3.1.3.RELEASE.jar:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/lib/optional/security/spring-security-core-3.0.7.RELEASE.jar:
+2013-11-06 07:36:00,801 GSC INFO [com.gigaspaces.grid.gsc] - 
+
+ System Environment: 
+	 System:
+		 OS Name: Mac OS X
+		 OS Version: 10.8.5
+		 Architecture: x86_64
+		 Number Of Processors: 8
+	 JVM Details:
+		 Java Version: 1.7.0_25, Oracle Corporation
+		 Java Runtime: Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+		 Java VM: Java HotSpot(TM) 64-Bit Server VM 23.25-b01, Oracle Corporation
+		 Java Home: /Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre
+	 JVM Memory:
+		 Max Heap Size (KB): 233024
+		 Current Allocated Heap Size (KB): 61421
+	 Network Interfaces Information:
+		 Host Name: [BYOC02L21ASDV33] 
+		 Network Interface Name: vmnet8 / vmnet8
+		 IP Address: 192.168.226.1
+		 Network Interface Name: vmnet1 / vmnet1
+		 IP Address: 192.168.146.1
+		 Network Interface Name: utun0 / utun0
+		 IP Address: fe80:0:0:0:5d68:3b30:3df2:3df2%8
+		 IP Address: fe80:0:0:0:12dd:b1ff:fee7:3f41%8
+		 IP Address: 10.143.19.118
+		 Network Interface Name: en1 / en1
+		 IP Address: fe80:0:0:0:aabb:cfff:fe01:23e8%5
+		 IP Address: 192.168.1.101
+		 Network Interface Name: lo0 / lo0
+		 IP Address: 0:0:0:0:0:0:0:1
+		 IP Address: fe80:0:0:0:0:0:0:1%1
+		 IP Address: 127.0.0.1
+	 Zones: [rest, cloudifyManagementSpace, webui]
+	 Process Id: 17775
+	 Managed by GSA with Id: 1
+	 GigaSpaces Cloudify:
+		 Edition: Cloudify 2.6.2 GA (compatible with XAP 9.6.2)
+		 Build: 5400
+		 Home: /Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/
+
+
+2013-11-06 07:36:01,297  INFO [org.jini.rio.jsb] - Service-Id: [84c8e304-294a-4d35-aa00-a9a915966ada]
+2013-11-06 07:36:01,297  INFO [com.gigaspaces.grid.gsc] - GSC started successfully with groups [localcloud] and locators [jini://127.0.0.1:4176/]
+2013-11-06 07:36:01,648 GSC INFO [com.gigaspaces.grid.gsc] - Registered with GSM - [GSM pid[17774] host[BYOC02L21ASDV33/127.0.0.1]]
+2013-11-06 07:36:04,049 GSC INFO [com.gigaspaces.grid.gsc] - Instantiating cloudifyManagementSpace [1]
+2013-11-06 07:36:04,168 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - ClusterInfo [name[cloudifyManagementSpace] schema[null] numberOfInstances[1] numberOfBackups[0] instanceId[1] backupId[null]]
+2013-11-06 07:36:04,170 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - BeanLevelProperties Context {space.name=cloudifyManagementSpace, com.gs.cloudify.cloud-name=local-cloud, com.gs.application=management} Beans {}
+2013-11-06 07:36:04,310 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Downloading from GSM [http://127.0.0.1:61323//management-space] to [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/cloudifyManagementSpace_1_930409324] ...
+2013-11-06 07:36:07,005 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Downloaded [10.03mb] to [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/cloudifyManagementSpace_1_930409324]
+2013-11-06 07:36:09,565 cloudifyManagementSpace [1] INFO [com.gigaspaces.container] - No license provided, using community license
+2013-11-06 07:36:09,585 cloudifyManagementSpace [1] INFO [com.gigaspaces.container] - Using an already running RMIRegistry on: < BYOC02L21ASDV33:10099 >
+2013-11-06 07:36:10,013 cloudifyManagementSpace [1] INFO [com.gigaspaces.core.common] - Starting Space [cloudifyManagementSpace_container:cloudifyManagementSpace] with url [/./cloudifyManagementSpace?schema=default&locators=127.0.0.1:4176&groups=localcloud&state=started] ...
+2013-11-06 07:36:10,708 cloudifyManagementSpace [1] INFO [com.gigaspaces.cache] - Cache manager created with policy [ALL IN CACHE], persistency mode [memory]
+2013-11-06 07:36:10,949 cloudifyManagementSpace [1] INFO [com.gigaspaces.core.common] - Space [cloudifyManagementSpace_container:cloudifyManagementSpace] with url [/./cloudifyManagementSpace?schema=default&locators=127.0.0.1:4176&groups=localcloud&state=started] started successfully
+2013-11-06 07:36:11,163 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - registering invocable services: {}
+2013-11-06 07:36:11,243 cloudifyManagementSpace [1] INFO [org.jini.rio.jsb] - Service-Id: [cba972cf-e93e-4544-a4ec-ca8e33603076]
+2013-11-06 07:36:11,244 GSC INFO [com.gigaspaces.grid.gsc] - Instantiated cloudifyManagementSpace [1] in 7.2 seconds
+2013-11-06 07:36:11,245 GSC INFO [com.gigaspaces.grid.gsc] - Instantiating webui [1]
+2013-11-06 07:36:11,345 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - ClusterInfo [name[webui] schema[null] numberOfInstances[1] numberOfBackups[0] instanceId[1] backupId[null]]
+2013-11-06 07:36:11,349 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - BeanLevelProperties Context {com.gs.cloudify.cloud-name=local-cloud, com.gs.application=management, web.sslPort=8099, web.port=8099, web.context.unique=true, web.context=/} Beans {}
+2013-11-06 07:36:11,444 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Downloading from GSM [http://127.0.0.1:61323//gs-webui-9.6.2-9900-RELEASE] to [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/webui_1_1832633478] ...
+2013-11-06 07:36:15,071 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Downloaded [15.66mb] to [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/webui_1_1832633478]
+2013-11-06 07:36:16,618  INFO [org.openspaces.pu.container.jee.jetty.JettyJeeProcessingUnitContainerProvider] - Using Jetty server connector [org.eclipse.jetty.server.nio.SelectChannelConnector], Host [null], Port [8099], Confidential Port [8099]
+2013-11-06 07:36:17,915 webui [1] INFO [org.openspaces.pu.container.jee.context.BootstrapWebApplicationContextListener] - Booting OpenSpaces Web Application Support
+2013-11-06 07:36:17,924 webui [1] INFO [web.webui.1] - Initializing Spring root WebApplicationContext
+2013-11-06 07:36:17,983 webui [1] INFO [mvc.jetty.SmartContextLoaderListener] - initializing smart context loader. isCloudifyVersion = [true]
+2013-11-06 07:36:18,001 webui [1] INFO [mvc.jetty.SmartContextLoaderListener] - found context override under cloudify conf, using it
+2013-11-06 07:36:18,002 webui [1] INFO [mvc.jetty.SmartContextLoaderListener] - default context is : [file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../config/cloudify-webui-context-override.xml] 
+2013-11-06 07:36:18,017 webui [1] INFO [mvc.jetty.SmartContextLoaderListener] - using the following locations [[META-INF/spring/security-app-context.xml, WEB-INF/web-context.xml, file:/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../config/cloudify-webui-context-override.xml]]
+2013-11-06 07:36:19,073 webui [1] INFO [com.gigaspaces.webuistubs.CloudifyRepositoryStub] - initializing
+2013-11-06 07:36:19,077 webui [1] INFO [com.gigaspaces.webuistubs.CloudifyRepositoryStub] - initializing cliHomedir to default value
+2013-11-06 07:36:19,077 webui [1] INFO [org.cloudifysource.repository.GitRepositoryImpl] - cloning repository [https://github.com/CloudifySource/cloudify-recipes.git] into [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../work/cloudify_recipes_clone]
+2013-11-06 07:36:19,083 webui [1] INFO [com.gigaspaces.webuistubs.CloudifyRepositoryStub] - cli location is at [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/tools/cli/../../tools/cli/cloudify.sh]
+2013-11-06 07:36:19,201 webui [1] INFO [mvc.jetty.SmartFilter] - initializing [mvc.jetty.SmartFilter$Sass]. checking to see if implementation is available in classpath
+2013-11-06 07:36:19,203 webui [1] INFO [mvc.jetty.SmartFilter] - implementation not available. running in silent mode.
+2013-11-06 07:36:19,602 webui [1] INFO [web.webui.1] - Aliases are enabled
+2013-11-06 07:36:19,642 webui [1] INFO [web.webui.1] - Initializing Spring FrameworkServlet 'Spring'
+2013-11-06 07:36:20,381 webui [1] INFO [org.openspaces.pu.container.jee.jetty.JettyJeeProcessingUnitContainerProvider] - Deployed web application [127.0.0.1:8099/]
+2013-11-06 07:36:20,384 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - registering invocable services: {}
+2013-11-06 07:36:20,514 webui [1] INFO [org.jini.rio.jsb] - Service-Id: [3a4d7d8a-0ca6-4db3-9ff6-7e83de653d7d]
+2013-11-06 07:36:20,515 GSC INFO [com.gigaspaces.grid.gsc] - Instantiated webui [1] in 9.27 seconds
+2013-11-06 07:36:20,515 GSC INFO [com.gigaspaces.grid.gsc] - Instantiating rest [1]
+2013-11-06 07:36:20,612 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - ClusterInfo [name[rest] schema[null] numberOfInstances[1] numberOfBackups[0] instanceId[1] backupId[null]]
+2013-11-06 07:36:20,615 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - BeanLevelProperties Context {com.gs.cloudify.cloud-name=local-cloud, com.gs.application=management, web.sslPort=8100, web.port=8100, web.context.unique=true, web.context=/} Beans {}
+2013-11-06 07:36:20,660 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Downloading from GSM [http://127.0.0.1:61323//rest] to [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/rest_1_934145161] ...
+2013-11-06 07:36:21,337 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - starting [2]
+2013-11-06 07:36:21,376 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - beginTask [remote: Counting objects], [0]
+2013-11-06 07:36:21,380 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - beginTask [remote: Compressing objects], [4156]
+2013-11-06 07:36:21,922 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - beginTask [Receiving objects], [11673]
+2013-11-06 07:36:25,439 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Downloaded [22.9mb] to [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/rest_1_934145161]
+2013-11-06 07:36:26,614  INFO [org.openspaces.pu.container.jee.jetty.JettyJeeProcessingUnitContainerProvider] - Using Jetty server connector [org.eclipse.jetty.server.nio.SelectChannelConnector], Host [null], Port [8100], Confidential Port [8100]
+2013-11-06 07:36:28,084 rest [1] INFO [org.openspaces.pu.container.jee.context.BootstrapWebApplicationContextListener] - Booting OpenSpaces Web Application Support
+2013-11-06 07:36:28,101 rest [1] INFO [web.rest.1] - Initializing Spring root WebApplicationContext
+2013-11-06 07:36:29,066 rest [1] INFO [web.rest.1] - Set web app root system property: 'webapp.root' = [/Users/carlos.frias/Applications/gigaspaces-cloudify-2.6.2-ga-b5400/work/processing-units/rest_1_934145161]
+2013-11-06 07:36:29,088 rest [1] INFO [web.rest.1] - Aliases are enabled
+2013-11-06 07:36:29,104 rest [1] INFO [web.rest.1] - Initializing Spring FrameworkServlet 'springmvc'
+2013-11-06 07:36:30,043 rest [1] INFO [org.cloudifysource.rest.util.AdminFactoryBean] - Configured lookup groups=[localcloud]
+2013-11-06 07:36:30,043 rest [1] INFO [org.cloudifysource.rest.util.AdminFactoryBean] - Configured lookup locators=[]
+2013-11-06 07:36:30,283 rest [1] INFO [org.cloudifysource.rest.util.AdminFactoryBean] - Admin using lookup locators=[127.0.0.1:4176] groups=[localcloud]
+2013-11-06 07:36:30,782 rest [1] INFO [org.cloudifysource.rest.RestConfigurationFactoryBean] - Initializing cloud configuration
+2013-11-06 07:36:30,782 rest [1] INFO [org.cloudifysource.rest.RestConfigurationFactoryBean] - Loading cloud configuration
+2013-11-06 07:36:30,782 rest [1] INFO [org.cloudifysource.rest.RestConfigurationFactoryBean] - Waiting for cloud configuration to become available in management space
+2013-11-06 07:36:30,882 rest [1] INFO [org.cloudifysource.rest.RestConfigurationFactoryBean] - Cloud Configuration: CloudConfigurationHolder [cloudConfiguration=null, cloudConfigurationFilePath=null]
+2013-11-06 07:36:30,882 rest [1] INFO [org.cloudifysource.rest.RestConfigurationFactoryBean] - running in local cloud mode
+2013-11-06 07:36:30,897 rest [1] INFO [org.cloudifysource.rest.repo.UploadRepo] - created rest uploads directory - /var/folders/t_/dwr6s3511lj45std8p2_g8580000gp/T/Cloudify/restUploads
+2013-11-06 07:36:31,385 rest [1] INFO [org.cloudifysource.rest.controllers.VersionValidateInterceptor] - Initialize VersionValidateHandler
+2013-11-06 07:36:31,934 rest [1] INFO [org.openspaces.pu.container.jee.jetty.JettyJeeProcessingUnitContainerProvider] - Deployed web application [127.0.0.1:8100/]
+2013-11-06 07:36:31,937 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - registering invocable services: {}
+2013-11-06 07:36:31,979 rest [1] INFO [org.jini.rio.jsb] - Service-Id: [e6a49db9-046f-4d69-b0e1-371e55488680]
+2013-11-06 07:36:31,979 GSC INFO [com.gigaspaces.grid.gsc] - Instantiated rest [1] in 11.46 seconds
+2013-11-06 07:36:34,112 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - finished
+2013-11-06 07:36:34,112 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - beginTask [Resolving deltas], [7335]
+2013-11-06 07:36:34,757 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - finished
+2013-11-06 07:36:34,917 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - beginTask [Updating references], [71]
+2013-11-06 07:36:35,672 webui [1] INFO [org.cloudifysource.repository.GitProgressMonitor] - finished
+2013-11-06 07:36:39,684 webui [1] INFO [org.cloudifysource.repository.GitRepositoryImpl] - got a git implementation [org.eclipse.jgit.api.Git@37e1a5d1]. checking out branch [refs/tags/2.6.2_ga_build5400_10_13_2013]
+2013-11-06 07:36:41,514 webui [1] INFO [org.cloudifysource.repository.GitRepositoryImpl] - checked out branch [refs/tags/2.6.2_ga_build5400_10_13_2013]
+2013-11-06 07:45:51,538 webui [1] WARNING [org.eclipse.jetty.http.HttpGenerator] - Ignoring extra content 
+
+
+
+2013-11-06 07:45:56,747 webui [1] INFO [com.gigaspaces.webui.admin] - Starting Long Polling Server
+2013-11-06 07:45:56,930 webui [1] INFO [com.gigaspaces.webui.admin] - Alert Manager was configured
+2013-11-06 07:45:56,931 webui [1] INFO [com.gigaspaces.webui.admin] - Start Statistics Monitor...
+2013-11-06 07:45:56,934 webui [1] INFO [com.gigaspaces.webui.admin] - Default admin is used, it is listening to [localcloud] groups and to [jini://127.0.0.1:4176/] locators, client [1]
+2013-11-06 07:45:56,954 webui [1] INFO [com.gigaspaces.webui.admin] - > added event listener to admin, client id:1
+2013-11-06 07:45:56,954 webui [1] INFO [com.gigaspaces.webui.admin] - Login was performed for client Id:1, session id:webui_19z8lcj11uf9qafeomz6lka6h, remote host:0:0:0:0:0:0:0:1
+2013-11-06 07:46:16,892  INFO [com.gigaspaces.start] - Received stop command from GSA, exiting
+2013-11-06 07:46:16,894 GSC INFO [com.gigaspaces.grid.gsc] - Stopping GSC
+2013-11-06 07:46:16,902 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Stopping ...
+2013-11-06 07:46:16,903 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Stopping ...
+2013-11-06 07:46:16,902 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Stopping ...
+2013-11-06 07:46:16,904 rest [1] INFO [web.rest.1] - Destroying Spring FrameworkServlet 'springmvc'
+2013-11-06 07:46:16,908 cloudifyManagementSpace [1] INFO [com.gigaspaces.core.common] - Beginning <cloudifyManagementSpace_container:cloudifyManagementSpace> shutdown ...
+2013-11-06 07:46:16,907 webui [1] INFO [web.webui.1] - Destroying Spring FrameworkServlet 'Spring'
+2013-11-06 07:46:16,919 cloudifyManagementSpace [1] INFO [com.gigaspaces.core.common] - Space <cloudifyManagementSpace_container:cloudifyManagementSpace> stopped successfully
+2013-11-06 07:46:16,922 cloudifyManagementSpace [1] INFO [com.gigaspaces.core.common] - Space [cloudifyManagementSpace_container:cloudifyManagementSpace] shutdown complete
+2013-11-06 07:46:17,017 cloudifyManagementSpace [1] INFO [com.gigaspaces.container] - Container <cloudifyManagementSpace_container> shutdown completed
+2013-11-06 07:46:17,056 webui [1] INFO [web.webui.1] - Closing Spring root WebApplicationContext
+2013-11-06 07:46:17,144 webui [1] WARNING [web.webui.1] - Exception while dispatching incoming RPC call; Caused by: org.eclipse.jetty.io.EofException
+2013-11-06 07:46:17,144 webui [1] WARNING [web.webui.1] - respondWithUnexpectedFailure failed while sending the previous failure to the client; Caused by: org.eclipse.jetty.io.EofException
+2013-11-06 07:46:17,150 cloudifyManagementSpace [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Stopped
+2013-11-06 07:46:17,154 rest [1] INFO [web.rest.1] - Shutting down log4j
+2013-11-06 07:46:17,191 webui [1] WARNING [org.eclipse.jetty.util.thread.QueuedThreadPool] - 4 threads could not be stopped
+2013-11-06 07:46:17,343 rest [1] INFO [web.rest.1] - Closing Spring root WebApplicationContext
+2013-11-06 07:46:18,135 rest [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Stopped
+2013-11-06 07:46:18,623 webui [1] INFO [org.openspaces.pu.container.servicegrid.PUServiceBeanImpl] - Stopped
+2013-11-06 07:46:18,650 webui [1] WARNING [com.sun.jini.thread.TaskManager] - GS-SDM Cache Task ran [net.jini.lookup.ServiceDiscoveryManager$LookupCacheImpl$NotifyEventTask@3eaf659d] and caught an exception.; Caused by: java.lang.NoClassDefFoundError: org/openspaces/admin/internal/gsc/events/DefaultGridServiceContainerRemovedEventManager$1

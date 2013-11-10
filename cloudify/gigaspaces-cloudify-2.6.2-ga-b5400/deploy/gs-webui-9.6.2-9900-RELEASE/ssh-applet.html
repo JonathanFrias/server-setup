@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<style>
+html, body { height: 100%; width: 100%; margin: 0; }
+div { height: 100%; width: 100%; background: red; }
+</style>
+<SCRIPT LANGUAGE="JavaScript">
+
+	function writeAppletTag() {
+		var prmstr = window.location.search.substr(1);
+		var prmarr = prmstr.split ("&");
+		var params = {};
+
+		for ( var i = 0; i < prmarr.length; i++) {
+    		var tmparr = prmarr[i].split("=");
+    		params[tmparr[0]] = tmparr[1];
+		}
+
+		var usernameVal = params.username;
+		var hostnameVal = params.hostname;
+		var counterVal = params.counter;
+
+		//create title with passed username and hostname	
+		document.writeln('<title>');
+		document.writeln( usernameVal + '@' + hostnameVal + " -" + counterVal );
+		document.writeln('</title>');
+		document.writeln('<body>');
+		//create applet tag for ssh terminal applet
+        document.writeln('<applet name=\"sshpage\" code=\"com.jcraft.jcterm.JCTermSingleFrameApplet.class\" archive=\"jsch-0.1.48.jar,jcterm-0.0.11.jar,jzlib-1.1.1.jar\" width=\"100%\" height=\"100%\">');
+        //create applet param tag with passed username
+        document.writeln(buildParamTag('username',usernameVal));
+        //create applet param tag with passed hostname
+        document.writeln(buildParamTag('hostname',hostnameVal));                
+        document.writeln('</applet>');
+        document.writeln('</body>');
+    }
+
+    function buildParamTag(name, value) {
+          return '<PARAM NAME="' + name + '" VALUE="' + value + '">';
+    }	
+</SCRIPT>
+
+</head>
+   <SCRIPT LANGUAGE="JavaScript">
+   		writeAppletTag();
+   	</SCRIPT>
+</html>

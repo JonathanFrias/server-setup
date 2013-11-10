@@ -1,0 +1,11 @@
+<process initial-instances="script" shutdown-class="com.gigaspaces.grid.gsa.GigaSpacesShutdownProcessHandler" restart-on-exit="always">
+    <script enable="true" work-dir="${com.gs.home}/bin"
+            windows="${com.gs.home}/bin/gsm_nolus.bat" unix="${com.gs.home}/bin/gsm_nolus.sh">
+        <argument></argument>
+    </script>
+    <vm enable="true" work-dir="${com.gs.home}/bin" main-class="com.gigaspaces.start.SystemBoot">
+        <input-argument></input-argument>
+        <argument>com.gigaspaces.start.services="GSM"</argument>
+    </vm>
+    <restart-regex>.*java\.lang\.OutOfMemoryError.*</restart-regex>
+</process>
