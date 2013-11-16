@@ -2,3 +2,4 @@ bin*
 .idea*
 ec2-cfrias*
 .DS_Store
+logs*

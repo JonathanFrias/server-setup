@@ -1,4 +1,5 @@
 
+import org.cloudifysource.dsl.utils.ServiceUtils;
 
 service {
     name 'postfix'
@@ -16,9 +17,13 @@ service {
         preInstall 'postfix_preInstall.groovy'
         install 'postfix_install.groovy'
         start 'postfix_start.groovy'
-        startDetectionTimeoutSecs 800
+//        startDetectionTimeoutSecs 800
         startDetection {
             ServiceUtils.isPortOccupied(postfixPort)
         }
+        locator {
+            NO_PROCESS_LOCATORS
+        }
+        stop 'postfix_stop.groovy'
     }
 }

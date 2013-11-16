@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/rest/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/rest" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/gs-webui-9.6.2-9900-RELEASE/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/gs-webui-9.6.2-9900-RELEASE" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/rest/WEB-INF/springmvc-servlet.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/rest/WEB-INF/http-intercepts.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/mule/processor/src/main/resources/META-INF/spring/sla.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/mule/processor/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency/processor/src/main/resources/META-INF/spring/sla.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency-xml/processor/src/main/resources/META-INF/spring/sla.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency-xml/processor/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-xml/feeder/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency-xml/processor/src/test/java/${puGroupPath}/processor/ProcessorIntegrationTest-context.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/templates/datagrid/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/mule/feeder/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic/processor/src/main/resources/META-INF/spring/sla.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/gs-webui-9.6.2-9900-RELEASE/WEB-INF/web-context.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic/processor/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/config/security/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-xml/processor/src/test/java/${puGroupPath}/processor/ProcessorIntegrationTest-context.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-xml/processor/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency/processor/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/templates/memcached/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/work/cloudify_recipes_clone/apps/streaming-bigdata/processor/src/main/resources/META-INF/spring/sla.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/logs/gofrias-mail.postfix/gsc-10.85.21.58-1696--1384100190308/processing-units/gofrias-mail.postfix/1/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/work/cloudify_recipes_clone/apps/streaming-bigdata/processor/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic/processor/src/test/java/${puGroupPath}/processor/ProcessorIntegrationTest-context.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-xml/processor/src/main/resources/META-INF/spring/sla.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency/processor/src/test/java/${puGroupPath}/processor/ProcessorIntegrationTest-context.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/config/cloudify-webui-context-override.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic/feeder/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/rest/META-INF/spring/jetty.pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency/mirror/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/management-space/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency-xml/mirror/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/clouds/privateEc2/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency-xml/feeder/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/work/cloudify_recipes_clone/apps/streaming-bigdata/feeder/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/rest/WEB-INF/spring-security.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/tools/maven/maven-openspaces-plugin/src/main/resources/pu-templates/basic-async-persistency/feeder/src/main/resources/META-INF/spring/pu.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/gs-webui-9.6.2-9900-RELEASE/META-INF/spring/security-app-context.xml</file>
+          <file>file://$MODULE_DIR$/cloudify/gigaspaces-cloudify-2.6.2-ga-b5400/deploy/gs-webui-9.6.2-9900-RELEASE/META-INF/spring/jetty.pu.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">

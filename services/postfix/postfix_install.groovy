@@ -1,5 +1,19 @@
+import org.cloudifysource.dsl.context.ServiceContext
+import org.cloudifysource.dsl.context.ServiceContextFactory
 import org.hyperic.sigar.OperatingSystem as os
-import groovy.text.*
+import ShellExecutor
+
+ServiceContext context = ServiceContextFactory.serviceContext
+def thisService = context.attributes.thisService
+thisService.instances.each {
+    println "thisService attribute: ${it.dump()}"
+}
+assert thisService.mainCfTemplate, "Required file name name for main.cf template is not provided"
+def templateFilePath = "${context.serviceDirectory}/templates/${thisService.mainCfTemplate}"
+assert new File(templateFilePath).exists(), "Template File Not Found: $templateFilePath"
+def templateFile = new File(templateFilePath)
+template = templateFile.text.replaceAll('#myhostname#', thisService.myhostname)
+template = template.replaceAll('#mydomain#', thisService.mydomain)
 
 def postfixConfPath
 switch (os.instance.vendor) {
@@ -12,13 +26,13 @@ switch (os.instance.vendor) {
     default:
         postfixConfPath = "/etc/postfix/main.cf"
 }
-
-def config = new ConfigSlurper(new File('postfix-service.properties').toURI().toURL())
-
-def templateFile = new File(config.mainCfTemplate)
-template = templateFile.text.replaceAll('#myhostname#', config.myhostname)
-template = template.replaceAll('#mydomain#', config.mydomain)
-new File(postfixConfPath).write template.toString()
+File postfixConfTempFile = File.createTempFile('postfix', 'cf')
+postfixConfTempFile.write template.toString()
+File postfixConfFile = new File(postfixConfPath)
+use(ShellExecutor) {
+    "sudo chown root:root ${postfixConfTempFile}".executeOnShell()
+    "sudo mv ${postfixConfTempFile} ${postfixConfFile}".executeOnShell()
+}
 
 
 

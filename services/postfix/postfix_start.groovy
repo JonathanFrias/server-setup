@@ -1,5 +1,7 @@
 import ShellExecutor
 
 use(ShellExecutor) {
-    "sudo service start postfix".executeOnShell()
+    println "Starting postfix..."
+    "sudo /etc/init.d/postfix reload".executeOnShell()
+    println "Starting postfix complete."
 }

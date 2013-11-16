@@ -14,6 +14,7 @@ class ShellExecutor {
         def command = ['sh', '-c']
         command << self
 
+        println "Executing on Shell: ${command.join(' ')}"
         def process = processBuilder.command(command as String[]).start()
         process.inputStream.eachLine printLines
         process.waitFor()
