@@ -4,7 +4,7 @@ import org.cloudifysource.dsl.utils.ServiceUtils;
 service {
     name 'postfix'
 
-//    icon "mysql.png"
+    icon "postfix.gif"
     type "APP_SERVER"
     elastic true
     numInstances 1
@@ -17,7 +17,6 @@ service {
         preInstall 'postfix_preInstall.groovy'
         install 'postfix_install.groovy'
         start 'postfix_start.groovy'
-//        startDetectionTimeoutSecs 800
         startDetection {
             ServiceUtils.isPortOccupied(postfixPort)
         }
